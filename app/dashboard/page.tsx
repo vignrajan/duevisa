@@ -2,6 +2,7 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { DashboardClient } from "./DashboardClient";
+import type { Profile } from "@/types/database";
 
 export const metadata = {
   title: "Dashboard",
@@ -18,12 +19,14 @@ export default async function DashboardPage() {
     redirect("/login");
   }
 
-  // Fetch or create profile
-  let { data: profile } = await supabase
+  // Fetch or create profile with explicit typing to prevent inference errors
+  const { data: existingProfile } = await supabase
     .from("profiles")
     .select("*")
     .eq("id", user.id)
     .single();
+
+  let profile: Profile | null = existingProfile;
 
   if (!profile) {
     const { createAdminClient } = await import("@/lib/supabase/admin");

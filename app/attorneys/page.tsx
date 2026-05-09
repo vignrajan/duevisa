@@ -1,5 +1,8 @@
 import { Metadata } from "next";
 import Link from "next/link";
+
+export const dynamic = "force-dynamic";
+
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { MapPin, Phone, Star, ExternalLink } from "lucide-react";

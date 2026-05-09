@@ -1,6 +1,8 @@
 // /app/signup/onboarding/page.tsx
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Loader2, ChevronRight, ChevronLeft, Check, Bell, Mail, Phone } from "lucide-react";
