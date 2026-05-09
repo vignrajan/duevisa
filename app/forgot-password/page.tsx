@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import { useState } from "react";
 import Link from "next/link";
 import { Loader2, ArrowLeft } from "lucide-react";
@@ -20,9 +22,12 @@ export default function ForgotPasswordPage() {
     
     // Redirect back to dashboard/settings (or login) to set the new password 
     // after Supabase automatically logs them in via the magic link.
+    const { error: resetError } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${process.env.NEXT_PUBLIC_APP_URL || (typeof window !== 'undefined' ? window.location.origin : '')}/dashboard/settings`,
+    });
     
-    if (error) { 
-      setError(error.message); 
+    if (resetError) { 
+      setError(resetError.message); 
     } else { 
       setSuccess(true); 
     }
@@ -76,7 +81,7 @@ export default function ForgotPasswordPage() {
           <Link href="/login" className="inline-flex items-center gap-2 text-sm font-medium text-text-muted hover:text-text-primary mb-6 transition-colors">
             <ArrowLeft size={14} /> Back to login
           </Link>
-
+          
           <h1 className="text-3xl font-bold mb-2 tracking-tight text-text-primary">Reset password</h1>
           <p className="text-text-secondary text-sm mb-8">Enter the email associated with your account</p>
 
