@@ -23,6 +23,7 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import { DocumentCard } from "@/components/DocumentCard";
 import { AddDocumentModal } from "@/components/AddDocumentModal";
+import { RenewalChecklist } from "@/components/RenewalChecklist";
 import { daysUntil, getDocumentStatus, sortByUrgency, FREE_PLAN_LIMIT, isOverFreeLimit } from "@/lib/utils";
 import { VISA_CONFIG } from "@/lib/visa-config";
 import type { Document, FamilyMember, Profile, DocumentWithStatus } from "@/types/database";
@@ -355,14 +356,23 @@ export function DashboardClient({ user, profile, documents, familyMembers }: Das
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {docsWithStatus.map((doc) => (
-                <DocumentCard
-                  key={doc.id}
-                  doc={doc}
-                  onStartRenewal={handleStartRenewal}
-                  onEdit={(d) => setEditingDoc(d)}
-                  onDelete={handleDeleteDocument}
-                  loading={isUpdating === doc.id}
-                />
+                <div key={doc.id} className="flex flex-col gap-2">
+                  <DocumentCard
+                    doc={doc}
+                    onStartRenewal={handleStartRenewal}
+                    onEdit={(d) => setEditingDoc(d)}
+                    onDelete={handleDeleteDocument}
+                    loading={isUpdating === doc.id}
+                  />
+                  <RenewalChecklist
+                    documentId={doc.id}
+                    documentType={doc.doc_type}
+                    daysRemaining={doc.daysRemaining}
+                    userId={user.id}
+                    isPro={isPro}
+                    onRequestEdit={() => setEditingDoc(doc)}
+                  />
+                </div>
               ))}
             </div>
           )}

@@ -176,6 +176,44 @@ export interface Database {
         };
         Relationships: [];
       };
+      checklist_progress: {
+        Row: {
+          id: string;
+          user_id: string;
+          document_id: string;
+          checklist_key: string;
+          completed_steps: number[];
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          document_id: string;
+          checklist_key: string;
+          completed_steps?: number[];
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          document_id?: string;
+          checklist_key?: string;
+          completed_steps?: number[];
+          created_at?: string;
+          updated_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "checklist_progress_document_id_fkey";
+            columns: ["document_id"];
+            isOneToOne: false;
+            referencedRelation: "documents";
+            referencedColumns: ["id"];
+          }
+        ];
+      };
       attorney_leads: {
         Row: {
           id: string;
@@ -218,6 +256,7 @@ export type Document = Database["public"]["Tables"]["documents"]["Row"];
 export type FamilyMember = Database["public"]["Tables"]["family_members"]["Row"];
 export type ReminderLog = Database["public"]["Tables"]["reminder_logs"]["Row"];
 export type AttorneyLead = Database["public"]["Tables"]["attorney_leads"]["Row"];
+export type ChecklistProgress = Database["public"]["Tables"]["checklist_progress"]["Row"];
 
 export type DocumentWithStatus = Document & {
   daysRemaining: number;

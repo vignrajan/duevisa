@@ -131,3 +131,25 @@ CREATE TRIGGER update_profiles_updated_at
 CREATE TRIGGER update_documents_updated_at
   BEFORE UPDATE ON documents
   FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+-- ─── Checklist Progress ───────────────────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS checklist_progress (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
+  document_id UUID REFERENCES documents(id) ON DELETE CASCADE NOT NULL,
+  checklist_key TEXT NOT NULL,
+  completed_steps INTEGER[] DEFAULT '{}',
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW(),
+  UNIQUE(user_id, document_id)
+);
+
+ALTER TABLE checklist_progress ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Users can manage own checklist progress"
+ON checklist_progress
+FOR ALL USING (auth.uid() = user_id);
+
+CREATE TRIGGER update_checklist_progress_updated_at
+  BEFORE UPDATE ON checklist_progress
+  FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
