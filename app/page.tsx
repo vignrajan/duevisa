@@ -31,7 +31,7 @@ const FEATURES = [
   { icon: <Users size={20} className="text-forest" />, title: "Family dashboard", desc: "Track your spouse, children, dependents — all in one unified view." },
   { icon: <Clock size={20} className="text-forest" />, title: "Days-remaining countdown", desc: "Live countdown with color-coded urgency. Red, amber, green — instantly clear." },
   { icon: <Scale size={20} className="text-forest" />, title: "Attorney connect", desc: "When time is short, connect with a vetted immigration lawyer in minutes." },
-  { icon: <CheckCircle2 size={20} className="text-forest" />, title: "All visa types", desc: "H-1B, F-1, Green Card, TN, O-1, L-1, H-4 EAD, and more." },
+  { icon: <CheckCircle2 size={20} className="text-forest" />, title: "All visa types", desc: "H-1B, F-1, OPT, STEM OPT, Green Card, TN, O-1, L-1, H-4 EAD, and more." },
 ];
 
 const TESTIMONIALS = [
@@ -109,7 +109,7 @@ export default function HomePage() {
           {/* Visa chips */}
           <div className="flex flex-wrap items-center justify-center gap-2 text-sm">
             <span className="text-xs font-medium mr-1" style={{ color: "var(--text-muted)" }}>Supports:</span>
-            {["H-1B", "F-1", "Green Card", "TN", "O-1", "L-1", "H-4"].map(v => (
+            {["H-1B", "F-1", "OPT / STEM OPT", "Green Card", "TN", "O-1", "L-1", "H-4", "H-4 EAD", "I-485", "I-751"].map(v => (
               <span key={v} className="px-3 py-1.5 rounded-lg text-xs font-medium cursor-default transition-all duration-200"
                 style={{ border: "1px solid var(--border-default)", color: "var(--text-secondary)", background: "var(--bg-card)" }}>
                 {v}
