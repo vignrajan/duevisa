@@ -312,7 +312,7 @@ export default function HomePage() {
               style={{ boxShadow: "var(--shadow-card-hover)" }}>
               {/* Top badge */}
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                <span className="badge badge-good px-4 py-1 font-bold text-xs shadow-sm">Most popular</span>
+                <span className="px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap" style={{ background: "var(--color-lime)", color: "#050e0b" }}>Most popular</span>
               </div>
 
               <div className="flex items-center gap-3 mb-6 mt-2">
@@ -454,7 +454,7 @@ export default function HomePage() {
                 }}>
                 {plan.highlight && (
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                    <span className="badge badge-good px-4 py-1 font-bold text-xs shadow-sm">Most popular</span>
+                    <span className="px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap" style={{ background: "var(--color-lime)", color: "#050e0b" }}>Most popular</span>
                   </div>
                 )}
                 <div className="mb-6">
