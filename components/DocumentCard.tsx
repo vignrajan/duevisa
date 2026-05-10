@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import { Clock, RefreshCw, AlertCircle, CheckCircle2, ChevronRight } from "lucide-react";
+import { Clock, RefreshCw, AlertCircle, CheckCircle2, ChevronRight, Trash2, Pencil } from "lucide-react";
 import { cn, formatDate, formatTimeRemaining, getStatusBg, getStatusColor, getStatusLabel } from "@/lib/utils";
 import type { DocumentWithStatus } from "@/types/database";
 
@@ -10,12 +10,12 @@ interface DocumentCardProps {
   doc: DocumentWithStatus;
   onStartRenewal?: (id: string) => void;
   onEdit?: (doc: DocumentWithStatus) => void;
+  onDelete?: (id: string) => void;
   loading?: boolean;
 }
 
-export function DocumentCard({ doc, onStartRenewal, onEdit, loading }: DocumentCardProps) {
+export function DocumentCard({ doc, onStartRenewal, onEdit, onDelete, loading }: DocumentCardProps) {
   const [hovered, setHovered] = useState(false);
-// ... (omitting unchanged lines for brevity in instruction, will provide full replacement)
 
   const statusBg = getStatusBg(doc.status);
   const statusColor = getStatusColor(doc.status);
@@ -163,14 +163,31 @@ export function DocumentCard({ doc, onStartRenewal, onEdit, loading }: DocumentC
         </div>
       </div>
 
-      {/* Visa category tag */}
-      <div className="mt-3 pt-3 border-t border-border-default flex items-center justify-between">
-        <span className="font-mono text-[10px] text-muted/60 uppercase tracking-wider">
+      {/* Bottom bar: visa tag + action buttons */}
+      <div className="mt-3 pt-3 border-t border-border-default flex items-center justify-between gap-2">
+        <span className="font-mono text-[10px] text-muted/60 uppercase tracking-wider truncate">
           {doc.visa_category} · {doc.doc_type}
         </span>
-        {doc.notes && (
-          <span className="text-muted/40 text-[10px] truncate max-w-[120px]">{doc.notes}</span>
-        )}
+        <div className="flex items-center gap-1 flex-shrink-0">
+          {onEdit && (
+            <button
+              onClick={(e) => { e.stopPropagation(); onEdit(doc); }}
+              aria-label="Edit document"
+              className="w-7 h-7 rounded-lg flex items-center justify-center text-muted/40 hover:text-forest dark:hover:text-lime hover:bg-forest/5 dark:hover:bg-lime/10 transition-all"
+            >
+              <Pencil size={12} />
+            </button>
+          )}
+          {onDelete && (
+            <button
+              onClick={(e) => { e.stopPropagation(); onDelete(doc.id); }}
+              aria-label="Delete document"
+              className="w-7 h-7 rounded-lg flex items-center justify-center text-muted/40 hover:text-critical hover:bg-critical/5 transition-all"
+            >
+              <Trash2 size={12} />
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

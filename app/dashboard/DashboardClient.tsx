@@ -41,6 +41,7 @@ export function DashboardClient({ user, profile, documents, familyMembers }: Das
   const supabase = createClient();
 
   const [showAddModal, setShowAddModal] = useState(false);
+  const [editingDoc, setEditingDoc] = useState<DocumentWithStatus | null>(null);
   const [refreshKey, setRefreshKey] = useState(0);
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
@@ -96,6 +97,18 @@ export function DashboardClient({ user, profile, documents, familyMembers }: Das
 
   function handleDocumentAdded() {
     setShowAddModal(false);
+    router.refresh();
+  }
+
+  function handleDocumentEdited() {
+    setEditingDoc(null);
+    router.refresh();
+  }
+
+  async function handleDeleteDocument(docId: string) {
+    if (!confirm("Remove this document from tracking?")) return;
+    // @ts-expect-error — hand-crafted DB types incompatible with Supabase v2.105 generics for writes
+    await supabase.from("documents").update({ is_active: false }).eq("id", docId);
     router.refresh();
   }
 
@@ -346,7 +359,8 @@ export function DashboardClient({ user, profile, documents, familyMembers }: Das
                   key={doc.id}
                   doc={doc}
                   onStartRenewal={handleStartRenewal}
-                  onEdit={() => {}}
+                  onEdit={(d) => setEditingDoc(d)}
+                  onDelete={handleDeleteDocument}
                   loading={isUpdating === doc.id}
                 />
               ))}
@@ -434,6 +448,16 @@ export function DashboardClient({ user, profile, documents, familyMembers }: Das
           userId={user.id}
           onClose={() => setShowAddModal(false)}
           onSuccess={handleDocumentAdded}
+        />
+      )}
+
+      {/* Edit Document Modal */}
+      {editingDoc && (
+        <AddDocumentModal
+          userId={user.id}
+          onClose={() => setEditingDoc(null)}
+          onSuccess={handleDocumentEdited}
+          document={editingDoc}
         />
       )}
     </div>
