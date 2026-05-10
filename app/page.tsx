@@ -6,10 +6,10 @@ import { Footer } from "@/components/Footer";
 import { CheckCircle2, Clock, Bell, Users, Shield, Zap, ChevronRight, AlertTriangle, Plane, Scale, ArrowRight, Star, X } from "lucide-react";
 
 const STATS = [
-  { value: "10,000+", label: "immigrants protected" },
-  { value: "47", label: "avg days of early warning" },
-  { value: "99.8%", label: "reminder delivery rate" },
-  { value: "3 min", label: "setup time" },
+  { value: "580,000+", label: "H-1B holders in the US" },
+  { value: "180-day",  label: "EAD window auto-calculated" },
+  { value: "5",        label: "document types tracked" },
+  { value: "Zero",     label: "missed deadlines" },
 ];
 
 const PROBLEMS = [
@@ -181,12 +181,21 @@ export default function HomePage() {
 
       {/* ── STATS BAR ─────────────────────────────────────────────── */}
       <section style={{ background: "var(--bg-page-alt)", borderTop: "1px solid var(--border-default)", borderBottom: "1px solid var(--border-default)" }}>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {STATS.map(s => (
-              <div key={s.label}>
-                <div className="stat-number text-forest mb-1">{s.value}</div>
-                <div className="text-sm" style={{ color: "var(--text-secondary)" }}>{s.label}</div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            {STATS.map((s, i) => (
+              <div
+                key={s.label}
+                className="text-center px-4 py-6 md:py-0"
+                style={{
+                  borderRight: i < 3 ? "1px solid var(--border-default)" : undefined,
+                  borderBottom: i < 2 ? "1px solid var(--border-default)" : undefined,
+                }}
+              >
+                <div className="stat-number text-forest dark:text-lime mb-1.5" style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)" }}>
+                  {s.value}
+                </div>
+                <div className="text-xs sm:text-sm font-medium" style={{ color: "var(--text-secondary)" }}>{s.label}</div>
               </div>
             ))}
           </div>
