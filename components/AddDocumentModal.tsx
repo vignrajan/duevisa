@@ -90,8 +90,8 @@ export function AddDocumentModal({ userId, onClose, onSuccess, document: editDoc
         onClick={onClose}
       />
       {/* Modal — full-width sheet on mobile, centered card on sm+ */}
-      <div className="relative z-10 w-full sm:max-w-lg bg-card-bg sm:rounded-2xl rounded-t-2xl border border-border-default shadow-card flex flex-col max-h-[92dvh] sm:max-h-[90vh]">
-        {/* Header — sticky */}
+      <div className="relative z-10 w-full sm:max-w-lg bg-card-bg sm:rounded-2xl rounded-t-2xl border border-border-default shadow-card flex flex-col" style={{ maxHeight: "90vh" }}>
+        {/* Header — never scrolls away */}
         <div className="flex items-center justify-between p-5 sm:p-6 border-b border-border-default flex-shrink-0">
           <div>
             <h2 className="font-syne font-bold text-primary text-lg">
@@ -106,8 +106,8 @@ export function AddDocumentModal({ userId, onClose, onSuccess, document: editDoc
           </button>
         </div>
 
-        {/* Scrollable body */}
-        <div className="p-5 sm:p-6 overflow-y-auto flex-1">
+        {/* Scrollable body — min-h-0 is required for flex children to actually shrink and scroll */}
+        <div className="p-5 sm:p-6 overflow-y-auto flex-1 min-h-0">
           {step === "visa" && (
             <div>
               <p className="text-muted text-sm mb-4">Select your visa type:</p>
