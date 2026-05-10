@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CheckCircle2, Clock, Bell, Users, Shield, Zap, ChevronRight, AlertTriangle, Plane, Scale, ArrowRight, Star, X } from "lucide-react";
+import { EADCalculator } from "@/components/EADCalculator";
 
 const STATS = [
   { value: "580,000+", label: "H-1B holders in the US" },
@@ -265,6 +266,23 @@ export default function HomePage() {
               Start for free — takes 3 minutes <ArrowRight size={16} />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ── EAD CALCULATOR ───────────────────────────────────────── */}
+      <section style={{ background: "var(--bg-page)", padding: "6rem 0" }}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="badge badge-good mb-5 inline-flex">Free tool</span>
+            <h2 className="h-section mb-4" style={{ color: "var(--text-primary)" }}>
+              Check Your EAD<br />
+              <span className="text-gradient-lime">Renewal Date</span>
+            </h2>
+            <p className="text-base max-w-xl mx-auto" style={{ color: "var(--text-secondary)" }}>
+              Enter your EAD card expiry date. We&apos;ll calculate exactly when to file and which reminder stage you&apos;re in — no login required.
+            </p>
+          </div>
+          <EADCalculator />
         </div>
       </section>
 
