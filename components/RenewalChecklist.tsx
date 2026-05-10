@@ -44,8 +44,9 @@ export function RenewalChecklist({
         .eq("document_id", documentId)
         .maybeSingle();
 
-      if (data?.completed_steps) {
-        setCompletedSteps(data.completed_steps as number[]);
+      const steps = (data as { completed_steps: number[] } | null)?.completed_steps;
+      if (steps?.length) {
+        setCompletedSteps(steps);
       }
       setLoaded(true);
     }
