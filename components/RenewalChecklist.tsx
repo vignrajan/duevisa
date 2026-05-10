@@ -38,7 +38,6 @@ export function RenewalChecklist({
     if (!checklist || daysRemaining > checklist.triggerDays) return;
 
     async function fetchProgress() {
-      // @ts-expect-error — checklist_progress not yet in Supabase generated types
       const { data } = await supabase
         .from("checklist_progress")
         .select("completed_steps")
@@ -67,7 +66,6 @@ export function RenewalChecklist({
     setSaving(true);
 
     try {
-      // @ts-expect-error — checklist_progress not yet in Supabase generated types
       const { error } = await supabase.from("checklist_progress").upsert(
         {
           user_id: userId,
