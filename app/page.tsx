@@ -3,7 +3,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { CheckCircle2, Clock, Bell, Users, Shield, Zap, ChevronRight, AlertTriangle, Plane, Scale, ArrowRight, Star } from "lucide-react";
+import { CheckCircle2, Clock, Bell, Users, Shield, Zap, ChevronRight, AlertTriangle, Plane, Scale, ArrowRight, Star, X } from "lucide-react";
 
 const STATS = [
   { value: "10,000+", label: "immigrants protected" },
@@ -255,6 +255,145 @@ export default function HomePage() {
             <Link href="/signup" className="btn-primary text-base px-8 py-3.5 cursor-pointer inline-flex">
               Start for free — takes 3 minutes <ArrowRight size={16} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHY DUEVISA COMPARISON ───────────────────────────────── */}
+      <section style={{ background: "#0b1a15", padding: "6rem 0" }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Header */}
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide"
+              style={{ background: "rgba(200,245,98,0.12)", border: "1px solid rgba(200,245,98,0.20)", color: "#c8f562" }}>
+              Why DueVisa
+            </span>
+            <h2 className="h-section mb-4" style={{ color: "#eef5f0" }}>
+              The difference is<br />
+              <span style={{ color: "#c8f562" }}>knowing in advance.</span>
+            </h2>
+            <p className="text-base max-w-xl mx-auto" style={{ color: "rgba(238,245,240,0.55)" }}>
+              Most immigrants manage immigration reactively. DueVisa makes it proactive.
+            </p>
+          </div>
+
+          {/* Three columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-0 md:items-stretch">
+
+            {/* Column 1 — Without DueVisa */}
+            <div className="rounded-2xl md:rounded-r-none p-7 flex flex-col"
+              style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                  style={{ background: "rgba(255,255,255,0.06)" }}>
+                  <X size={14} style={{ color: "rgba(255,255,255,0.35)" }} />
+                </div>
+                <h3 className="font-bold text-sm tracking-tight" style={{ color: "rgba(238,245,240,0.45)" }}>
+                  Without DueVisa
+                </h3>
+              </div>
+              <ul className="space-y-4 flex-1">
+                {[
+                  "Track expiry dates in a spreadsheet",
+                  "Set manual Google Calendar reminders",
+                  "Remember which date means what (stamp vs I-797 vs I-94)",
+                  "Guess when your 180-day EAD window opens",
+                  "Panic when a deadline approaches",
+                  "Pay attorney fees for status checks",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5">
+                    <X size={14} className="flex-shrink-0 mt-0.5" style={{ color: "rgba(255,255,255,0.18)" }} />
+                    <span className="text-sm leading-snug" style={{ color: "rgba(238,245,240,0.40)" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 2 — DueVisa (center, elevated) */}
+            <div className="relative rounded-2xl md:-my-4 p-7 pb-8 flex flex-col z-10"
+              style={{
+                background: "rgba(10,92,74,0.40)",
+                border: "1.5px solid rgba(200,245,98,0.28)",
+                boxShadow: "0 0 60px rgba(10,92,74,0.35), 0 0 0 1px rgba(200,245,98,0.08)",
+              }}>
+              {/* Top badge */}
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                <span className="px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap"
+                  style={{ background: "#c8f562", color: "#050e0b" }}>
+                  DueVisa
+                </span>
+              </div>
+
+              <div className="flex items-center gap-3 mb-6 mt-2">
+                <div className="w-8 h-8 rounded-lg bg-forest flex items-center justify-center flex-shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                    <rect x="2" y="4" width="12" height="1.5" rx="0.75" fill="#C8F562" />
+                    <rect x="2" y="7.25" width="9" height="1.5" rx="0.75" fill="#C8F562" opacity="0.7" />
+                    <rect x="2" y="10.5" width="12" height="1.5" rx="0.75" fill="#C8F562" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-sm tracking-tight" style={{ color: "#c8f562" }}>
+                  The DueVisa difference
+                </h3>
+              </div>
+
+              <ul className="space-y-4 flex-1">
+                {[
+                  "One dashboard for every document",
+                  "Auto-calculates the 180-day EAD window",
+                  "Smart reminders at 180/90/60/30/7 days",
+                  "Family & dependent tracking included",
+                  "Color-coded urgency — green, yellow, red",
+                  "Attorney directory when you need help",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5">
+                    <CheckCircle2 size={15} className="flex-shrink-0 mt-0.5" style={{ color: "#c8f562" }} />
+                    <span className="text-sm leading-snug" style={{ color: "#eef5f0" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <Link href="/signup" className="btn-primary-lime mt-8 text-sm justify-center">
+                Start free — 3 minutes <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            {/* Column 3 — Consequences */}
+            <div className="rounded-2xl md:rounded-l-none p-7 flex flex-col"
+              style={{ background: "rgba(220,38,38,0.07)", border: "1px solid rgba(220,38,38,0.16)" }}>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                  style={{ background: "rgba(220,38,38,0.15)" }}>
+                  <AlertTriangle size={14} style={{ color: "#dc2626" }} />
+                </div>
+                <h3 className="font-bold text-sm tracking-tight" style={{ color: "rgba(220,80,80,0.85)" }}>
+                  Missing a deadline
+                </h3>
+              </div>
+              <ul className="space-y-4 flex-1">
+                {[
+                  "EAD expiry = can't legally work",
+                  "I-94 overstay = immigration violation",
+                  "Passport expiry = can't travel for visa stamp",
+                  "Missed renewal = months of legal delays",
+                  "Worst case = deportation proceedings",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5">
+                    <AlertTriangle size={14} className="flex-shrink-0 mt-0.5" style={{ color: "rgba(220,38,38,0.7)" }} />
+                    <span className="text-sm leading-snug" style={{ color: "rgba(238,245,240,0.50)" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              {/* Callout */}
+              <div className="mt-8 p-4 rounded-xl"
+                style={{ background: "rgba(220,38,38,0.10)", border: "1px solid rgba(220,38,38,0.18)" }}>
+                <p className="text-xs leading-relaxed" style={{ color: "rgba(220,80,80,0.80)" }}>
+                  A single missed deadline can trigger consequences that take years and thousands of dollars to resolve.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
