@@ -260,20 +260,17 @@ export default function HomePage() {
       </section>
 
       {/* ── WHY DUEVISA COMPARISON ───────────────────────────────── */}
-      <section style={{ background: "#0b1a15", padding: "6rem 0" }}>
+      <section style={{ background: "var(--bg-page-alt2)", padding: "6rem 0" }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Header */}
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide"
-              style={{ background: "rgba(200,245,98,0.12)", border: "1px solid rgba(200,245,98,0.20)", color: "#c8f562" }}>
-              Why DueVisa
-            </span>
-            <h2 className="h-section mb-4" style={{ color: "#eef5f0" }}>
+            <span className="badge badge-good mb-5 inline-flex">Why DueVisa</span>
+            <h2 className="h-section mb-4" style={{ color: "var(--text-primary)" }}>
               The difference is<br />
-              <span style={{ color: "#c8f562" }}>knowing in advance.</span>
+              <span className="text-gradient-lime">knowing in advance.</span>
             </h2>
-            <p className="text-base max-w-xl mx-auto" style={{ color: "rgba(238,245,240,0.55)" }}>
+            <p className="text-base max-w-xl mx-auto" style={{ color: "var(--text-secondary)" }}>
               Most immigrants manage immigration reactively. DueVisa makes it proactive.
             </p>
           </div>
@@ -283,13 +280,13 @@ export default function HomePage() {
 
             {/* Column 1 — Without DueVisa */}
             <div className="rounded-2xl md:rounded-r-none p-7 flex flex-col"
-              style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
+              style={{ background: "var(--bg-card)", border: "1px solid var(--border-default)" }}>
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: "rgba(255,255,255,0.06)" }}>
-                  <X size={14} style={{ color: "rgba(255,255,255,0.35)" }} />
+                  style={{ background: "var(--bg-page-alt)", border: "1px solid var(--border-default)" }}>
+                  <X size={14} style={{ color: "var(--text-muted)" }} />
                 </div>
-                <h3 className="font-bold text-sm tracking-tight" style={{ color: "rgba(238,245,240,0.45)" }}>
+                <h3 className="font-bold text-sm tracking-tight" style={{ color: "var(--text-muted)" }}>
                   Without DueVisa
                 </h3>
               </div>
@@ -303,26 +300,19 @@ export default function HomePage() {
                   "Pay attorney fees for status checks",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
-                    <X size={14} className="flex-shrink-0 mt-0.5" style={{ color: "rgba(255,255,255,0.18)" }} />
-                    <span className="text-sm leading-snug" style={{ color: "rgba(238,245,240,0.40)" }}>{item}</span>
+                    <X size={14} className="flex-shrink-0 mt-0.5" style={{ color: "var(--text-muted)" }} />
+                    <span className="text-sm leading-snug" style={{ color: "var(--text-secondary)" }}>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Column 2 — DueVisa (center, elevated) */}
-            <div className="relative rounded-2xl md:-my-4 p-7 pb-8 flex flex-col z-10"
-              style={{
-                background: "rgba(10,92,74,0.40)",
-                border: "1.5px solid rgba(200,245,98,0.28)",
-                boxShadow: "0 0 60px rgba(10,92,74,0.35), 0 0 0 1px rgba(200,245,98,0.08)",
-              }}>
+            <div className="relative rounded-2xl md:-my-4 p-7 pb-8 flex flex-col z-10 bg-forest/[0.05] dark:bg-forest/[0.35] border border-forest/25 dark:border-lime/25"
+              style={{ boxShadow: "var(--shadow-card-hover)" }}>
               {/* Top badge */}
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                <span className="px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap"
-                  style={{ background: "#c8f562", color: "#050e0b" }}>
-                  DueVisa
-                </span>
+                <span className="badge badge-good px-4 py-1 font-bold text-xs shadow-sm">Most popular</span>
               </div>
 
               <div className="flex items-center gap-3 mb-6 mt-2">
@@ -333,7 +323,7 @@ export default function HomePage() {
                     <rect x="2" y="10.5" width="12" height="1.5" rx="0.75" fill="#C8F562" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-sm tracking-tight" style={{ color: "#c8f562" }}>
+                <h3 className="font-bold text-sm tracking-tight text-forest dark:text-lime">
                   The DueVisa difference
                 </h3>
               </div>
@@ -348,26 +338,24 @@ export default function HomePage() {
                   "Attorney directory when you need help",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
-                    <CheckCircle2 size={15} className="flex-shrink-0 mt-0.5" style={{ color: "#c8f562" }} />
-                    <span className="text-sm leading-snug" style={{ color: "#eef5f0" }}>{item}</span>
+                    <CheckCircle2 size={15} className="flex-shrink-0 mt-0.5 text-forest dark:text-lime" />
+                    <span className="text-sm leading-snug" style={{ color: "var(--text-primary)" }}>{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <Link href="/signup" className="btn-primary-lime mt-8 text-sm justify-center">
+              <Link href="/signup" className="btn-primary mt-8 text-sm justify-center">
                 Start free — 3 minutes <ArrowRight size={14} />
               </Link>
             </div>
 
             {/* Column 3 — Consequences */}
-            <div className="rounded-2xl md:rounded-l-none p-7 flex flex-col"
-              style={{ background: "rgba(220,38,38,0.07)", border: "1px solid rgba(220,38,38,0.16)" }}>
+            <div className="rounded-2xl md:rounded-l-none p-7 flex flex-col bg-red-600/[0.04] dark:bg-red-600/[0.09] border border-red-500/20">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: "rgba(220,38,38,0.15)" }}>
-                  <AlertTriangle size={14} style={{ color: "#dc2626" }} />
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-red-500/10">
+                  <AlertTriangle size={14} className="text-critical" />
                 </div>
-                <h3 className="font-bold text-sm tracking-tight" style={{ color: "rgba(220,80,80,0.85)" }}>
+                <h3 className="font-bold text-sm tracking-tight text-critical">
                   Missing a deadline
                 </h3>
               </div>
@@ -380,15 +368,14 @@ export default function HomePage() {
                   "Worst case = deportation proceedings",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
-                    <AlertTriangle size={14} className="flex-shrink-0 mt-0.5" style={{ color: "rgba(220,38,38,0.7)" }} />
-                    <span className="text-sm leading-snug" style={{ color: "rgba(238,245,240,0.50)" }}>{item}</span>
+                    <AlertTriangle size={14} className="flex-shrink-0 mt-0.5 text-critical" />
+                    <span className="text-sm leading-snug" style={{ color: "var(--text-secondary)" }}>{item}</span>
                   </li>
                 ))}
               </ul>
               {/* Callout */}
-              <div className="mt-8 p-4 rounded-xl"
-                style={{ background: "rgba(220,38,38,0.10)", border: "1px solid rgba(220,38,38,0.18)" }}>
-                <p className="text-xs leading-relaxed" style={{ color: "rgba(220,80,80,0.80)" }}>
+              <div className="mt-8 p-4 rounded-xl bg-red-500/[0.07] border border-red-500/20">
+                <p className="text-xs leading-relaxed text-critical/80">
                   A single missed deadline can trigger consequences that take years and thousands of dollars to resolve.
                 </p>
               </div>
