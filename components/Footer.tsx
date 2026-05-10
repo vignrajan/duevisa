@@ -13,7 +13,7 @@ const FOOTER_LINKS = {
   ],
 };
 
-const VISA_TYPES = ["H-1B", "F-1", "Green Card", "TN", "O-1", "L-1", "H-4"];
+const VISA_TYPES = ["H-1B", "F-1", "OPT / STEM OPT", "Green Card", "TN", "O-1", "L-1", "H-4", "H-4 EAD", "I-485", "I-751"];
 
 export function Footer() {
   return (
