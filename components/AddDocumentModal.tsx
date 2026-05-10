@@ -83,16 +83,16 @@ export function AddDocumentModal({ userId, onClose, onSuccess, document: editDoc
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-midnight/80 backdrop-blur-sm"
         onClick={onClose}
       />
-      {/* Modal */}
-      <div className="relative z-10 w-full max-w-lg bg-card-bg rounded-2xl border border-border-default shadow-card overflow-hidden">
-        {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-border-default">
+      {/* Modal — full-width sheet on mobile, centered card on sm+ */}
+      <div className="relative z-10 w-full sm:max-w-lg bg-card-bg sm:rounded-2xl rounded-t-2xl border border-border-default shadow-card flex flex-col max-h-[92dvh] sm:max-h-[90vh]">
+        {/* Header — sticky */}
+        <div className="flex items-center justify-between p-5 sm:p-6 border-b border-border-default flex-shrink-0">
           <div>
             <h2 className="font-syne font-bold text-primary text-lg">
               {isEditing ? "Edit Document" : "Add Document"}
@@ -106,7 +106,8 @@ export function AddDocumentModal({ userId, onClose, onSuccess, document: editDoc
           </button>
         </div>
 
-        <div className="p-6">
+        {/* Scrollable body */}
+        <div className="p-5 sm:p-6 overflow-y-auto flex-1">
           {step === "visa" && (
             <div>
               <p className="text-muted text-sm mb-4">Select your visa type:</p>
