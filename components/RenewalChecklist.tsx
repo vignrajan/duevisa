@@ -59,6 +59,7 @@ export function RenewalChecklist({
   if (!checklist || daysRemaining > checklist.triggerDays) return null;
 
   async function toggleStep(stepId: number) {
+    if (!checklist) return;
     const next = completedSteps.includes(stepId)
       ? completedSteps.filter((id) => id !== stepId)
       : [...completedSteps, stepId];
