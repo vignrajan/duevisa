@@ -67,7 +67,8 @@ export function RenewalChecklist({
     setSaving(true);
 
     try {
-      const { error } = await supabase.from("checklist_progress").upsert(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const { error } = await (supabase as any).from("checklist_progress").upsert(
         {
           user_id: userId,
           document_id: documentId,
