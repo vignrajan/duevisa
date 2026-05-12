@@ -93,17 +93,26 @@ export const CHECKLISTS: Record<string, Checklist> = {
 
 export function getChecklistForDocument(documentType: string): Checklist | null {
   const typeMap: Record<string, string> = {
+    // H-1B variants
     h1b: "h1b",
-    h1b_visa_stamp: "h1b",
     h1b_stamp: "h1b",
+    h1b_visa_stamp: "h1b",
     i797: "h1b",
-    ead: "ead",
-    h4_ead: "ead",
-    passport: "passport",
-    green_card: "greencard",
-    greencard: "greencard",
+    // I-94 variants
     i94: "i94",
     i_94: "i94",
+    tn_i94: "i94",   // TN status tracked as I-94
+    // EAD variants
+    ead: "ead",
+    h4_ead: "ead",
+    opt_ead: "ead",  // OPT EAD
+    stem_opt: "ead", // STEM OPT extension
+    // Passport
+    passport: "passport",
+    // Green Card variants
+    green_card: "greencard",
+    greencard: "greencard",
+    i751: "greencard", // Conditions removal tied to green card renewal
   };
 
   const key = typeMap[documentType.toLowerCase().replace(/[-\s]/g, "_")];
