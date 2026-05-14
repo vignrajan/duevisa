@@ -5,3 +5,8 @@ build/
 .env*
 .vercel
 *.log
+
+# Playwright
+tests/e2e/.auth/
+playwright-report/
+test-results/
