@@ -448,7 +448,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       <main className="pt-28 pb-24">
         <article className="max-w-3xl mx-auto px-4 sm:px-6">
           {/* Back */}
-          <Link href="/blog" className="flex items-center gap-2 text-sage hover:text-white text-sm mb-8 transition-colors">
+          <Link href="/blog" className="flex items-center gap-2 text-secondary hover:text-primary text-sm mb-8 transition-colors">
             <ArrowLeft size={16} />
             Back to Blog
           </Link>
@@ -456,11 +456,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           {/* Header */}
           <div className="mb-10">
             <span className="badge badge-good mb-4">{post.category}</span>
-            <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+            <h1 className="font-display text-3xl md:text-4xl font-bold text-primary mb-4 leading-tight">
               {post.title}
             </h1>
-            <p className="text-sage text-lg mb-6">{post.description}</p>
-            <div className="flex items-center gap-4 text-sage/60 text-sm font-mono">
+            <p className="text-secondary text-lg mb-6">{post.description}</p>
+            <div className="flex items-center gap-4 text-muted text-sm font-mono">
               <div className="flex items-center gap-1.5">
                 <Calendar size={13} />
                 {post.date}
@@ -473,7 +473,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
 
           {/* Divider */}
-          <div className="h-px bg-white/10 mb-10" />
+          <div className="h-px mb-10" style={{ background: "var(--border-default)" }} />
 
           {/* Content */}
           <div className="prose-custom space-y-5">
@@ -481,14 +481,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               const trimmed = section.trim();
               if (trimmed.startsWith("## ")) {
                 return (
-                  <h2 key={i} className="font-syne font-bold text-white text-2xl mt-10 mb-4">
+                  <h2 key={i} className="font-syne font-bold text-primary text-2xl mt-10 mb-4">
                     {trimmed.slice(3)}
                   </h2>
                 );
               }
               if (trimmed.startsWith("### ")) {
                 return (
-                  <h3 key={i} className="font-syne font-bold text-white text-lg mt-8 mb-3">
+                  <h3 key={i} className="font-syne font-bold text-primary text-lg mt-8 mb-3">
                     {trimmed.slice(4)}
                   </h3>
                 );
@@ -497,8 +497,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 // Bold definition
                 const [bold, ...rest] = trimmed.split("**:");
                 return (
-                  <p key={i} className="text-sage leading-relaxed">
-                    <strong className="text-white">{bold.replace("**", "")}</strong>
+                  <p key={i} className="text-secondary leading-relaxed">
+                    <strong className="text-primary">{bold.replace("**", "")}</strong>
                     {rest.join("**:")}
                   </p>
                 );
@@ -514,15 +514,15 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                         return (
                           <tr
                             key={ri}
-                            className={ri === 0 ? "border-b border-white/20" : "border-b border-white/5"}
+                            className={ri === 0 ? "border-b border-border-default" : "border-b border-border-subtle"}
                           >
                             {cells.map((cell, ci) => (
                               ri === 0 ? (
-                                <th key={ci} className="text-left py-2 px-3 font-syne font-semibold text-white text-xs uppercase tracking-wider">
+                                <th key={ci} className="text-left py-2 px-3 font-syne font-semibold text-primary text-xs uppercase tracking-wider">
                                   {cell.trim()}
                                 </th>
                               ) : (
-                                <td key={ci} className="py-2 px-3 text-sage">
+                                <td key={ci} className="py-2 px-3 text-secondary">
                                   {cell.trim()}
                                 </td>
                               )
@@ -539,8 +539,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 return (
                   <ul key={i} className="space-y-2">
                     {items.map((item, ii) => (
-                      <li key={ii} className="flex items-start gap-2 text-sage">
-                        <span className="text-lime mt-1.5 flex-shrink-0">·</span>
+                      <li key={ii} className="flex items-start gap-2 text-secondary">
+                        <span className="text-forest dark:text-lime mt-1.5 flex-shrink-0">·</span>
                         <span>{item.slice(2)}</span>
                       </li>
                     ))}
@@ -552,8 +552,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 return (
                   <ol key={i} className="space-y-2">
                     {items.map((item, ii) => (
-                      <li key={ii} className="flex items-start gap-3 text-sage">
-                        <span className="font-mono text-lime font-bold text-sm mt-0.5 flex-shrink-0">
+                      <li key={ii} className="flex items-start gap-3 text-secondary">
+                        <span className="font-mono text-forest dark:text-lime font-bold text-sm mt-0.5 flex-shrink-0">
                           {ii + 1}.
                         </span>
                         <span>{item.replace(/^\d+\.\s/, "")}</span>
@@ -566,10 +566,10 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 // Process bold text
                 const parts = trimmed.split(/\*\*(.*?)\*\*/g);
                 return (
-                  <p key={i} className="text-sage leading-relaxed text-base">
+                  <p key={i} className="text-secondary leading-relaxed text-base">
                     {parts.map((part, pi) =>
                       pi % 2 === 1 ? (
-                        <strong key={pi} className="text-white font-semibold">
+                        <strong key={pi} className="text-primary font-semibold">
                           {part}
                         </strong>
                       ) : (
@@ -584,11 +584,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
 
           {/* CTA */}
-          <div className="mt-16 p-8 bg-forest/20 border border-lime/20 rounded-2xl text-center">
-            <h3 className="font-syne font-bold text-white text-xl mb-3">
+          <div className="mt-16 p-8 rounded-2xl text-center" style={{ background: "var(--bg-page-alt2)", border: "1px solid var(--border-strong)" }}>
+            <h3 className="font-syne font-bold text-primary text-xl mb-3">
               Track your deadlines automatically
             </h3>
-            <p className="text-sage text-sm mb-6">
+            <p className="text-secondary text-sm mb-6">
               DueVisa sends you email reminders at 180, 90, 60, 30, and 7 days before
               every immigration deadline. Free for up to 3 documents.
             </p>
@@ -598,8 +598,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
 
           {/* Disclaimer */}
-          <div className="mt-8 p-4 bg-white/3 rounded-xl">
-            <p className="text-sage/60 text-xs text-center">
+          <div className="mt-8 p-4 rounded-xl" style={{ background: "var(--bg-page-alt)" }}>
+            <p className="text-muted text-xs text-center">
               This article is for informational purposes only and does not constitute legal advice.
               Consult a licensed immigration attorney for advice specific to your situation.
             </p>
