@@ -67,11 +67,11 @@ const BLOG_POSTS = [
 ];
 
 const CATEGORY_COLORS: Record<string, string> = {
-  "H-1B":       "bg-indigo-50 text-indigo-700 border-indigo-200",
-  "F-1":        "bg-emerald-50 text-emerald-700 border-emerald-200",
-  "EAD":        "bg-[#F0F4EF] text-forest border-[#C8D4C4]",
-  "Green Card": "bg-yellow-50 text-yellow-800 border-yellow-200",
-  "General":    "bg-slate-50 text-slate-700 border-slate-200",
+  "H-1B":       "bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-900/30 dark:text-indigo-300 dark:border-indigo-700/40",
+  "F-1":        "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-700/40",
+  "EAD":        "bg-tinted-white text-forest border-border-strong dark:bg-forest/20 dark:text-lime dark:border-forest/40",
+  "Green Card": "bg-yellow-50 text-yellow-800 border-yellow-200 dark:bg-yellow-900/30 dark:text-yellow-300 dark:border-yellow-700/40",
+  "General":    "bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-800/30 dark:text-slate-300 dark:border-slate-700/40",
 };
 
 export default function BlogPage() {
@@ -97,7 +97,7 @@ export default function BlogPage() {
               href={`/blog/${BLOG_POSTS[0].slug}`}
               className="block bg-card-bg border border-border-default rounded-2xl hover:border-forest hover:shadow-card-hover transition-all duration-300 group md:flex md:gap-8 overflow-hidden"
             >
-              <div className="md:w-2/5 aspect-video md:aspect-auto bg-[#F0F4EF] flex items-center justify-center flex-shrink-0">
+              <div className="md:w-2/5 aspect-video md:aspect-auto bg-page-alt2 flex items-center justify-center flex-shrink-0">
                 <div className="text-center">
                   <div className="font-mono text-forest text-4xl font-bold">H-1B</div>
                   <div className="text-forest/70 text-sm mt-1 font-medium tracking-wide uppercase">Renewal Guide</div>
@@ -140,7 +140,7 @@ export default function BlogPage() {
                 className="bg-card-bg border border-border-default rounded-2xl hover:border-forest hover:shadow-card-hover transition-all duration-300 group flex flex-col overflow-hidden"
               >
                 {/* Visual */}
-                <div className="aspect-[16/9] bg-[#FAF9F7] border-b border-border-subtle flex items-center justify-center flex-shrink-0">
+                <div className="aspect-[16/9] bg-page-alt border-b border-border-subtle flex items-center justify-center flex-shrink-0">
                   <div className="font-mono text-text-muted text-xl font-bold tracking-widest uppercase">
                     {post.category}
                   </div>
