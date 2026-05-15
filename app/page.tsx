@@ -3,6 +3,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { CheckCircle2, Clock, Bell, Users, Shield, Zap, ChevronRight, AlertTriangle, Plane, Scale, ArrowRight, Star, X } from "lucide-react";
 import { EADCalculator } from "@/components/EADCalculator";
 
@@ -64,6 +65,7 @@ const PLANS = [
 export default function HomePage() {
   return (
     <div className="min-h-screen" style={{ background: "var(--bg-page)" }}>
+      <AnnouncementBanner />
       <Navbar />
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
