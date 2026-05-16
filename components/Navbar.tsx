@@ -9,10 +9,10 @@ import { createClient } from "@/lib/supabase/client";
 import type { User } from "@supabase/supabase-js";
 
 const NAV_LINKS = [
+  { href: "/how-to-use", label: "How it works" },
   { href: "/pricing",    label: "Pricing" },
-  { href: "/attorneys",  label: "Attorneys" },
+  { href: "/attorneys",  label: "For Attorneys" },
   { href: "/blog",       label: "Blog" },
-  { href: "/how-to-use", label: "Guide" },
 ];
 
 export function Navbar() {

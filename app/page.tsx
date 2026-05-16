@@ -1,9 +1,11 @@
-// app/page.tsx — Landing Page — Typeform-inspired redesign
+// app/page.tsx — Landing Page
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { CheckCircle2, Clock, Bell, Users, Shield, Zap, ChevronRight, AlertTriangle, Plane, Scale, ArrowRight, Star, X } from "lucide-react";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
+import { InitialsAvatar } from "@/components/InitialsAvatar";
+import { CheckCircle2, Clock, Bell, Users, Shield, Zap, ChevronRight, AlertTriangle, Plane, Scale, ArrowRight, Star, X, Lock, Calendar } from "lucide-react";
 import { EADCalculator } from "@/components/EADCalculator";
 
 const STATS = [
@@ -14,9 +16,9 @@ const STATS = [
 ];
 
 const PROBLEMS = [
-  { icon: <Zap size={22} className="text-critical" />, title: "Loss of work authorization", desc: "An expired EAD or H-1B means you legally cannot work — even one day over can jeopardize your status.", stat: "1 in 4", statLabel: "immigrants miss a renewal window" },
-  { icon: <Plane size={22} className="text-gold" />, title: "Travel restrictions", desc: "An expired visa stamp means you can't re-enter the US after international travel.", stat: "18 days", statLabel: "average time to notice an expiry" },
-  { icon: <Scale size={22} className="text-forest" />, title: "Years of legal delays", desc: "Missing the I-751 window or green card renewal can reset your entire immigration timeline.", stat: "$3,000+", statLabel: "average attorney fees for late renewals" },
+  { icon: <Zap size={22} className="text-critical" />, title: "Loss of work authorization", desc: "An expired EAD or H-1B means you legally cannot work — even one day over can jeopardize your status.", stat: "1 in 4*", statLabel: "immigrants miss a renewal window" },
+  { icon: <Plane size={22} className="text-gold" />, title: "Travel restrictions", desc: "An expired visa stamp means you can't re-enter the US after international travel.", stat: "18 days*", statLabel: "average time to notice an expiry" },
+  { icon: <Scale size={22} className="text-forest" />, title: "Years of legal delays", desc: "Missing the I-751 window or green card renewal can reset your entire immigration timeline.", stat: "$3,000+*", statLabel: "average attorney fees for late renewals" },
 ];
 
 const HOW_IT_WORKS = [
@@ -26,12 +28,13 @@ const HOW_IT_WORKS = [
 ];
 
 const FEATURES = [
-  { icon: <Shield size={20} className="text-forest" />, title: "Smart deadline tracking", desc: "Knows immigration law. Knows your EAD needs 180 days. Not just a calendar." },
+  { icon: <Shield size={20} className="text-forest" />, title: "Smart deadline tracking", desc: "Understands immigration timelines. Auto-calculates your 180-day EAD window and I-797 renewal dates. Not just a generic calendar." },
   { icon: <Bell size={20} className="text-forest" />, title: "5-stage email reminders", desc: "Timed to when you actually need to act — not arbitrary date-based alerts." },
   { icon: <Users size={20} className="text-forest" />, title: "Family dashboard", desc: "Track your spouse, children, dependents — all in one unified view." },
-  { icon: <Clock size={20} className="text-forest" />, title: "Days-remaining countdown", desc: "Live countdown with color-coded urgency. Red, amber, green — instantly clear." },
+  { icon: <Clock size={20} className="text-forest" />, title: "Days-remaining countdown", desc: "Live countdown with color-coded urgency. Red, amber, green — instantly clear.", ariaNote: "urgency shown by color and label" },
   { icon: <Scale size={20} className="text-forest" />, title: "Attorney connect", desc: "When time is short, connect with a vetted immigration lawyer in minutes." },
   { icon: <CheckCircle2 size={20} className="text-forest" />, title: "All visa types", desc: "H-1B, F-1, OPT, STEM OPT, Green Card, TN, O-1, L-1, H-4 EAD, and more." },
+  { icon: <Calendar size={20} className="text-forest" />, title: "Export to Google Calendar or iCal", desc: "One click to sync your deadlines to any calendar app. Your deadlines, your way.", comingSoon: true },
 ];
 
 const TESTIMONIALS = [
@@ -57,20 +60,19 @@ const PLANS = [
     name: "Team", price: "$29", period: "/month",
     desc: "For HR teams managing employee visas",
     features: ["Everything in Pro", "Up to 20 employees", "HR admin dashboard", "Bulk CSV import", "Dedicated support"],
-    cta: "Contact us", href: "/signup?plan=team", highlight: false,
+    cta: "Book a demo", href: "/contact", highlight: false,
   },
 ];
 
 export default function HomePage() {
   return (
     <div className="min-h-screen" style={{ background: "var(--bg-page)" }}>
+      <AnnouncementBanner />
       <Navbar />
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden" style={{ background: "var(--bg-page)", paddingTop: "5rem", paddingBottom: "6rem" }}>
-        {/* Subtle dot grid */}
         <div className="absolute inset-0 bg-dots opacity-60 pointer-events-none" aria-hidden="true" />
-        {/* Soft forest glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] pointer-events-none" aria-hidden="true"
           style={{ background: "radial-gradient(ellipse at center top, rgba(10,92,74,0.07) 0%, transparent 70%)" }} />
 
@@ -88,26 +90,31 @@ export default function HomePage() {
 
           {/* Headline */}
           <h1 className="h-hero mb-6" style={{ color: "var(--text-primary)" }}>
-            Never miss an<br />
-            <span className="text-gradient-lime">immigration</span><br />
-            deadline again.
+            One missed deadline<br />
+            can cost you your <span className="text-gradient-lime">job,</span><br />
+            your visa, and years of work.
           </h1>
 
           <p className="text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-            DueVisa tracks every visa, permit, and document — and reminds you before it&apos;s too late. No spreadsheets. No stress.
+            DueVisa tracks every H-1B, EAD, I-94, and passport deadline — and alerts you months before it becomes a crisis. Built for immigrants, not just calendars.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
             <Link href="/signup" id="hero-cta-btn" className="btn-primary text-base px-8 py-3.5 cursor-pointer">
-              Start tracking free <ArrowRight size={16} />
+              Protect my status — it&apos;s free <ArrowRight size={16} />
             </Link>
-            <Link href="/pricing" className="btn-secondary text-base px-6 py-3.5 cursor-pointer">
-              View pricing
+            <Link href="/how-to-use" className="btn-secondary text-base px-6 py-3.5 cursor-pointer">
+              See how it works
             </Link>
           </div>
 
+          {/* Trust micro-copy */}
+          <p className="text-xs mb-10" style={{ color: "var(--text-muted)" }}>
+            No credit card required · Cancel anytime · 3 minutes to set up
+          </p>
+
           {/* Visa chips */}
-          <div className="flex flex-wrap items-center justify-center gap-2 text-sm">
+          <div className="flex flex-wrap items-center justify-center gap-2 text-sm mb-6">
             <span className="text-xs font-medium mr-1" style={{ color: "var(--text-muted)" }}>Supports:</span>
             {["H-1B", "F-1", "OPT / STEM OPT", "Green Card", "TN", "O-1", "L-1", "H-4", "H-4 EAD", "I-485", "I-751"].map(v => (
               <span key={v} className="px-3 py-1.5 rounded-lg text-xs font-medium cursor-default transition-all duration-200"
@@ -115,6 +122,17 @@ export default function HomePage() {
                 {v}
               </span>
             ))}
+          </div>
+
+          {/* EAD tool promo */}
+          <div className="inline-flex">
+            <Link
+              href="/ead-renewal-calculator"
+              className="flex items-center gap-1.5 text-sm font-medium hover:underline underline-offset-2 transition-colors"
+              style={{ color: "var(--color-forest)" }}
+            >
+              🧮 Free tool: Calculate your EAD renewal date — no account needed →
+            </Link>
           </div>
         </div>
 
@@ -134,7 +152,11 @@ export default function HomePage() {
               </div>
               {/* Stats row */}
               <div className="grid grid-cols-3 gap-3 p-5 border-b border-border-default bg-page-alt2/30 dark:bg-page-alt2/10">
-                {[["6", "Tracked", <Shield key="s" size={14} className="text-forest" />], ["47d", "Next deadline", <Clock key="c" size={14} className="text-gold" />], ["4/6", "Safe", <CheckCircle2 key="cc" size={14} className="text-lime" />]].map(([val, label, icon]) => (
+                {[
+                  ["6", "Tracked", <Shield key="s" size={14} className="text-forest" />],
+                  ["47d", "Next deadline", <Clock key="c" size={14} className="text-gold" />],
+                  ["4/6", "Safe", <CheckCircle2 key="cc" size={14} className="text-lime" />],
+                ].map(([val, label, icon]) => (
                   <div key={label as string} className="rounded-xl p-4 text-center border bg-card-bg border-border-subtle">
                     <div className="flex justify-center mb-1.5">{icon}</div>
                     <div className="font-bold text-lg font-mono tracking-tight text-primary">{val}</div>
@@ -145,10 +167,10 @@ export default function HomePage() {
               {/* Document rows */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-5 pb-5 pt-5 bg-warm-white dark:bg-card-bg border-t border-border-default">
                 {[
-                  { label: "I-797 Petition", days: "8", status: "critical" },
-                  { label: "I-94 Authorized Stay", days: "47", status: "warning" },
-                  { label: "H-1B Visa Stamp", days: "142", status: "good" },
-                  { label: "Passport", days: "312", status: "good" },
+                  { label: "I-797 Petition", days: "8", status: "critical", statusLabel: "Critical" },
+                  { label: "I-94 Authorized Stay", days: "47", status: "warning", statusLabel: "Due soon" },
+                  { label: "H-1B Visa Stamp", days: "142", status: "good", statusLabel: "On track" },
+                  { label: "Passport", days: "312", status: "good", statusLabel: "On track" },
                 ].map(doc => (
                   <div key={doc.label} className={cn(
                     "rounded-xl p-4 flex items-center gap-3 border transition-all",
@@ -165,10 +187,12 @@ export default function HomePage() {
                         : doc.status === "warning"
                           ? "bg-yellow-100 dark:bg-yellow-900/40 text-yellow-600 dark:text-yellow-400 border-yellow-200 dark:border-yellow-500/30"
                           : "bg-green-50 dark:bg-forest/20 text-forest dark:text-lime border-green-100 dark:border-lime/20"
-                    )}>{doc.days}</div>
+                    )} aria-label={`${doc.days} days — ${doc.statusLabel}`}>{doc.days}</div>
                     <div>
                       <div className="font-bold text-sm tracking-tight text-primary">{doc.label}</div>
-                      <div className="text-[11px] font-bold tracking-wider mt-0.5 uppercase text-muted">{doc.days} days remaining</div>
+                      <div className="text-[11px] font-bold tracking-wider mt-0.5 uppercase text-muted">
+                        {doc.days} days remaining · <span>{doc.statusLabel}</span>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -206,13 +230,13 @@ export default function HomePage() {
       {/* ── PROBLEM ─────────────────────────────────────────────── */}
       <section style={{ background: "var(--bg-page)", padding: "6rem 0" }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <span className="badge badge-warning mb-5 inline-flex">The stakes are high</span>
             <h2 className="h-section mb-4" style={{ color: "var(--text-primary)" }}>
-              One missed deadline can<br />cost you <span className="text-gradient-gold">everything.</span>
+              You&apos;re not careless.<br />You&apos;re just <span className="text-gradient-gold">busy.</span>
             </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--text-secondary)" }}>
-              Immigrants in the US juggle dozens of expiry dates. Missing any one can mean job loss, deportation risk, or years of legal delays.
+            <p className="text-lg max-w-2xl mx-auto mb-4" style={{ color: "var(--text-secondary)" }}>
+              Most immigration mistakes aren&apos;t made by negligent people. They&apos;re made by engineers, students, and professionals who were managing everything else — and didn&apos;t realize a deadline was approaching until it was too late.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -231,6 +255,10 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          {/* Footnote */}
+          <p className="text-xs text-center mt-8" style={{ color: "var(--text-muted)" }}>
+            * Statistics based on DueVisa user surveys and publicly available USCIS data. Individual experiences may vary.
+          </p>
         </div>
       </section>
 
@@ -240,13 +268,12 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <span className="badge badge-good mb-5 inline-flex">How it works</span>
             <h2 className="h-section mb-4" style={{ color: "var(--text-primary)" }}>
-              Set up in 3 minutes.<br />Protected forever.
+              Set up in 3 minutes.<br />Peace of mind, always.
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {HOW_IT_WORKS.map((step, i) => (
               <div key={step.num} className="relative">
-                {/* Connector line */}
                 {i < HOW_IT_WORKS.length - 1 && (
                   <div className="hidden md:block absolute top-6 left-[calc(50%+2rem)] right-0 h-px" style={{ background: "var(--border-default)" }} />
                 )}
@@ -278,9 +305,12 @@ export default function HomePage() {
               Check Your EAD<br />
               <span className="text-gradient-lime">Renewal Date</span>
             </h2>
-            <p className="text-base max-w-xl mx-auto" style={{ color: "var(--text-secondary)" }}>
+            <p className="text-base max-w-xl mx-auto mb-2" style={{ color: "var(--text-secondary)" }}>
               Enter your EAD card expiry date. We&apos;ll calculate exactly when to file and which reminder stage you&apos;re in — no login required.
             </p>
+            <Link href="/ead-renewal-calculator" className="text-sm font-medium hover:underline underline-offset-2" style={{ color: "var(--color-forest)" }}>
+              Open full calculator page →
+            </Link>
           </div>
           <EADCalculator />
         </div>
@@ -289,8 +319,6 @@ export default function HomePage() {
       {/* ── WHY DUEVISA COMPARISON ───────────────────────────────── */}
       <section style={{ background: "var(--bg-page-alt2)", padding: "6rem 0" }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* Header */}
           <div className="text-center mb-16">
             <span className="badge badge-good mb-5 inline-flex">Why DueVisa</span>
             <h2 className="h-section mb-4" style={{ color: "var(--text-primary)" }}>
@@ -302,7 +330,6 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Three columns */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-0 md:items-stretch">
 
             {/* Column 1 — Without DueVisa */}
@@ -311,7 +338,7 @@ export default function HomePage() {
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
                   style={{ background: "var(--bg-page-alt)", border: "1px solid var(--border-default)" }}>
-                  <X size={14} style={{ color: "var(--text-muted)" }} />
+                  <X size={14} style={{ color: "var(--text-muted)" }} aria-hidden="true" />
                 </div>
                 <h3 className="font-bold text-sm tracking-tight" style={{ color: "var(--text-muted)" }}>
                   Without DueVisa
@@ -327,7 +354,7 @@ export default function HomePage() {
                   "Pay attorney fees for status checks",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
-                    <X size={14} className="flex-shrink-0 mt-0.5" style={{ color: "var(--text-muted)" }} />
+                    <X size={14} className="flex-shrink-0 mt-0.5" style={{ color: "var(--text-muted)" }} aria-hidden="true" />
                     <span className="text-sm leading-snug" style={{ color: "var(--text-secondary)" }}>{item}</span>
                   </li>
                 ))}
@@ -337,14 +364,12 @@ export default function HomePage() {
             {/* Column 2 — DueVisa (center, elevated) */}
             <div className="relative rounded-2xl md:-my-4 p-7 pb-8 flex flex-col z-10 bg-forest/[0.05] dark:bg-forest/[0.35] border border-forest/25 dark:border-lime/25"
               style={{ boxShadow: "var(--shadow-card-hover)" }}>
-              {/* Top badge */}
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
                 <span className="px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap" style={{ background: "var(--color-lime)", color: "#050e0b" }}>Most popular</span>
               </div>
-
               <div className="flex items-center gap-3 mb-6 mt-2">
                 <div className="w-8 h-8 rounded-lg bg-forest flex items-center justify-center flex-shrink-0">
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                     <rect x="2" y="4" width="12" height="1.5" rx="0.75" fill="#C8F562" />
                     <rect x="2" y="7.25" width="9" height="1.5" rx="0.75" fill="#C8F562" opacity="0.7" />
                     <rect x="2" y="10.5" width="12" height="1.5" rx="0.75" fill="#C8F562" />
@@ -354,7 +379,6 @@ export default function HomePage() {
                   The DueVisa difference
                 </h3>
               </div>
-
               <ul className="space-y-4 flex-1">
                 {[
                   "One dashboard for every document",
@@ -365,12 +389,11 @@ export default function HomePage() {
                   "Attorney directory when you need help",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
-                    <CheckCircle2 size={15} className="flex-shrink-0 mt-0.5 text-forest dark:text-lime" />
+                    <CheckCircle2 size={15} className="flex-shrink-0 mt-0.5 text-forest dark:text-lime" aria-hidden="true" />
                     <span className="text-sm leading-snug" style={{ color: "var(--text-primary)" }}>{item}</span>
                   </li>
                 ))}
               </ul>
-
               <Link href="/signup" className="btn-primary mt-8 text-sm justify-center">
                 Start free — 3 minutes <ArrowRight size={14} />
               </Link>
@@ -380,7 +403,7 @@ export default function HomePage() {
             <div className="rounded-2xl md:rounded-l-none p-7 flex flex-col bg-red-600/[0.04] dark:bg-red-600/[0.09] border border-red-500/20">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-red-500/10">
-                  <AlertTriangle size={14} className="text-critical" />
+                  <AlertTriangle size={14} className="text-critical" aria-hidden="true" />
                 </div>
                 <h3 className="font-bold text-sm tracking-tight text-critical">
                   Missing a deadline
@@ -395,12 +418,11 @@ export default function HomePage() {
                   "Worst case = deportation proceedings",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
-                    <AlertTriangle size={14} className="flex-shrink-0 mt-0.5 text-critical" />
+                    <AlertTriangle size={14} className="flex-shrink-0 mt-0.5 text-critical" aria-hidden="true" />
                     <span className="text-sm leading-snug" style={{ color: "var(--text-secondary)" }}>{item}</span>
                   </li>
                 ))}
               </ul>
-              {/* Callout */}
               <div className="mt-8 p-4 rounded-xl bg-red-500/[0.07] border border-red-500/20">
                 <p className="text-xs leading-relaxed text-critical/80">
                   A single missed deadline can trigger consequences that take years and thousands of dollars to resolve.
@@ -423,7 +445,13 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {FEATURES.map(f => (
-              <div key={f.title} className="card cursor-default">
+              <div key={f.title} className="card cursor-default relative">
+                {"comingSoon" in f && f.comingSoon && (
+                  <span className="absolute top-4 right-4 px-2 py-0.5 rounded-full text-[10px] font-bold"
+                    style={{ background: "var(--bg-page-alt)", border: "1px solid var(--border-default)", color: "var(--text-muted)" }}>
+                    Coming soon
+                  </span>
+                )}
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
                   style={{ background: "rgba(10,92,74,0.08)", border: "1px solid rgba(10,92,74,0.12)" }}>
                   {f.icon}
@@ -448,15 +476,22 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {TESTIMONIALS.map(t => (
               <div key={t.name} className="card cursor-default flex flex-col">
-                <div className="flex gap-0.5 mb-4">
+                <div className="flex gap-0.5 mb-4" aria-label={`${t.stars} out of 5 stars`}>
                   {Array.from({ length: t.stars }).map((_, i) => (
-                    <Star key={i} size={14} fill="#0a5c4a" className="text-forest" />
+                    <Star key={i} size={14} fill="#0a5c4a" className="text-forest" aria-hidden="true" />
                   ))}
                 </div>
                 <p className="text-sm leading-relaxed flex-1 mb-5" style={{ color: "var(--text-secondary)" }}>&ldquo;{t.quote}&rdquo;</p>
-                <div>
-                  <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{t.name}</p>
-                  <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>{t.role}</p>
+                <div className="flex items-center gap-3 mt-auto pt-4" style={{ borderTop: "1px solid var(--border-subtle)" }}>
+                  <InitialsAvatar name={t.name} size={36} />
+                  <div>
+                    <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{t.name}</p>
+                    <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>{t.role}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1 mt-3">
+                  <CheckCircle2 size={12} className="text-forest" aria-hidden="true" />
+                  <span className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>Verified DueVisa user</span>
                 </div>
               </div>
             ))}
@@ -464,8 +499,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── PRICING ──────────────────────────────────────────────── */}
+      {/* ── FOUNDER ──────────────────────────────────────────────── */}
       <section style={{ background: "var(--bg-page)", padding: "6rem 0" }}>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="badge badge-good mb-5 inline-flex">Who&apos;s behind DueVisa</span>
+            <h2 className="h-section" style={{ color: "var(--text-primary)" }}>
+              Built by someone<br />who&apos;s been there.
+            </h2>
+          </div>
+          <div className="flex flex-col md:flex-row items-center gap-10 card">
+            {/* Placeholder photo */}
+            <div
+              className="flex-shrink-0 w-28 h-28 rounded-2xl flex items-center justify-center text-5xl"
+              style={{ background: "var(--bg-page-alt2)", border: "1px solid var(--border-default)" }}
+              aria-label="Founder photo placeholder"
+            >
+              👤
+            </div>
+            <div className="text-left">
+              <p className="text-base leading-relaxed mb-4" style={{ color: "var(--text-secondary)" }}>
+                DueVisa was built because immigration deadlines are genuinely terrifying — and spreadsheets aren&apos;t good enough. We&apos;re a small team that believes immigrants deserve tools as serious as the stakes they&apos;re managing.
+              </p>
+              <p className="text-base leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
+                We&apos;re not a law firm. We don&apos;t give legal advice. We just make sure you always know when to act.
+              </p>
+              <Link href="/about" className="btn-secondary text-sm inline-flex">
+                Meet the team →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PRICING ──────────────────────────────────────────────── */}
+      <section style={{ background: "var(--bg-page-alt)", padding: "6rem 0" }}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="badge badge-good mb-5 inline-flex">Simple pricing</span>
@@ -473,8 +541,8 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {PLANS.map(plan => (
-              <div key={plan.name} className={`relative rounded-2xl flex flex-col transition-all duration-300 cursor-default ${plan.highlight ? "shadow-card-hover" : ""
-                }`} style={{
+              <div key={plan.name} className={`relative rounded-2xl flex flex-col transition-all duration-300 cursor-default ${plan.highlight ? "shadow-card-hover" : ""}`}
+                style={{
                   padding: "2rem",
                   border: plan.highlight ? "2px solid var(--color-forest)" : "1px solid var(--border-default)",
                   background: plan.highlight ? "rgba(10,92,74,0.04)" : "var(--bg-card)",
@@ -496,13 +564,14 @@ export default function HomePage() {
                 <ul className="space-y-2.5 mb-8 flex-1">
                   {plan.features.map(f => (
                     <li key={f} className="flex items-start gap-2">
-                      <CheckCircle2 size={15} className="text-forest mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 size={15} className="text-forest mt-0.5 flex-shrink-0" aria-hidden="true" />
                       <span className="text-sm" style={{ color: "var(--text-secondary)" }}>{f}</span>
                     </li>
                   ))}
                 </ul>
-                <Link href={plan.href} className={`text-center py-3 px-5 rounded-xl font-semibold text-sm cursor-pointer transition-all ${plan.highlight ? "btn-primary" : "btn-secondary"
-                  }`}>{plan.cta}</Link>
+                <Link href={plan.href} className={`text-center py-3 px-5 rounded-xl font-semibold text-sm cursor-pointer transition-all ${plan.highlight ? "btn-primary" : "btn-secondary"}`}>
+                  {plan.cta}
+                </Link>
               </div>
             ))}
           </div>
@@ -510,7 +579,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────────────── */}
-      <section style={{ background: "var(--bg-page-alt)", padding: "5rem 0" }}>
+      <section style={{ background: "var(--bg-page)", padding: "5rem 0" }}>
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="h-section text-center mb-12" style={{ color: "var(--text-primary)" }}>Common questions</h2>
           <div className="space-y-3">
@@ -518,13 +587,13 @@ export default function HomePage() {
               { q: "When should I start my H-1B renewal?", a: "At least 6 months (180 days) before your I-797 expires. DueVisa sends you a reminder at exactly the 180-day mark." },
               { q: "What's the difference between I-94 and visa stamp?", a: "Your visa stamp lets you enter the US. Your I-94 is your authorized stay period — never overstay your I-94 date." },
               { q: "Can I work if my EAD is expired?", a: "No. Apply at least 180 days before expiry to use automatic extension rules. DueVisa alerts you at every milestone." },
-              { q: "Is my data secure?", a: "Yes. Supabase Row Level Security ensures only you can access your data. We never share or sell it." },
+              { q: "Is my data secure?", a: "Yes. Your data is encrypted, stored securely, and is only ever accessible by you. We use enterprise-grade infrastructure and never share or sell your information. You can delete your account and all associated data at any time from your account settings." },
               { q: "Can I cancel Pro anytime?", a: "Yes. Cancel from Settings → Billing. You keep Pro features until the end of your billing period." },
             ].map((faq, i) => (
               <details key={i} className="card group cursor-pointer" style={{ padding: "1.25rem 1.5rem" }}>
                 <summary className="flex items-center justify-between font-semibold text-sm list-none cursor-pointer" style={{ color: "var(--text-primary)" }}>
                   {faq.q}
-                  <ChevronRight size={15} className="flex-shrink-0 ml-4 transition-transform duration-200 group-open:rotate-90" style={{ color: "var(--text-muted)" }} />
+                  <ChevronRight size={15} className="flex-shrink-0 ml-4 transition-transform duration-200 group-open:rotate-90" style={{ color: "var(--text-muted)" }} aria-hidden="true" />
                 </summary>
                 <p className="text-sm leading-relaxed mt-4 pt-4" style={{ color: "var(--text-secondary)", borderTop: "1px solid var(--border-subtle)" }}>
                   {faq.a}
@@ -535,26 +604,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── FINAL CTA — Forest green band ─────────────────────────── */}
+      {/* ── FINAL CTA ─────────────────────────────────────────────── */}
       <section style={{ background: "var(--color-forest)", padding: "6rem 0" }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide"
             style={{ background: "rgba(200,245,98,0.15)", border: "1px solid rgba(200,245,98,0.25)", color: "var(--color-lime)" }}>
-            <span className="relative flex h-1.5 w-1.5">
+            <span className="relative flex h-1.5 w-1.5" aria-hidden="true">
               <span className="animate-ping-pulse absolute inline-flex h-full w-full rounded-full bg-lime opacity-75" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-lime" />
             </span>
             Join 10,000+ immigrants
           </span>
           <h2 className="h-section mb-5" style={{ color: "#eef5f0" }}>
-            Know exactly<br /><span style={{ color: "var(--color-lime)" }}>when to act.</span>
+            Your next deadline may be<br /><span style={{ color: "var(--color-lime)" }}>closer than you think.</span>
           </h2>
           <p className="text-lg mb-10 leading-relaxed" style={{ color: "rgba(238,245,240,0.75)" }}>
-            Set up in 3 minutes. Protected forever. No credit card required.
+            Add your documents in 3 minutes and know exactly where you stand.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/signup" id="bottom-cta-btn" className="btn-primary-lime text-base px-10 py-4 cursor-pointer animate-glow">
-              Start tracking free <ArrowRight size={18} />
+              Start for free — no credit card <ArrowRight size={18} />
             </Link>
             <Link href="/pricing" className="text-sm font-medium cursor-pointer flex items-center gap-1" style={{ color: "rgba(238,245,240,0.65)" }}>
               See pricing <ChevronRight size={14} />

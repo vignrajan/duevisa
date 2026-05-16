@@ -5,8 +5,10 @@ import { Footer } from "@/components/Footer";
 import { Clock, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Immigration Blog",
-  description: "Expert guides on H-1B renewal, EAD timelines, green card renewal, F-1 OPT deadlines, and more. Stay informed about US immigration.",
+  title: "Immigration Blog — Visa Deadlines, Renewal Guides & Tips",
+  description: "Expert guides on H-1B renewal, EAD timelines, green card renewal, F-1 OPT deadlines, and more. Written in plain English.",
+  keywords: ["H-1B renewal guide", "EAD renewal 2026", "immigration deadline tips", "F-1 OPT tracker", "green card renewal"],
+  alternates: { canonical: "https://duevisa.com/blog" },
 };
 
 const BLOG_POSTS = [
@@ -128,6 +130,17 @@ export default function BlogPage() {
                   </div>
                 </div>
               </div>
+            </Link>
+          </div>
+
+          {/* CTA Banner */}
+          <div className="mb-10 rounded-2xl px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-6" style={{ background:"var(--color-forest)" }}>
+            <div>
+              <p className="font-bold text-lg mb-1" style={{ color:"#eef5f0" }}>Never miss a deadline again.</p>
+              <p className="text-sm" style={{ color:"rgba(238,245,240,0.7)" }}>Track all your visas, EADs, and immigration documents in one place. Free for up to 3 documents.</p>
+            </div>
+            <Link href="/signup" className="btn-primary-lime text-sm px-6 py-3 cursor-pointer whitespace-nowrap flex-shrink-0">
+              Start free →
             </Link>
           </div>
 
