@@ -6,6 +6,33 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 
+const RELATED_TOOLS: Record<string, { label: string; href: string; desc: string }[]> = {
+  "h1b-renewal-timeline": [
+    { label: "H-1B Deadline Tracker", href: "/h1b-renewal-tracker", desc: "Track your H-1B renewal countdown automatically." },
+    { label: "Start tracking free", href: "/signup", desc: "Add your I-797 and get reminders at 180, 90, 60, 30, and 7 days." },
+  ],
+  "i94-vs-visa-stamp": [
+    { label: "H-1B Deadline Tracker", href: "/h1b-renewal-tracker", desc: "Track both your I-94 and visa stamp with automatic reminders." },
+    { label: "Start tracking free", href: "/signup", desc: "Never confuse your deadlines again — DueVisa tracks both." },
+  ],
+  "ead-renewal-2026": [
+    { label: "EAD Renewal Calculator", href: "/ead-renewal-calculator", desc: "Calculate your exact EAD filing window in seconds." },
+    { label: "EAD Renewal Reminder", href: "/ead-reminder", desc: "Get reminders 180 days before your EAD expires." },
+  ],
+  "f1-student-immigration-checklist": [
+    { label: "F-1 OPT Tracker", href: "/f1-opt-tracker", desc: "Track your OPT EAD, STEM OPT, and I-20 deadlines automatically." },
+    { label: "Start tracking free", href: "/signup", desc: "All 6 F-1 documents, pre-configured with the right lead times." },
+  ],
+  "what-happens-if-you-overstay": [
+    { label: "H-1B Deadline Tracker", href: "/h1b-renewal-tracker", desc: "Track your I-94 authorized stay and never overstay again." },
+    { label: "EAD Renewal Reminder", href: "/ead-reminder", desc: "Automatic reminders before your EAD expires." },
+  ],
+  "green-card-renewal-guide": [
+    { label: "Green Card Renewal Tracker", href: "/green-card-renewal", desc: "Track your I-551 expiry and I-751 filing window automatically." },
+    { label: "Start tracking free", href: "/signup", desc: "DueVisa sends your first green card reminder 180 days out." },
+  ],
+};
+
 // Blog post content
 const POSTS: Record<string, {
   title: string;
@@ -583,8 +610,29 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             })}
           </div>
 
+          {/* Related tools */}
+          {RELATED_TOOLS[params.slug] && (
+            <div className="mt-12 space-y-3">
+              <p className="text-xs font-bold uppercase tracking-widest" style={{ color:"var(--text-muted)" }}>Related tools</p>
+              {RELATED_TOOLS[params.slug].map((tool) => (
+                <Link
+                  key={tool.href}
+                  href={tool.href}
+                  className="flex items-center justify-between p-4 rounded-xl border transition-all hover:border-forest group"
+                  style={{ background:"var(--bg-card)", borderColor:"var(--border-default)" }}
+                >
+                  <div>
+                    <p className="font-semibold text-sm group-hover:text-forest transition-colors" style={{ color:"var(--text-primary)" }}>{tool.label}</p>
+                    <p className="text-xs mt-0.5" style={{ color:"var(--text-secondary)" }}>{tool.desc}</p>
+                  </div>
+                  <span className="text-forest opacity-0 group-hover:opacity-100 transition-opacity text-sm font-bold ml-4">→</span>
+                </Link>
+              ))}
+            </div>
+          )}
+
           {/* CTA */}
-          <div className="mt-16 p-8 rounded-2xl text-center" style={{ background: "var(--bg-page-alt2)", border: "1px solid var(--border-strong)" }}>
+          <div className="mt-12 p-8 rounded-2xl text-center" style={{ background: "var(--bg-page-alt2)", border: "1px solid var(--border-strong)" }}>
             <h3 className="font-syne font-bold text-primary text-xl mb-3">
               Track your deadlines automatically
             </h3>

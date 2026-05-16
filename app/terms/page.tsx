@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 import { FileText, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | DueVisa",
+  title: "Terms of Service — DueVisa User Agreement",
   description:
     "DueVisa terms of service. Understand your rights and responsibilities when using our immigration deadline tracking platform.",
   alternates: { canonical: "https://duevisa.com/terms" },

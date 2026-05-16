@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Shield, Info } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | DueVisa",
+  title: "Privacy Policy — How We Protect Your Data",
   description:
     "DueVisa privacy policy. Learn how we collect, use, and protect your immigration document data.",
   alternates: { canonical: "https://duevisa.com/privacy" },
