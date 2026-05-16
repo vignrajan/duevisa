@@ -30,20 +30,11 @@ export const metadata: Metadata = {
     title: "DueVisa — Know exactly when to act.",
     description:
       "Track every visa, permit, and immigration deadline. Get reminded at 180, 90, 60, 30, and 7 days before expiry.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "DueVisa — Immigration Deadline Tracker",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "DueVisa — Immigration Deadline Tracker",
     description: "Track every visa, permit, and immigration deadline.",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,
