@@ -17,13 +17,14 @@ export async function POST(request: Request) {
       .upsert({ email: email.toLowerCase().trim(), plan }, { onConflict: "email" });
 
     if (error) {
-      console.error("Waitlist insert error:", error);
-      return NextResponse.json({ error: "Failed to join waitlist" }, { status: 500 });
+      console.error("Waitlist insert error:", JSON.stringify(error));
+      return NextResponse.json({ error: error.message || "Failed to join waitlist" }, { status: 500 });
     }
 
     return NextResponse.json({ success: true });
   } catch (err) {
-    console.error("Waitlist error:", err);
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
+    const msg = err instanceof Error ? err.message : "Server error";
+    console.error("Waitlist error:", msg);
+    return NextResponse.json({ error: msg }, { status: 500 });
   }
 }
