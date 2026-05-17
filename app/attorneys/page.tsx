@@ -2,84 +2,24 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
-
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { MapPin, Phone, Star, ExternalLink } from "lucide-react";
+import { Scale, CheckCircle2, Mail } from "lucide-react";
 import { AttorneyLeadForm } from "./AttorneyLeadForm";
 
 export const metadata: Metadata = {
-  title: "Immigration Attorneys",
-  description: "Find vetted immigration attorneys by state. DueVisa connects immigrants with trusted legal professionals for visa renewals, green cards, and more.",
+  title: "Find an Immigration Attorney — DueVisa",
+  description: "Need an immigration attorney? Describe your situation and we'll help connect you with the right legal professional for your visa or green card case.",
+  alternates: { canonical: "https://duevisa.com/attorneys" },
 };
 
-const ATTORNEYS = [
-  {
-    name: "Sarah Chen, Esq.",
-    firm: "Chen Immigration Law",
-    state: "California",
-    city: "San Jose",
-    specialties: ["H-1B", "EB-2/EB-3", "Green Card", "O-1"],
-    rating: 4.9,
-    reviews: 142,
-    phone: "+1 (408) 555-0101",
-    website: "https://example.com",
-  },
-  {
-    name: "Michael Patel, JD",
-    firm: "Patel & Associates",
-    state: "New York",
-    city: "New York City",
-    specialties: ["F-1/OPT", "H-1B", "TN Visa", "I-485"],
-    rating: 4.8,
-    reviews: 98,
-    phone: "+1 (212) 555-0102",
-    website: "https://example.com",
-  },
-  {
-    name: "Priya Sharma, Esq.",
-    firm: "Sharma Immigration",
-    state: "Texas",
-    city: "Houston",
-    specialties: ["H-4 EAD", "Green Card", "L-1", "E-2"],
-    rating: 4.7,
-    reviews: 76,
-    phone: "+1 (713) 555-0103",
-    website: "https://example.com",
-  },
-  {
-    name: "David Nguyen, JD",
-    firm: "Nguyen Law Group",
-    state: "Washington",
-    city: "Seattle",
-    specialties: ["H-1B", "O-1", "EB-1", "Naturalization"],
-    rating: 4.9,
-    reviews: 121,
-    phone: "+1 (206) 555-0104",
-    website: "https://example.com",
-  },
-  {
-    name: "Lisa Park, Esq.",
-    firm: "Park Immigration Law",
-    state: "Illinois",
-    city: "Chicago",
-    specialties: ["TN Visa", "L-1", "H-1B", "Green Card"],
-    rating: 4.8,
-    reviews: 89,
-    phone: "+1 (312) 555-0105",
-    website: "https://example.com",
-  },
-  {
-    name: "Raj Kumar, JD",
-    firm: "Kumar & Partners",
-    state: "Massachusetts",
-    city: "Boston",
-    specialties: ["F-1/STEM OPT", "H-1B Cap", "EB-2 NIW", "I-140"],
-    rating: 4.9,
-    reviews: 163,
-    phone: "+1 (617) 555-0106",
-    website: "https://example.com",
-  },
+const WHEN_YOU_NEED = [
+  "Your H-1B renewal is denied or delayed",
+  "You've received an RFE (Request for Evidence)",
+  "You're considering an EB-1 or EB-2 NIW petition",
+  "You've overstayed or have a status gap",
+  "You're filing an I-485 adjustment of status",
+  "Your employer won't sponsor your green card",
 ];
 
 export default function AttorneysPage() {
@@ -88,99 +28,69 @@ export default function AttorneysPage() {
       <Navbar />
 
       <main className="pt-28 pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-16 relative">
-            <span className="badge badge-good mb-5 relative">Vetted Professionals</span>
-            <h1 className="h-section text-primary mb-5">
-              Immigration <span className="text-forest">Attorneys</span>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Hero */}
+          <div className="text-center mb-16">
+            <div className="w-14 h-14 rounded-2xl mx-auto mb-6 flex items-center justify-center" style={{ background: "var(--color-forest)" }}>
+              <Scale size={24} style={{ color: "var(--color-lime)" }} />
+            </div>
+            <span className="badge badge-good mb-4 inline-flex">Attorney Connect</span>
+            <h1 className="h-section mb-5" style={{ color: "var(--text-primary)" }}>
+              Need an immigration attorney?
             </h1>
-            <p className="text-lg max-w-2xl mx-auto leading-relaxed text-secondary">
-              Trusted immigration attorneys by state. Each attorney has been vetted
-              for expertise and client satisfaction.
+            <p className="text-lg leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+              DueVisa tracks your deadlines — but some situations require legal advice. Describe your case below and we&apos;ll help connect you with the right attorney within 24 hours.
             </p>
           </div>
 
-          {/* Attorney Lead Form */}
-          <div className="max-w-2xl mx-auto mb-16">
-            <div className="card !p-8 bg-page-alt2 border-border-default">
-              <h2 className="font-bold text-primary text-xl mb-2 tracking-tight">
-                Need immediate help?
-              </h2>
-              <p className="text-secondary text-sm mb-6 leading-relaxed">
-                Describe your situation and we&apos;ll connect you with the right attorney within 24 hours.
-              </p>
-              <AttorneyLeadForm />
+          {/* Lead form */}
+          <div className="mb-16 p-8 rounded-2xl" style={{ background: "var(--bg-card)", border: "1px solid var(--border-default)" }}>
+            <h2 className="font-bold text-xl mb-2" style={{ color: "var(--text-primary)" }}>
+              Tell us about your situation
+            </h2>
+            <p className="text-sm mb-6" style={{ color: "var(--text-secondary)" }}>
+              We&apos;ll respond within 24 hours. This is not legal advice — we&apos;re helping you find the right attorney.
+            </p>
+            <AttorneyLeadForm />
+          </div>
+
+          {/* When you need an attorney */}
+          <div className="mb-16">
+            <h2 className="font-bold text-xl mb-6" style={{ color: "var(--text-primary)" }}>
+              When you need an attorney (not just a tracker)
+            </h2>
+            <div className="space-y-3">
+              {WHEN_YOU_NEED.map((item) => (
+                <div key={item} className="flex items-start gap-3 p-4 rounded-xl" style={{ background: "var(--bg-page-alt)", border: "1px solid var(--border-default)" }}>
+                  <CheckCircle2 size={15} className="flex-shrink-0 mt-0.5" style={{ color: "var(--color-forest)" }} />
+                  <span className="text-sm" style={{ color: "var(--text-secondary)" }}>{item}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Attorney directory */}
-          <h2 className="font-bold text-primary text-2xl mb-6 tracking-tight">
-            Browse by State
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ATTORNEYS.map((attorney) => (
-              <div key={attorney.name} className="bg-card-bg border border-border-default rounded-2xl p-6 hover:shadow-card-hover hover:border-forest transition-all duration-300">
-                {/* Header */}
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <h3 className="font-bold text-primary text-base tracking-tight">{attorney.name}</h3>
-                    <p className="text-secondary text-sm font-medium">{attorney.firm}</p>
-                  </div>
-                  <div className="flex items-center gap-1 bg-yellow-50 border border-yellow-200 px-2.5 py-1 rounded-xl flex-shrink-0">
-                    <Star size={12} className="text-yellow-600 fill-yellow-600" />
-                    <span className="font-bold text-yellow-700 text-xs">{attorney.rating}</span>
-                  </div>
-                </div>
-
-                {/* Location */}
-                <div className="flex items-center gap-1.5 text-secondary text-xs mb-2 font-medium">
-                  <MapPin size={14} className="flex-shrink-0" />
-                  {attorney.city}, {attorney.state}
-                </div>
-
-                {/* Reviews */}
-                <p className="text-muted text-xs mb-4 font-semibold tracking-wide">{attorney.reviews} verified reviews</p>
-
-                {/* Specialties */}
-                <div className="flex flex-wrap gap-1.5 mb-5">
-                  {attorney.specialties.map((s) => (
-                    <span key={s} className="px-2.5 py-1 rounded-lg bg-card-elevated text-secondary border border-border-default text-[11px] font-semibold tracking-wide">
-                      {s}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Contact */}
-                <div className="flex items-center gap-2 pt-4 border-t border-border-subtle mt-auto">
-                  <a
-                    href={`tel:${attorney.phone}`}
-                    className="flex items-center gap-1.5 text-secondary hover:text-forest dark:hover:text-lime font-medium text-xs transition-colors duration-200 cursor-pointer"
-                  >
-                    <Phone size={14} />
-                    {attorney.phone}
-                  </a>
-                  <Link
-                    href="/attorneys/coming-soon"
-                    className="ml-auto flex items-center gap-1 text-forest text-xs hover:text-forest-dark transition-colors duration-200 cursor-pointer font-bold"
-                  >
-                    Visit site
-                    <ExternalLink size={12} />
-                  </Link>
-                </div>
-              </div>
-            ))}
+          {/* Are you an attorney? */}
+          <div className="p-8 rounded-2xl text-center" style={{ background: "var(--bg-page-alt)", border: "1px solid var(--border-default)" }}>
+            <h2 className="font-bold text-lg mb-2" style={{ color: "var(--text-primary)" }}>
+              Are you an immigration attorney?
+            </h2>
+            <p className="text-sm mb-6" style={{ color: "var(--text-secondary)" }}>
+              We&apos;re building a vetted attorney directory. Apply to be listed and connect with immigrants who need your expertise.
+            </p>
+            <a
+              href="mailto:attorneys@duevisa.com?subject=Attorney Directory Application"
+              className="btn-primary inline-flex items-center gap-2 text-sm px-6 py-3 cursor-pointer"
+            >
+              <Mail size={14} /> Apply to be listed →
+            </a>
           </div>
 
-          {/* CTA */}
-          <div className="text-center mt-20">
-            <div className="bg-page-alt border border-border-default rounded-2xl max-w-md mx-auto p-8">
-              <p className="text-primary font-bold text-lg mb-2 tracking-tight">Are you an immigration attorney?</p>
-              <p className="text-secondary text-sm mb-6 leading-relaxed">Join our verified directory and connect with immigrants who need your expertise.</p>
-              <Link href="/attorneys/coming-soon" className="btn-primary w-full justify-center">
-                Apply to be listed
-              </Link>
-            </div>
+          {/* Disclaimer */}
+          <div className="mt-8 p-4 rounded-xl" style={{ background: "var(--bg-page-alt)" }}>
+            <p className="text-xs text-center" style={{ color: "var(--text-muted)" }}>
+              DueVisa is not a law firm and does not provide legal advice. Attorney referrals are a courtesy service only. Always verify an attorney&apos;s credentials independently.
+            </p>
           </div>
         </div>
       </main>

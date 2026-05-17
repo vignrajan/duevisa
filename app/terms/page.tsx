@@ -175,8 +175,8 @@ const SECTIONS = [
     id: "governing-law",
     title: "14. Governing Law",
     body: [
-      "These Terms are governed by and construed in accordance with the laws of India, without regard to its conflict of law provisions.",
-      "Any dispute arising from or relating to these Terms or your use of DueVisa that cannot be resolved informally shall be submitted to binding arbitration in accordance with the Arbitration and Conciliation Act, 1996 (India).",
+      "These Terms are governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law provisions.",
+      "Any dispute arising from or relating to these Terms or your use of DueVisa that cannot be resolved informally shall be resolved through binding arbitration under the rules of the American Arbitration Association (AAA).",
       "Before initiating arbitration, you agree to first contact us at legal@duevisa.com and attempt to resolve the dispute informally for a period of 30 days.",
     ],
   },

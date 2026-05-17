@@ -492,7 +492,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-1 mt-3">
                   <CheckCircle2 size={12} className="text-forest" aria-hidden="true" />
-                  <span className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>Verified DueVisa user</span>
+                  <span className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>Early DueVisa user</span>
                 </div>
               </div>
             ))}
