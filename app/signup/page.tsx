@@ -87,14 +87,15 @@ export default function SignupPage() {
             Start tracking deadlines for free.
           </h2>
           <p className="text-lg opacity-80 leading-relaxed max-w-sm mb-12">
-            Join 10,000+ immigrants who trust DueVisa to keep them protected.
+            Track your H-1B, EAD, green card, and passport deadlines — all in one place.
           </p>
 
           <ul className="space-y-4">
             {[
+              "Free for up to 3 documents",
               "180-day advance warnings",
               "Family member tracking",
-              "Bank-level data security",
+              "Encrypted and private",
               "Cancel anytime"
             ].map(item => (
               <li key={item} className="flex items-center gap-3">
