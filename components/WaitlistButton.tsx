@@ -28,8 +28,8 @@ export function WaitlistButton({ plan = "pro", variant = "lime", label = "Join w
         body: JSON.stringify({ email, plan }),
       });
 
+      const data = await res.json() as { error?: string };
       if (!res.ok) {
-        const data = await res.json() as { error?: string };
         setError(data.error || "Something went wrong. Try again.");
         return;
       }
