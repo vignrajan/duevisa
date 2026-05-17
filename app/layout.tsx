@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://duevisa.com"),
+  metadataBase: new URL("https://duevisa.com"),
 
   title: {
     default: "DueVisa — Immigration Deadline Tracker",
