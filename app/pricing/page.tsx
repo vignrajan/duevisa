@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle2, Lock, X } from "lucide-react";
+import { CheckCircle2, Lock } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { WaitlistButton } from "@/components/WaitlistButton";
 
 export const metadata: Metadata = {
   title: "Pricing — Immigration Deadline Tracker",
@@ -140,9 +141,7 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/signup?plan=pro" className="btn-primary-lime text-center py-3 px-5 rounded-xl font-bold text-sm cursor-pointer transition-all">
-                  Start Pro
-                </Link>
+                <WaitlistButton plan="pro" variant="lime" label="Join waitlist for Pro →" />
               </div>
 
               {/* Team */}
