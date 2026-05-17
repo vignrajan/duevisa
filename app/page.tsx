@@ -84,7 +84,7 @@ export default function HomePage() {
                 <span className="animate-ping-pulse absolute inline-flex h-full w-full rounded-full bg-forest opacity-75" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-forest" />
               </span>
-              Trusted by 10,000+ immigrants across the US
+              Built for immigrants managing US visa deadlines
             </span>
           </div>
 
@@ -613,7 +613,7 @@ export default function HomePage() {
               <span className="animate-ping-pulse absolute inline-flex h-full w-full rounded-full bg-lime opacity-75" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-lime" />
             </span>
-            Join 10,000+ immigrants
+            Free to start. 3 minutes to set up.
           </span>
           <h2 className="h-section mb-5" style={{ color: "#eef5f0" }}>
             Your next deadline may be<br /><span style={{ color: "var(--color-lime)" }}>closer than you think.</span>
