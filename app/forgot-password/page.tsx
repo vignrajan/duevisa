@@ -23,7 +23,7 @@ export default function ForgotPasswordPage() {
     // Redirect back to dashboard/settings (or login) to set the new password 
     // after Supabase automatically logs them in via the magic link.
     const { error: resetError } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${process.env.NEXT_PUBLIC_APP_URL || (typeof window !== 'undefined' ? window.location.origin : '')}/dashboard/settings`,
+      redirectTo: `${typeof window !== 'undefined' ? window.location.origin : process.env.NEXT_PUBLIC_APP_URL}/update-password`,
     });
     
     if (resetError) { 
