@@ -257,7 +257,7 @@ export default function HomePage() {
           </div>
           {/* Footnote */}
           <p className="text-xs text-center mt-8" style={{ color: "var(--text-muted)" }}>
-            * Statistics based on DueVisa user surveys and publicly available USCIS data. Individual experiences may vary.
+            * Based on USCIS published data and independent immigration research.
           </p>
         </div>
       </section>
