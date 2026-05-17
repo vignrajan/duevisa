@@ -201,6 +201,18 @@ export default function PricingPage() {
           </div>
         </section>
 
+        {/* Founding Member terms */}
+        <section id="founding-member" style={{ background:"var(--bg-page)", paddingBottom:"2rem" }}>
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="p-5 rounded-xl" style={{ background:"var(--bg-page-alt)", border:"1px solid var(--border-default)" }}>
+              <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color:"var(--text-muted)" }}>Founding Member offer — terms</p>
+              <p className="text-xs leading-relaxed" style={{ color:"var(--text-muted)" }}>
+                The Founding Member price of $4/month is locked in for life for the first 100 signups who upgrade to Pro. Your price will never increase as long as your subscription remains active. If you cancel and re-subscribe, standard pricing applies. This offer is available while capacity remains and may be withdrawn at any time without notice. No expiry date on the discount itself — it lasts as long as your subscription does.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section style={{ background:"var(--color-forest)", padding:"5rem 0" }}>
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
