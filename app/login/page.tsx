@@ -62,18 +62,11 @@ export default function LoginPage() {
           </p>
         </div>
 
-        {/* Testimonial snippet */}
+        {/* Trust note */}
         <div className="relative z-10 p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md">
-          <p className="text-sm leading-relaxed mb-4 text-white/90">
-            "The 180-day reminder is what sold me. No other tool thinks that far ahead. My attorney was impressed."
+          <p className="text-sm leading-relaxed text-white/90">
+            Your immigration data is encrypted at rest and in transit. We never sell or share it. You can delete your account and all data at any time.
           </p>
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-xs font-bold text-lime">CW</div>
-            <div>
-              <p className="text-xs font-semibold text-white">Chen W.</p>
-              <p className="text-[10px] text-white/60">F-1 → OPT STEM</p>
-            </div>
-          </div>
         </div>
       </div>
 

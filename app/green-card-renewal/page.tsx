@@ -84,7 +84,7 @@ export default function GreenCardRenewalPage() {
               USCIS currently processes Form I-90 (green card renewal) in <strong style={{ color: "var(--text-primary)" }}>8–24 months</strong>. While your case is pending, your I-90 receipt notice serves as proof of your continued Lawful Permanent Resident status for up to 24 months.
             </p>
             <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-              File as early as 6 months before expiry. USCIS recommends filing exactly at the 6-month mark — filing too early can result in your new card expiring sooner than necessary.
+              You may file Form I-90 up to 6 months before your card expires. USCIS does not penalise early filing — your new card&apos;s validity is calculated from the date of approval, not the date you filed.
             </p>
           </div>
 
