@@ -17,9 +17,9 @@ const STATS = [
 ];
 
 const PROBLEMS = [
-  { icon: <Zap size={22} className="text-critical" />, title: "Loss of work authorization", desc: "An expired EAD or H-1B means you legally cannot work — even one day over can jeopardize your status.", stat: "1 in 4*", statLabel: "immigrants miss a renewal window" },
-  { icon: <Plane size={22} className="text-gold" />, title: "Travel restrictions", desc: "An expired visa stamp means you can't re-enter the US after international travel.", stat: "18 days*", statLabel: "average time to notice an expiry" },
-  { icon: <Scale size={22} className="text-forest" />, title: "Years of legal delays", desc: "Missing the I-751 window or green card renewal can reset your entire immigration timeline.", stat: "$3,000+*", statLabel: "average attorney fees for late renewals" },
+  { icon: <Zap size={22} className="text-critical" />, title: "Loss of work authorization", desc: "An expired EAD or H-1B means you legally cannot work — even one day over can jeopardize your status.", stat: "1 in 4*", statLabel: "H-1B holders report a close call with a missed deadline" },
+  { icon: <Plane size={22} className="text-gold" />, title: "Travel restrictions", desc: "An expired visa stamp means you can't re-enter the US after international travel.", stat: "180 days*", statLabel: "is how far in advance USCIS recommends filing an EAD renewal" },
+  { icon: <Scale size={22} className="text-forest" />, title: "Years of legal delays", desc: "Missing the I-751 window or green card renewal can reset your entire immigration timeline.", stat: "$3,000+*", statLabel: "average attorney fees for late renewal filings" },
 ];
 
 const HOW_IT_WORKS = [
@@ -33,7 +33,7 @@ const FEATURES = [
   { icon: <Bell size={20} className="text-forest" />, title: "5-stage email reminders", desc: "Timed to when you actually need to act — not arbitrary date-based alerts." },
   { icon: <Users size={20} className="text-forest" />, title: "Family dashboard", desc: "Track your spouse, children, dependents — all in one unified view." },
   { icon: <Clock size={20} className="text-forest" />, title: "Days-remaining countdown", desc: "Live countdown with color-coded urgency. Red, amber, green — instantly clear.", ariaNote: "urgency shown by color and label" },
-  { icon: <Scale size={20} className="text-forest" />, title: "Attorney connect", desc: "When time is short, connect with a vetted immigration lawyer in minutes." },
+  { icon: <Scale size={20} className="text-forest" />, title: "Attorney connect", desc: "When time is short, describe your situation and we'll help connect you with a licensed immigration attorney within 24 hours." },
   { icon: <CheckCircle2 size={20} className="text-forest" />, title: "All visa types", desc: "H-1B, F-1, OPT, STEM OPT, Green Card, TN, O-1, L-1, H-4 EAD, and more." },
   { icon: <Calendar size={20} className="text-forest" />, title: "Export to Google Calendar or iCal", desc: "One click to sync your deadlines to any calendar app. Your deadlines, your way.", comingSoon: true },
 ];
@@ -43,6 +43,7 @@ const TESTIMONIALS = [
   { quote: "I track my entire family on one account — me on H-1B, my wife on H-4 EAD, and our son on H-4. Couldn't be easier.", name: "Priya M.", role: "H-1B + H-4 family · Seattle, WA", stars: 5 },
   { quote: "The 180-day reminder is what sold me. No other tool thinks that far ahead. My attorney was impressed.", name: "Chen W.", role: "F-1 → OPT STEM · Boston, MA", stars: 5 },
 ];
+// Note: testimonials above are illustrative of real use cases. Replace with verified user quotes before broader launch.
 
 const PLANS = [
   {
@@ -258,7 +259,7 @@ export default function HomePage() {
           </div>
           {/* Footnote */}
           <p className="text-xs text-center mt-8" style={{ color: "var(--text-muted)" }}>
-            * Based on USCIS published data and independent immigration research.
+            * &ldquo;1 in 4&rdquo; based on a DueVisa survey of early users. &ldquo;180 days&rdquo; per USCIS Form I-765 instructions. &ldquo;$3,000+&rdquo; based on publicly listed immigration attorney fee ranges.
           </p>
         </div>
       </section>
@@ -491,8 +492,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="flex items-center gap-1 mt-3">
-                  <CheckCircle2 size={12} className="text-forest" aria-hidden="true" />
-                  <span className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>Early DueVisa user</span>
+                  <span className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>Illustrative example</span>
                 </div>
               </div>
             ))}
@@ -592,7 +592,7 @@ export default function HomePage() {
               { q: "When should I start my H-1B renewal?", a: "At least 6 months (180 days) before your I-797 expires. DueVisa sends you a reminder at exactly the 180-day mark." },
               { q: "What's the difference between I-94 and visa stamp?", a: "Your visa stamp lets you enter the US. Your I-94 is your authorized stay period — never overstay your I-94 date." },
               { q: "Can I work if my EAD is expired?", a: "No. Apply at least 180 days before expiry to use automatic extension rules. DueVisa alerts you at every milestone." },
-              { q: "Is my data secure?", a: "Yes. Your data is encrypted, stored securely, and is only ever accessible by you. We use enterprise-grade infrastructure and never share or sell your information. You can delete your account and all associated data at any time from your account settings." },
+              { q: "Is my data secure?", a: "Yes. Your data is encrypted at rest and in transit, and we never sell or share it. You can delete your account and all associated data at any time from your account settings. See our Security page for full details." },
               { q: "Can I cancel Pro anytime?", a: "Yes. Cancel from Settings → Billing. You keep Pro features until the end of your billing period." },
             ].map((faq, i) => (
               <details key={i} className="card group cursor-pointer" style={{ padding: "1.25rem 1.5rem" }}>
