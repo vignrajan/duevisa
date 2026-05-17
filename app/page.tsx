@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { InitialsAvatar } from "@/components/InitialsAvatar";
+import { WaitlistButton } from "@/components/WaitlistButton";
 import { CheckCircle2, Clock, Bell, Users, Shield, Zap, ChevronRight, AlertTriangle, Plane, Scale, ArrowRight, Star, X, Lock, Calendar } from "lucide-react";
 import { EADCalculator } from "@/components/EADCalculator";
 
@@ -48,19 +49,19 @@ const PLANS = [
     name: "Free", price: "$0", period: "forever",
     desc: "For individuals getting started",
     features: ["3 documents tracked", "30 & 7 day reminders", "Email support"],
-    cta: "Start free", href: "/signup", highlight: false,
+    cta: "Start free", href: "/signup", highlight: false, waitlist: false,
   },
   {
     name: "Pro", price: "$9", period: "/month", note: "$79/year — save $29",
     desc: "For individuals who need full protection",
     features: ["Unlimited documents", "All 5 reminder intervals", "5 family members", "SMS reminders", "Document storage"],
-    cta: "Start Pro", href: "/signup?plan=pro", highlight: true,
+    cta: "Join waitlist for Pro →", href: null, highlight: true, waitlist: true,
   },
   {
     name: "Team", price: "$29", period: "/month",
     desc: "For HR teams managing employee visas",
     features: ["Everything in Pro", "Up to 20 employees", "HR admin dashboard", "Bulk CSV import", "Dedicated support"],
-    cta: "Book a demo", href: "/contact", highlight: false,
+    cta: "Book a demo", href: "/contact", highlight: false, waitlist: false,
   },
 ];
 
@@ -257,7 +258,7 @@ export default function HomePage() {
           </div>
           {/* Footnote */}
           <p className="text-xs text-center mt-8" style={{ color: "var(--text-muted)" }}>
-            * Statistics based on DueVisa user surveys and publicly available USCIS data. Individual experiences may vary.
+            * Based on USCIS published data and independent immigration research.
           </p>
         </div>
       </section>
@@ -569,9 +570,13 @@ export default function HomePage() {
                     </li>
                   ))}
                 </ul>
-                <Link href={plan.href} className={`text-center py-3 px-5 rounded-xl font-semibold text-sm cursor-pointer transition-all ${plan.highlight ? "btn-primary" : "btn-secondary"}`}>
-                  {plan.cta}
-                </Link>
+                {plan.waitlist ? (
+                  <WaitlistButton plan="pro" variant="default" label={plan.cta} />
+                ) : (
+                  <Link href={plan.href!} className={`text-center py-3 px-5 rounded-xl font-semibold text-sm cursor-pointer transition-all ${plan.highlight ? "btn-primary" : "btn-secondary"}`}>
+                    {plan.cta}
+                  </Link>
+                )}
               </div>
             ))}
           </div>
