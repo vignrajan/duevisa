@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CheckCircle2, Lock } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { WaitlistButton } from "@/components/WaitlistButton";
+import { CheckoutButton } from "@/components/CheckoutButton";
 
 export const metadata: Metadata = {
   title: "Pricing — Immigration Deadline Tracker",
@@ -141,7 +141,7 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <WaitlistButton plan="pro" variant="lime" label="Join waitlist for Pro →" />
+                <CheckoutButton plan="pro" variant="lime" />
               </div>
 
               {/* Team */}
@@ -170,11 +170,9 @@ export default function PricingPage() {
                   ))}
                 </ul>
                 <div>
-                  <Link href="/contact" className="btn-primary text-center py-3 px-5 rounded-xl font-bold text-sm cursor-pointer transition-all block w-full">
-                    Book a demo
-                  </Link>
+                  <CheckoutButton plan="team" variant="default" />
                   <p className="text-xs text-center mt-2.5" style={{ color:"var(--text-muted)" }}>
-                    or email <a href="mailto:team@duevisa.com" className="underline underline-offset-2" style={{ color:"var(--color-forest)" }}>team@duevisa.com</a>
+                    Questions? Email <a href="mailto:team@duevisa.com" className="underline underline-offset-2" style={{ color:"var(--color-forest)" }}>team@duevisa.com</a>
                   </p>
                 </div>
               </div>
