@@ -66,9 +66,43 @@ const PLANS = [
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://duevisa.com/#organization",
+      "name": "DueVisa",
+      "url": "https://duevisa.com",
+      "logo": "https://duevisa.com/favicon.svg",
+      "contactPoint": { "@type": "ContactPoint", "email": "hello@duevisa.com", "contactType": "customer support" },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://duevisa.com/#website",
+      "url": "https://duevisa.com",
+      "name": "DueVisa",
+      "description": "Immigration deadline tracker for H-1B, EAD, green card, and passport renewals.",
+      "publisher": { "@id": "https://duevisa.com/#organization" },
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "DueVisa",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Track every visa, permit, and immigration document. Get reminded at 180, 90, 60, 30, and 7 days before expiry.",
+    },
+  ],
+};
+
 export default function HomePage() {
   return (
     <div className="min-h-screen" style={{ background: "var(--bg-page)" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <AnnouncementBanner />
       <Navbar />
 

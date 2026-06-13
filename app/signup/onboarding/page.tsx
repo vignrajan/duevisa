@@ -82,7 +82,7 @@ export default function OnboardingPage() {
         id: user.id,
         email: user.email!,
         reminder_email: reminderEmail,
-        reminder_sms: reminderSms,
+        reminder_sms: false, // SMS is Pro-only; user can enable in Settings after upgrading
       });
 
       // Insert selected documents
@@ -432,35 +432,19 @@ export default function OnboardingPage() {
 
                 {/* SMS */}
                 <div
-                  className={cn(
-                    "flex items-center gap-4 p-5 rounded-2xl border cursor-pointer transition-all",
-                    reminderSms ? "border-lime/30 bg-lime/5" : "border-white/10"
-                  )}
-                  onClick={() => setReminderSms(!reminderSms)}
+                  className="flex items-center gap-4 p-5 rounded-2xl border border-white/10 opacity-50 cursor-not-allowed transition-all"
                 >
-                  <div
-                    className={cn(
-                      "w-12 h-12 rounded-xl flex items-center justify-center",
-                      reminderSms ? "bg-lime/20" : "bg-white/5"
-                    )}
-                  >
-                    <Phone size={22} className={reminderSms ? "text-lime" : "text-sage"} />
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-white/5">
+                    <Phone size={22} className="text-sage" />
                   </div>
                   <div className="flex-1">
                     <div className="font-syne font-semibold text-white flex items-center gap-2">
                       SMS reminders
-                      <span className="badge bg-gold/10 text-gold border border-gold/20 text-[9px]">Pro</span>
+                      <span className="badge bg-gold/10 text-gold border border-gold/20 text-[9px]">Pro only</span>
                     </div>
-                    <div className="text-sage text-sm">Quick text message alerts — upgrade to Pro to unlock</div>
+                    <div className="text-sage text-sm">Upgrade to Pro after signup to enable text alerts</div>
                   </div>
-                  <div
-                    className={cn(
-                      "w-6 h-6 rounded-full border-2 flex items-center justify-center",
-                      reminderSms ? "border-lime bg-lime" : "border-white/20"
-                    )}
-                  >
-                    {reminderSms && <Check size={12} className="text-midnight" />}
-                  </div>
+                  <div className="w-6 h-6 rounded-full border-2 border-white/20 flex items-center justify-center" />
                 </div>
               </div>
 

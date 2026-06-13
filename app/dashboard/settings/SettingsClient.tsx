@@ -91,9 +91,15 @@ export function SettingsClient({ user, profile }: SettingsClientProps) {
   }
 
   async function handleDeleteAccount() {
-    if (!confirm("Are you sure you want to delete your account? This cannot be undone.")) return;
-    await supabase.auth.signOut();
-    router.push("/");
+    if (!confirm("Are you sure you want to permanently delete your account and all your data? This cannot be undone.")) return;
+    const res = await fetch("/api/account", { method: "DELETE" });
+    if (res.ok) {
+      await supabase.auth.signOut();
+      router.push("/?deleted=true");
+    } else {
+      const data = await res.json();
+      setError(data.error || "Failed to delete account. Please contact hello@duevisa.com.");
+    }
   }
 
   // Check if user logged in via OAuth (no password to change)

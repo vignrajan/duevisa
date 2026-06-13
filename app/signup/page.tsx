@@ -196,7 +196,10 @@ export default function SignupPage() {
             </button>
             
             <p className="text-center text-xs text-text-secondary mt-4 flex items-center justify-center gap-1">
-              <Shield size={12} /> By signing up, you agree to the Terms
+              <Shield size={12} /> By signing up, you agree to our{" "}
+              <Link href="/terms" className="underline underline-offset-2 hover:no-underline">Terms</Link>
+              {" "}and{" "}
+              <Link href="/privacy" className="underline underline-offset-2 hover:no-underline">Privacy Policy</Link>
             </p>
           </form>
 
