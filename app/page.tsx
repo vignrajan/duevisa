@@ -5,7 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { InitialsAvatar } from "@/components/InitialsAvatar";
-import { WaitlistButton } from "@/components/WaitlistButton";
+import { CheckoutButton } from "@/components/CheckoutButton";
 import { CheckCircle2, Clock, Bell, Users, Shield, Zap, ChevronRight, AlertTriangle, Plane, Scale, ArrowRight, Star, X, Lock, Calendar } from "lucide-react";
 import { EADCalculator } from "@/components/EADCalculator";
 
@@ -56,7 +56,7 @@ const PLANS = [
     name: "Pro", price: "$9", period: "/month", note: "$79/year — save $29",
     desc: "For individuals who need full protection",
     features: ["Unlimited documents", "All 5 reminder intervals", "5 family members", "SMS reminders", "Document storage"],
-    cta: "Join waitlist for Pro →", href: null, highlight: true, waitlist: true,
+    cta: "Get Pro →", href: null, highlight: true, waitlist: false, checkout: true,
   },
   {
     name: "Team", price: "$29", period: "/month",
@@ -604,8 +604,8 @@ export default function HomePage() {
                     </li>
                   ))}
                 </ul>
-                {plan.waitlist ? (
-                  <WaitlistButton plan="pro" variant="default" label={plan.cta} />
+                {(plan as { checkout?: boolean }).checkout ? (
+                  <CheckoutButton plan="pro" variant="default" />
                 ) : (
                   <Link href={plan.href!} className={`text-center py-3 px-5 rounded-xl font-semibold text-sm cursor-pointer transition-all ${plan.highlight ? "btn-primary" : "btn-secondary"}`}>
                     {plan.cta}
