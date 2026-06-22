@@ -43,6 +43,10 @@ const RELATED_TOOLS: Record<string, { label: string; href: string; desc: string 
     { label: "EAD Renewal Calculator", href: "/ead-renewal-calculator", desc: "Find out exactly when to file to qualify for the auto-extension." },
     { label: "EAD Renewal Reminder", href: "/ead-reminder", desc: "File before expiry — DueVisa reminds you 180 days out." },
   ],
+  "h1b-grace-period-after-layoff": [
+    { label: "H-1B Deadline Tracker", href: "/h1b-renewal-tracker", desc: "Track your 60-day grace period countdown and every H-1B deadline automatically." },
+    { label: "Start tracking free", href: "/signup", desc: "DueVisa tracks your grace period end date and sends reminders at 30, 14, and 7 days." },
+  ],
 };
 
 // Blog post content
@@ -752,6 +756,197 @@ DueVisa sends you reminders at 180, 90, 60, 30, and 7 days before your authorize
 
 Sign up at duevisa.com.
     `,
+  },
+  "h1b-grace-period-after-layoff": {
+    title: "H-1B Grace Period After Layoff: Your 60-Day Survival Guide (2026)",
+    description: "Laid off on an H-1B? You have 60 days to act — and every day counts. Here's exactly what to do, what your options are, and what mistakes can end your stay.",
+    date: "June 22, 2026",
+    readTime: "13 min",
+    category: "H-1B",
+    content: `
+Losing your job is stressful for anyone. But losing your job on an H-1B visa adds a layer of urgency that most people aren't prepared for: the moment your employment ends, a 60-day countdown begins. Use those 60 days wisely and you can stay in the US legally and transition to a new status. Miss the deadline or make the wrong move and you may face serious consequences that could affect your immigration record for years.
+
+This guide is the complete playbook for navigating the H-1B grace period after a layoff.
+
+## Quick Answer
+
+When your H-1B employment is terminated — including layoffs, resignations, or firing — you enter a **60-day grace period** (or until your I-94 expires, whichever is shorter). During those 60 days you can legally remain in the US but you **cannot work**. You must use the time to either start a new H-1B transfer with a sponsoring employer, change to another visa status (such as F-1, O-1, or H-4), or prepare to leave the US. Doing nothing is not an option. Verify all timelines on the USCIS website and consult an immigration attorney as early as possible — ideally within the first week.
+
+## What Is the H-1B 60-Day Grace Period?
+
+The 60-day H-1B grace period was formally established in 2017 under the DHS rule "Retention of EB-1, EB-2, and EB-3 Immigrant Workers" (8 CFR 214.1(l)(2)). Before 2017, H-1B workers who lost their jobs were technically out of status the moment employment ended, with no official cushion. The regulation fixed that by creating a formal grace period.
+
+Key legal facts:
+
+- The grace period is **60 consecutive calendar days**, not business days
+- It applies each time you experience a period of employment cessation — you can use it multiple times during an H-1B admission, but only once per cessation event
+- If your authorized stay (I-94 expiry date) is less than 60 days away, the grace period ends at the I-94 date — whichever comes first
+- The grace period does **not** authorize work — you are maintaining status, not employment authorization
+
+## When Does the 60-Day Clock Start?
+
+The clock starts the day your employment ends. This is the date your employer terminates you — typically the last day you are on payroll or the date in your termination letter, whichever is earlier.
+
+A note on WARN Act severance: some companies keep laid-off workers on payroll for a period after the announced layoff date for legal or HR reasons. In those cases, your grace period likely starts when you actually stop being an employee, not when the layoff was announced. Confirm the exact effective date in writing from your employer, as this affects your entire timeline.
+
+## What You Can and Cannot Do During the Grace Period
+
+| Action | Allowed During Grace Period? |
+|--------|------------------------------|
+| Remain in the US | Yes |
+| Interview for new jobs | Yes |
+| Travel internationally | Risky — re-entry requires valid H-1B stamp and new employer petition |
+| Work for the old employer | No |
+| Work for a new employer without an approved transfer | No |
+| Work after receiving H-1B transfer receipt | Yes (with portability, after 60+ days in prior status) |
+| Start a business / work as self-employed | No |
+| Attend school (as enrolled student) | Not as a change of status — requires formal F-1 change |
+
+The most important thing to understand: **the grace period buys you time to act, not permission to work**.
+
+## Your 4 Options During the 60-Day Window
+
+### Option 1: H-1B Transfer to a New Employer
+
+This is the most common path and the one that keeps your career moving without interruption.
+
+To transfer your H-1B:
+
+1. Find an employer willing to sponsor your H-1B
+2. The new employer files a new Form I-129 (H-1B petition) on your behalf with USCIS
+3. Once the I-129 is **filed** (not just approved), you can begin working for the new employer under H-1B portability — provided you meet the AC21 portability rules (generally 180 days in H-1B status with an approved I-140)
+4. USCIS processes the petition (standard or premium processing available)
+
+**Important**: The filing must happen within your 60-day grace period. If your new employer's attorney files the I-129 on Day 61 or later, you were out of status at the time of filing and the petition will generally be denied.
+
+Premium processing ($2,805 as of 2026) expedites USCIS's review to 15 business days and is highly recommended given the tight timeline.
+
+### Option 2: Change to Another Nonimmigrant Status
+
+If you don't have a new employer lined up immediately, you can file to change to a different visa status. Common options:
+
+**H-4 (Dependent Spouse Status)**
+If your spouse is in valid H-1B status, you can file to change to H-4 within the 60-day window. This preserves your ability to stay in the US. If you were previously approved for H-4 EAD, you would need to reapply for work authorization separately.
+
+**F-1 (Student)**
+If you have been admitted to or plan to enroll in a US academic program, you can file to change to F-1 status. Note: most schools require you to be physically present and enrolled. Changing to F-1 does not automatically authorize work — you would need OPT or CPT for that later.
+
+**O-1 (Extraordinary Ability)**
+If you have significant achievements in your field (publications, awards, high salary, media coverage), an O-1 may be an option. O-1 petitions are complex and generally require an attorney and several months of preparation, so realistically this is not a fast option within 60 days unless preparation is already underway.
+
+**B-2 (Tourist)**
+In very limited circumstances, some people request a change to B-2 status to buy additional time. This is rarely a great long-term solution and comes with significant restrictions — you cannot work in B-2 status at all.
+
+### Option 3: File for Adjustment of Status (Green Card)
+
+If you have an approved I-140 immigrant petition (employment-based green card petition), you may be eligible to file Form I-485 (Adjustment of Status) if a visa number is available in your priority date's category. Filing I-485 gives you the ability to apply for an EAD (work permit) while the green card case is pending.
+
+This path requires careful planning and often has long wait times, but it can be a meaningful option for those already deep in the green card process.
+
+### Option 4: Leave the US
+
+If you cannot find a new employer or change status within 60 days, you must depart the US before the grace period ends. Leaving voluntarily — before you fall out of status — protects your ability to return on a future visa. Staying beyond the 60-day grace period means you are accruing unlawful presence, which can trigger bars on future re-entry.
+
+## The 60-Day Countdown: Week-by-Week Action Plan
+
+| Days | Action |
+|------|--------|
+| Day 1–3 | Get termination date confirmed in writing. Calculate your exact grace period end date. Consult an immigration attorney — ideally one your employer provides as a severance benefit. |
+| Day 4–7 | Begin job search aggressively. Reach out to your network. Ask your former employer if they will cooperate with H-1B transfer paperwork (documentation of previous employment, wage records). |
+| Day 8–21 | Pursue interviews. Identify employers open to H-1B sponsorship. If no leads, begin evaluating status change options (H-4, F-1). |
+| Day 21–35 | If you have an offer, engage the new employer's immigration attorney immediately. Begin I-129 preparation. |
+| Day 35–50 | The I-129 must be filed — or a change-of-status application submitted — with enough time to process and confirm receipt before Day 60. Do not wait until Day 59 to file. |
+| Day 50–60 | Last resort window. If no options have materialized, begin preparing to depart the US. |
+
+## Common Mistakes That End H-1B Status
+
+These are the errors that immigration attorneys see most often — and they are all avoidable.
+
+**Mistake 1: Treating the grace period as a job-hunting sabbatical.**
+60 days passes faster than you expect. Starting your job search on Day 1 is not too early — it is barely on time.
+
+**Mistake 2: Working for any employer without an approved or pending H-1B transfer.**
+Even a one-day consulting engagement, freelance project, or day of work for a startup is unauthorized employment. The consequences can include visa revocation, deportation, and multi-year bars on future immigration benefits.
+
+**Mistake 3: Traveling internationally without understanding re-entry rules.**
+If you leave the US during the grace period, you will need a valid H-1B visa stamp from your new employer and an approved or pending H-1B petition to re-enter in H-1B status. If you re-enter as a tourist, you will not be able to work. International travel during an active grace period is almost always a bad idea unless an attorney has specifically reviewed your situation.
+
+**Mistake 4: Assuming severance pay extends the grace period.**
+Receiving severance or staying on the payroll temporarily does not necessarily extend your authorized H-1B employment beyond your actual termination date. The grace period begins when employment legally ends.
+
+**Mistake 5: Waiting to hire an attorney.**
+The first week is the most valuable week. Many laid-off H-1B workers spend weeks processing the emotional shock of a layoff before thinking about immigration — and then discover they have 20 days left. Hire an attorney in week one.
+
+**Mistake 6: Not getting the termination date in writing.**
+The exact date matters for your grace period calculation. Verbal confirmations are not enough.
+
+## H-1B Transfer: How Portability Works
+
+If you've been in H-1B status for at least 180 days and your employer has filed an employment-based immigrant petition (I-140) that has been approved for 180+ days, you have **AC21 portability**. This allows you to change employers while a green card case is pending, without losing your priority date or requiring a new immigrant petition.
+
+Even without AC21 portability, you can still transfer your H-1B — you simply need the new I-129 to be filed and accepted before you begin work at the new employer.
+
+## If Your Company Provides Immigration Support
+
+Many tech and enterprise companies include immigration assistance in layoff severance packages, especially for H-1B employees. This typically means:
+
+- The company's immigration law firm will consult with you at no cost for a defined period
+- They may provide documentation of your prior H-1B status to help with transfers
+- Some employers offer extended payroll periods that keep you in valid H-1B status longer
+
+Ask your HR or severance coordinator about this explicitly. It is often not volunteered but is sometimes available.
+
+## USCIS Resources and Where to Verify
+
+Always confirm current policy details directly with USCIS before making decisions:
+
+- **8 CFR 214.1(l)(2)** — the federal regulation defining the grace period
+- **USCIS.gov H-1B page** — current filing requirements and processing times
+- **USCIS processing times tool** — current I-129 and I-485 timelines
+- **USCIS Form I-129 instructions** — H-1B classification section
+
+Immigration regulations can change. What applies in 2026 may differ from what applied in prior years. This article reflects the rules as of mid-2026 — verify current terms at USCIS.gov.
+
+## Track Your Grace Period with DueVisa
+
+The 60-day clock is unforgiving. DueVisa lets you enter your layoff date and tracks the exact end of your grace period, sending you reminders at 30, 14, and 7 days remaining — so you never lose track of where you stand.
+
+Add your grace period and any pending petition deadlines at duevisa.com. Free to start.
+    `,
+    faqs: [
+      {
+        q: "How long is the H-1B grace period after a layoff?",
+        a: "The H-1B grace period is 60 calendar days from the date your employment ends, or until your I-94 authorized stay expires, whichever comes first. It was established by a 2017 DHS regulation (8 CFR 214.1(l)(2)). The grace period allows you to remain in the US and look for a new employer, but you cannot work during this time.",
+      },
+      {
+        q: "Can I work during the 60-day H-1B grace period?",
+        a: "No. The grace period allows you to maintain legal presence in the US, but it does not authorize employment. You cannot work for any employer — including on a freelance or consulting basis — until a new H-1B transfer petition has been filed (and in some cases approved) by a new employer. Working without authorization is a serious immigration violation.",
+      },
+      {
+        q: "Does severance pay extend my H-1B status?",
+        a: "Not necessarily. If your employer keeps you on the official payroll for a defined severance period, you may technically remain in H-1B status during that time — but this depends on the terms of the arrangement. In most cases, if you are notified of termination on Day 1 and paid severance for 4 weeks, your H-1B status effectively ends at termination, not at the end of the severance period. Confirm the exact termination date with your employer and an attorney.",
+      },
+      {
+        q: "What if I can't find a new job within 60 days?",
+        a: "If you don't have a new H-1B sponsor within 60 days, you have a few options: (1) file to change to another nonimmigrant status such as H-4 (if your spouse is in H-1B status), F-1 (if you are enrolling in school), or in limited cases B-2; (2) file for Adjustment of Status if you have an approved I-140 and a visa number is available; or (3) depart the US voluntarily before the grace period ends. Staying beyond 60 days without taking any of these steps means you are accruing unlawful presence.",
+      },
+      {
+        q: "Can I travel outside the US during my H-1B grace period?",
+        a: "This is very risky and generally not recommended without consulting an attorney first. If you leave the US during the grace period, you will need a valid H-1B visa stamp in your passport from a sponsoring employer to re-enter in H-1B status. Without an active employer, you would typically need to re-enter as a tourist, which does not allow you to work. International travel during an active grace period can complicate your situation significantly.",
+      },
+      {
+        q: "When can I start working at a new company after an H-1B transfer is filed?",
+        a: "Under H-1B portability rules, you can generally start working at a new employer once the new I-129 petition has been filed and you have received the I-797C receipt notice — you do not need to wait for approval. However, standard portability (under AC21) requires that you have been in H-1B status for at least 180 days and your employment is in the same or a similar occupational classification. Confirm the specific rules with your attorney before starting work at the new employer.",
+      },
+      {
+        q: "Does the H-1B grace period reset each time I change employers?",
+        a: "The grace period applies each time there is a cessation of employment — so in theory you can use it multiple times during the same H-1B admission period. However, it applies per cessation event, not per calendar year. If you are laid off, use 45 days of your grace period to find a new employer, start working, and then are laid off again, you get a fresh 60-day grace period for the new cessation.",
+      },
+      {
+        q: "What happens if I overstay the 60-day grace period?",
+        a: "If you remain in the US beyond the 60-day grace period without changing to another valid status or filing for extension, you begin accruing unlawful presence. Accruing 180+ days of unlawful presence and then leaving the US triggers a 3-year bar on re-entry. Accruing 1 year or more triggers a 10-year bar. It also creates complications for future immigration applications including green card petitions and visa renewals.",
+      },
+    ],
   },
   "green-card-renewal-guide": {
     title: "Green Card Renewal Guide: When to Apply and What Documents You Need",
