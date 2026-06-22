@@ -28,6 +28,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogPosts = [
+    "how-long-does-ead-renewal-take",
+    "h4-ead-renewal-guide",
+    "ead-540-day-automatic-extension",
     "h1b-renewal-timeline",
     "i94-vs-visa-stamp",
     "ead-renewal-2026",

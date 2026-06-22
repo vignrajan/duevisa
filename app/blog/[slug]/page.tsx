@@ -31,6 +31,18 @@ const RELATED_TOOLS: Record<string, { label: string; href: string; desc: string 
     { label: "Green Card Renewal Tracker", href: "/green-card-renewal", desc: "Track your I-551 expiry and I-751 filing window automatically." },
     { label: "Start tracking free", href: "/signup", desc: "DueVisa sends your first green card reminder 180 days out." },
   ],
+  "how-long-does-ead-renewal-take": [
+    { label: "EAD Renewal Calculator", href: "/ead-renewal-calculator", desc: "See your exact 180-day filing window in seconds." },
+    { label: "EAD Renewal Reminder", href: "/ead-reminder", desc: "Get reminded 180 days before your EAD expires — automatically." },
+  ],
+  "h4-ead-renewal-guide": [
+    { label: "EAD Renewal Reminder", href: "/ead-reminder", desc: "Track your H-4 EAD and H-4 I-94 together — never let either lapse." },
+    { label: "H-1B Deadline Tracker", href: "/h1b-renewal-tracker", desc: "Your H-4 EAD depends on your spouse's H-1B — track both in one place." },
+  ],
+  "ead-540-day-automatic-extension": [
+    { label: "EAD Renewal Calculator", href: "/ead-renewal-calculator", desc: "Find out exactly when to file to qualify for the auto-extension." },
+    { label: "EAD Renewal Reminder", href: "/ead-reminder", desc: "File before expiry — DueVisa reminds you 180 days out." },
+  ],
 };
 
 // Blog post content
@@ -41,7 +53,373 @@ const POSTS: Record<string, {
   readTime: string;
   category: string;
   content: string;
+  faqs?: { q: string; a: string }[];
 }> = {
+  "how-long-does-ead-renewal-take": {
+    title: "EAD Processing Time in 2026: How Long Does Renewal Take?",
+    description: "EAD renewal can take anywhere from 1 to 8+ months depending on your category and service center. Here's how to check your timeline and avoid a work gap.",
+    date: "June 18, 2026",
+    readTime: "11 min",
+    category: "EAD",
+    content: `
+If your Employment Authorization Document (EAD) is approaching its expiry date, you are almost certainly asking the same question thousands of immigrants ask every week: how long does EAD renewal actually take?
+
+The honest answer is that it varies enormously — and that uncertainty is exactly what makes EAD renewal so stressful. File too late and you risk a gap in work authorization that can cost you your job. File at the right time and you may never feel a thing.
+
+This guide breaks down real EAD processing times in 2026, how to check your own case, and the single most important step that protects you from a work gap.
+
+## Quick Answer
+
+As of 2026, EAD renewal (Form I-765) typically takes **between 1 and 8 months** to process, depending on your eligibility category and which USCIS service center handles your case. The most reliable protection is to **file your renewal 180 days (about 6 months) before your current EAD expires** — and, for most categories, a timely-filed renewal grants an automatic extension of up to 540 days while you wait. Always confirm current processing times for your specific form category at the official USCIS processing times page.
+
+## Why EAD Processing Times Vary So Much
+
+There is no single "EAD processing time." USCIS processes Form I-765 across multiple service centers and lockboxes, and the time depends on several factors:
+
+- **Your eligibility category** — the three-letter code on your EAD (for example C08 for asylum applicants, C09 for adjustment of status applicants, A12 or C19 for TPS, C26 for H-4 spouses, C03B for OPT)
+- **Which service center is assigned** — workloads differ between centers
+- **Whether biometrics are required** — some categories need a biometrics appointment
+- **Filing method** — online filing is often slightly faster to process and confirm than paper
+- **Whether your case triggers a Request for Evidence (RFE)** — any RFE adds weeks or months
+
+Because of these variables, two people who file on the same day can receive their new cards months apart.
+
+## Typical EAD Processing Times by Category
+
+The ranges below are general estimates based on recent USCIS trends. **Always verify the live figure for your category at the USCIS processing times tool before relying on it** — these numbers shift month to month.
+
+| EAD Category | Common Range (2026) |
+|--------------|---------------------|
+| C09 — Adjustment of status (pending green card) | 2 to 8 months |
+| C08 — Asylum applicant | 1 to 6 months |
+| C26 — H-4 dependent spouse | 2 to 6 months |
+| C03B — F-1 STEM OPT | 2 to 5 months |
+| (c)(3) — F-1 OPT (post-completion) | 1 to 4 months |
+| A12 / C19 — TPS | 2 to 8 months |
+
+The key takeaway: even the fastest categories can take a month, and the slower ones can take well over half a year. That is why the timing of when you file matters more than almost anything else.
+
+## How to Check Your Own EAD Processing Time
+
+You do not have to guess. USCIS publishes live data:
+
+1. Go to the official USCIS "Check Case Processing Times" page
+2. Select **Form I-765, Application for Employment Authorization**
+3. Choose your **eligibility category** (use the code from your current EAD)
+4. Select the **form category / service center** if prompted
+5. USCIS shows the time it currently takes to process most cases, plus the date you can submit an inquiry if your case is taking longer than expected
+
+Once you have a case receipt number (it starts with three letters such as IOE, EAC, WAC, LIN, or SRC), you can also track real-time status updates in your USCIS online account.
+
+## The 180-Day Rule: When You Should File
+
+Here is the rule that protects you: **file your EAD renewal 180 days before your current card expires.**
+
+USCIS accepts EAD renewal applications up to 180 days before the expiration date printed on your current card. There are two reasons this is the smart move:
+
+1. **Processing buffer** — with up to 8 months of possible processing time, filing 6 months early gives USCIS the runway to approve your card before the old one expires.
+2. **Automatic extension eligibility** — for most renewal categories, filing **before** your EAD expires (and in the same eligibility category) qualifies you for an automatic extension of your work authorization while the renewal is pending.
+
+Filing earlier than 180 days is not allowed and will result in rejection. Filing later than 180 days is risky. The 180-day mark is the sweet spot — not a moment you want to discover after it has already passed.
+
+## The Automatic Extension: Your Safety Net
+
+If you file a timely renewal, many EAD categories receive an **automatic extension of up to 540 days** beyond the expiration date on your current card. During this window, your expired EAD — combined with your Form I-797C receipt notice — can serve as proof of continued work authorization for I-9 purposes.
+
+Important conditions generally apply:
+
+- You must file **before** your current EAD expires
+- Your renewal must be in the **same eligibility category** (with limited exceptions, such as certain C08 and C09 cross-category cases)
+- Your category must be **eligible** for the automatic extension — not every category qualifies
+- For dependent categories like H-4 EAD, the extension **cannot run beyond the validity of your underlying status** (more on this below)
+
+Because eligibility rules and the length of the extension have changed over time, confirm the current terms for your category on the USCIS website before you rely on the extension.
+
+## What Happens If There Is a Gap
+
+If your EAD expires before your renewal is approved and you do **not** qualify for an automatic extension, you generally must **stop working** on the expiration date. Continuing to work without authorization can have serious consequences for both you and your employer, including:
+
+- Loss of your job until the new EAD arrives
+- Complications for future immigration applications
+- I-9 compliance problems for your employer
+
+This is the exact scenario the 180-day rule and the automatic extension are designed to prevent. The cost of filing early is a few hours of paperwork. The cost of filing late can be your paycheck.
+
+## How to Speed Up (Or Avoid Slowing Down) Your EAD
+
+You cannot pay for premium processing on most EAD categories, but you can avoid self-inflicted delays:
+
+- **File online** when your category allows it — it reduces mailing time and data-entry errors
+- **Double-check your eligibility category code** — an incorrect code is a common RFE trigger
+- **Include the correct fee** (or a complete fee-waiver request if eligible) — verify the current fee on USCIS.gov before filing
+- **Respond to any RFE immediately** — do not let the clock run
+- **Keep your address updated** with USCIS so your card and notices reach you
+
+## Common EAD Renewal Mistakes
+
+1. **Waiting until 60 or 90 days before expiry to file** — by then, slower categories cannot finish in time
+2. **Assuming the automatic extension applies to everyone** — confirm your category qualifies
+3. **Filing in the wrong eligibility category** — triggers RFEs and delays
+4. **Forgetting that the auto-extension can be capped by your underlying status** — critical for H-4 and L-2 dependents
+5. **Not tracking the expiry date at all** — the single most common and most preventable mistake
+
+## Your EAD Renewal Action Checklist
+
+- Find the expiration date and category code on your current EAD
+- Mark the date exactly 180 days before expiry — this is your file-by target
+- Confirm your category's current processing time on USCIS.gov
+- Confirm whether your category qualifies for the automatic extension
+- Gather your documents (current EAD copy, photos, supporting evidence)
+- File Form I-765 online or by mail with the correct fee
+- Save your I-797C receipt notice — you may need it for I-9 proof
+- Track your case status in your USCIS online account
+
+## The Bottom Line
+
+EAD processing time in 2026 ranges from about one month to more than eight, and you cannot control which end of that range your case lands on. What you **can** control is when you file. File 180 days before expiry, in the correct category, and you give yourself both the processing buffer and the automatic extension that keep your work authorization intact.
+
+The hardest part is simply remembering the date — six months before an expiry that may be years away. That is precisely the problem DueVisa solves: add your EAD once, and we send you a reminder 180 days before it expires, then again at 90, 60, 30, and 7 days. Instead of tracking renewal windows in a spreadsheet, you get a nudge at exactly the right moment. Start tracking free at duevisa.com.
+    `,
+    faqs: [
+      { q: "How long does EAD renewal take in 2026?", a: "EAD renewal (Form I-765) generally takes between 1 and 8 months depending on your eligibility category and the assigned USCIS service center. Check the live figure for your category on the official USCIS processing times page." },
+      { q: "How early can I file my EAD renewal?", a: "USCIS accepts EAD renewal applications up to 180 days (about 6 months) before your current card expires. Filing earlier than 180 days results in rejection." },
+      { q: "Can I work while my EAD renewal is pending?", a: "If you file a timely renewal in an eligible category, you may receive an automatic extension of up to 540 days. During that window, your expired EAD plus your I-797C receipt notice can serve as I-9 proof. If your category is not eligible, you generally must stop working when the card expires." },
+      { q: "Is there premium processing for EAD?", a: "Premium processing is not available for most EAD categories. The best way to avoid delay is to file 180 days early, in the correct category, with complete documentation." },
+      { q: "How do I check my EAD case status?", a: "Use your receipt number (starting with letters like IOE, EAC, WAC, LIN, or SRC) in your USCIS online account, or check the USCIS Case Status Online tool." },
+      { q: "What happens if my EAD expires before renewal is approved?", a: "If you do not qualify for an automatic extension, you must stop working on the expiration date. This is why filing 180 days early and confirming your auto-extension eligibility is so important." },
+    ],
+  },
+  "h4-ead-renewal-guide": {
+    title: "H-4 EAD Renewal: The Complete 2026 Guide",
+    description: "H-4 EAD is one of the most fragile work permits in US immigration. Here's how renewal works, who qualifies, and how the auto-extension is capped by your H-4 status.",
+    date: "June 16, 2026",
+    readTime: "12 min",
+    category: "EAD",
+    content: `
+The H-4 EAD is a lifeline for thousands of spouses of H-1B workers — and one of the most fragile work permits in the entire US immigration system. Its rules have been litigated, threatened, and changed repeatedly, and its renewal depends on a chain of other documents that must all stay valid at the same time.
+
+If you hold an H-4 EAD, renewing it on time is not just paperwork — it is the difference between keeping your career and being forced to stop working overnight. This guide explains exactly how H-4 EAD renewal works in 2026, who qualifies, and the one nuance that catches H-4 holders off guard every year.
+
+## Quick Answer
+
+To renew an H-4 EAD, you must file **Form I-765** while you hold **valid H-4 status** and while your H-1B spouse has an **approved Form I-140** (or qualifies for H-1B extension beyond the sixth year under AC21). File **180 days before expiry**. A timely renewal in the C26 category can qualify for an automatic extension of up to 540 days — but, critically, that extension **cannot run beyond the expiration date of your H-4 I-94**. Renewing your H-4 status and your H-4 EAD together is the safest approach.
+
+## What Is an H-4 EAD?
+
+An H-4 visa is for the dependent spouse and children of an H-1B worker. By default, H-4 status does **not** include work authorization. However, certain H-4 spouses can apply for an Employment Authorization Document (EAD) — coded **category (c)(26)** — that lets them work for any employer, start a business, and build an independent career.
+
+The H-4 EAD is uniquely valuable because, unlike the H-1B itself, it is not tied to a single employer. But that freedom comes with fragility: the H-4 EAD exists only as long as the underlying H-1B and H-4 statuses remain valid.
+
+## Who Qualifies for an H-4 EAD?
+
+You are generally eligible to apply for (or renew) an H-4 EAD if **all** of the following are true:
+
+- You are in valid **H-4 status** as the spouse of an H-1B worker
+- Your H-1B spouse is the **principal beneficiary of an approved Form I-140** (Immigrant Petition for Alien Worker), **or**
+- Your H-1B spouse has been granted H-1B status beyond the standard six years under sections 106(a) and (b) of AC21 (typically because a labor certification or I-140 was filed at least 365 days earlier)
+
+Children in H-4 status are **not** eligible for an H-4 EAD — only spouses.
+
+## The H-4 EAD Renewal Timeline
+
+The renewal process mirrors other EADs but with extra dependencies. Here is the sequence:
+
+### 180 Days Before Expiry: Start
+
+USCIS accepts your renewal up to 180 days before your current H-4 EAD expires. This is your target filing window. Because H-4 EAD processing can take several months, starting here gives you the buffer you need.
+
+### Confirm Your H-4 Status Is Valid (and Will Stay Valid)
+
+This is the step unique to H-4 holders. Your H-4 EAD cannot extend past your H-4 I-94 expiration. If your H-4 status is expiring soon, you typically need to **extend your H-4 status at the same time** — often filed together with your spouse's H-1B extension (Form I-129) and your I-765.
+
+### File the Right Combination of Forms
+
+Depending on your situation, you may file:
+
+- **Form I-765** — the EAD renewal itself (always required)
+- **Form I-539** — to extend your H-4 status (if your H-4 I-94 is expiring)
+- These are frequently filed **concurrently** with the H-1B spouse's **Form I-129** extension
+
+### Track and Respond
+
+Save your I-797C receipt notices. Respond to any RFE immediately. Monitor your case in your USCIS online account.
+
+## The Nuance That Catches People: The Auto-Extension Cap
+
+Here is the single most important thing to understand about H-4 EAD renewal.
+
+Like many EAD categories, a timely-filed H-4 EAD renewal can qualify for an **automatic extension of up to 540 days**. But for H-4 holders there is a hard limit: **the automatic extension ends on the earlier of (a) the end of the extension period, or (b) the expiration date of your H-4 I-94.**
+
+In plain English: **your H-4 EAD auto-extension cannot outlive your H-4 status.** If your H-4 I-94 expires before your new EAD is approved, your work authorization stops on that date — even if the 540-day window has not run out.
+
+This is why H-4 spouses must think about **two deadlines at once**: the EAD expiry **and** the H-4 I-94 expiry. Renewing the EAD while letting H-4 status lapse defeats the entire purpose.
+
+## Documents You Will Typically Need
+
+- Completed **Form I-765** (category c26)
+- Copy of your **current H-4 EAD** (front and back)
+- Copy of your **H-4 approval notice / I-94**
+- Evidence of your spouse's **approved I-140** or AC21-qualifying H-1B extension
+- Copy of your **marriage certificate**
+- Copies of your spouse's **H-1B approval notice and I-94**
+- Two passport-style **photos**
+- The correct **filing fee** (verify the current amount on USCIS.gov — fees and online-vs-paper pricing have changed)
+
+## H-4 EAD Renewal Fees in 2026
+
+The Form I-765 filing fee changed under the 2024 USCIS fee rule, and online filing is priced differently from paper filing for many categories. Rather than rely on an outdated number, **check the current Form I-765 fee on the official USCIS fee schedule before you file.** Filing with the wrong fee is a common cause of rejection.
+
+## Common H-4 EAD Renewal Mistakes
+
+1. **Renewing the EAD but letting H-4 status lapse** — the auto-extension dies with your H-4 I-94
+2. **Assuming the I-140 approval carries forever** — keep the evidence current and on file
+3. **Filing late** — H-4 EAD processing can take months; the 180-day window exists for a reason
+4. **Not filing I-539 when H-4 status is also expiring** — leaves a status gap
+5. **Forgetting children's H-4 status** — they are not EAD-eligible but their status still needs tracking
+
+## Will the H-4 EAD Program Continue?
+
+The H-4 EAD program has faced repeated legal and political challenges over the years, and its future has been questioned more than once. As of 2026 it remains in effect, but the history of the program is a strong argument for **renewing early** and keeping your documentation airtight. Policy can change; a timely, complete filing is your best protection regardless of the political climate.
+
+## Your H-4 EAD Renewal Checklist
+
+- Note both your **EAD expiry** and your **H-4 I-94 expiry**
+- Mark 180 days before the **earlier** of the two as your action date
+- Confirm your spouse's I-140 approval (or AC21 eligibility) is documented
+- Decide whether you need I-539 (H-4 extension) alongside I-765
+- Consider concurrent filing with your spouse's I-129 extension
+- Verify the current I-765 fee on USCIS.gov
+- File, save your receipt notices, and track your case
+- Keep your expired EAD plus I-797C for I-9 proof during any auto-extension
+
+## The Bottom Line
+
+H-4 EAD renewal is not one deadline — it is two intertwined deadlines, and the work permit can only stand as long as the H-4 status beneath it holds. The spouses who never face a work gap are the ones who track both dates and file 180 days early.
+
+That dual-deadline tracking is exactly what trips people up, and exactly what DueVisa is built for. Add your H-4 EAD and your H-4 I-94, and DueVisa watches both — sending reminders 180, 90, 60, 30, and 7 days before either one expires, so you renew them together and never let the EAD outrun the status it depends on. Start tracking free at duevisa.com.
+    `,
+    faqs: [
+      { q: "Who qualifies for an H-4 EAD?", a: "H-4 spouses qualify if they are in valid H-4 status and their H-1B spouse has an approved Form I-140, or has H-1B status extended beyond six years under AC21. Children in H-4 status are not eligible." },
+      { q: "How early should I renew my H-4 EAD?", a: "File Form I-765 up to 180 days before your current H-4 EAD expires. Because processing can take several months, the 180-day mark is the recommended filing window." },
+      { q: "Does the 540-day automatic extension apply to H-4 EAD?", a: "Yes, a timely H-4 EAD renewal can qualify for an automatic extension of up to 540 days — but the extension cannot run beyond the expiration date of your H-4 I-94. Your work authorization ends if your H-4 status lapses." },
+      { q: "Do I need to file I-539 with my H-4 EAD renewal?", a: "If your H-4 I-94 is also expiring, you typically need Form I-539 to extend your H-4 status, often filed concurrently with your spouse's H-1B (I-129) extension and your I-765." },
+      { q: "What documents do I need to renew an H-4 EAD?", a: "Generally: Form I-765, a copy of your current EAD, your H-4 I-94/approval notice, evidence of your spouse's approved I-140, your marriage certificate, your spouse's H-1B documents, photos, and the correct fee." },
+      { q: "Can my H-4 EAD work authorization continue if my H-4 status expires?", a: "No. The H-4 EAD and any automatic extension end when your H-4 I-94 expires. You must keep your H-4 status valid for the EAD to remain effective." },
+    ],
+  },
+  "ead-540-day-automatic-extension": {
+    title: "The 540-Day EAD Automatic Extension, Explained (2026)",
+    description: "A timely EAD renewal can keep you working for up to 540 days past your card's expiry. Here's who qualifies, how to prove it for I-9, and the traps to avoid.",
+    date: "June 14, 2026",
+    readTime: "10 min",
+    category: "EAD",
+    content: `
+For anyone who depends on an Employment Authorization Document to work in the United States, few rules matter more than the automatic extension. It is the safety net that keeps you employed while USCIS — often slowly — processes your renewal. Used correctly, it means an expired card on your desk does not mean an expired paycheck.
+
+But the automatic extension is widely misunderstood. People assume it is automatic for everyone (it is not), that it lasts forever (it does not), and that their employer will simply know what to do (they often do not). This guide clears it all up.
+
+## Quick Answer
+
+If you file your EAD renewal (Form I-765) **before your current card expires**, in the **same eligibility category**, and your category is **eligible**, you may automatically continue working for up to **540 days** past the expiration date printed on your card. Your proof for I-9 purposes is your **expired EAD plus your Form I-797C receipt notice**. Not every category qualifies, and for dependent categories the extension can be capped by your underlying status — so always confirm the current rules for your category on USCIS.gov.
+
+## What Is the EAD Automatic Extension?
+
+When you file a renewal for certain EAD categories, USCIS allows your existing work authorization to continue automatically while the new card is being processed. This bridges the gap between your old card's expiration and your new card's approval.
+
+The extension period has been increased over time to address USCIS processing backlogs. In recent years the maximum automatic extension has been set at **up to 540 days** for eligible renewal applicants. Because the exact length and the categories covered have shifted as USCIS issues new rules, treat 540 days as the current ceiling and verify the figure that applies to your specific category and filing date.
+
+## Who Qualifies for the Automatic Extension?
+
+Three conditions generally must all be true:
+
+1. **Timely filing** — you filed Form I-765 to renew **before** your current EAD expired
+2. **Same category** — your renewal is in the **same eligibility category** as your expiring EAD (with limited exceptions, notably some adjustment-of-status C09 and asylum C08 situations where a cross-category match is allowed)
+3. **Eligible category** — your EAD category is on the list of categories that qualify for the automatic extension
+
+### Examples of Commonly Eligible Categories
+
+- (c)(8) — Pending asylum applicants
+- (c)(9) — Adjustment of status applicants (pending green card)
+- (c)(26) — H-4 dependent spouses
+- (a)(12) and (c)(19) — Temporary Protected Status (TPS)
+- (a)(17), (a)(18) — E and L dependent spouses (in many cases)
+
+### Categories That Often Do NOT Qualify
+
+- **F-1 OPT and STEM OPT** — post-completion OPT does **not** receive this automatic extension (STEM OPT has its own separate 180-day cap-gap-style extension rule, which works differently)
+
+Because this list is defined by USCIS and can change, **confirm your category's current eligibility on the USCIS website** before relying on the extension.
+
+## How Long Does the Extension Last?
+
+The automatic extension lasts until the **earliest** of:
+
+- **540 days** from the expiration date on your current EAD, **or**
+- The **approval or denial** of your renewal application, **or**
+- For dependent categories (such as H-4, L-2, E), the **expiration of your underlying status** (for example, your H-4 I-94)
+
+That third condition is the one people forget. If you are in a dependent category, your work authorization can end the moment your status document expires — even if the 540-day clock has time left.
+
+## How to Prove the Extension to Your Employer (Form I-9)
+
+Your employer is legally required to verify your work authorization, and an expired EAD card on its own does not satisfy that requirement. To document the automatic extension for **Form I-9**, you generally present:
+
+1. Your **expired EAD** (the physical card), **and**
+2. Your **Form I-797C, Notice of Action** receipt for the Form I-765 renewal, showing that you filed in the same eligibility category and that the category is eligible for the extension
+
+Together, these establish your continued authorization for the duration of the automatic extension. Your employer updates the I-9, and you keep working without interruption.
+
+**Tip:** Many HR departments are unfamiliar with the 540-day rule. It helps to bring a printout of the current USCIS guidance on automatic EAD extensions when you speak with them.
+
+## The Trap: Filing Even One Day Late
+
+The entire automatic extension depends on filing **before** your current EAD expires. If your card expires first and you file afterward:
+
+- You get **no** automatic extension
+- You generally must **stop working** until the new card is approved
+- You may face a gap that affects your income, your job, and your record
+
+There is no grace period for this. "Timely" means before the expiration date — full stop. This is why the 180-day filing window exists, and why filing early is the only reliable strategy.
+
+## Common Questions HR Teams Ask
+
+- **"Your card is expired — how can you still work?"** Show the I-797C receipt and the USCIS automatic-extension guidance.
+- **"How long is the extension?"** Up to 540 days from the card's expiry, or until USCIS decides, whichever comes first.
+- **"What if the new card never comes before 540 days?"** This is rare, but if it happens, work authorization ends at day 540 unless USCIS has acted. Escalate the case with USCIS well before then.
+
+## Common Mistakes to Avoid
+
+1. **Filing after the EAD expires** — forfeits the extension entirely
+2. **Filing in a different category** — breaks the "same category" requirement
+3. **Assuming OPT/STEM OPT qualifies** — it follows different rules
+4. **Ignoring the underlying-status cap** — fatal for H-4, L-2, and E dependents
+5. **Not informing HR proactively** — leads to wrongful work stoppages
+
+## Your Automatic Extension Checklist
+
+- Confirm your EAD **category code** and check if it is eligible for the extension
+- File your renewal **before** the card's expiration date (aim for 180 days early)
+- File in the **same eligibility category**
+- Keep your **I-797C receipt notice** safe — it is your I-9 proof
+- If you are a dependent, confirm your **underlying status** outlasts the extension you need
+- Give HR your expired EAD plus the I-797C and a copy of USCIS guidance
+- Track your case and escalate if it approaches the 540-day limit
+
+## The Bottom Line
+
+The 540-day automatic extension is one of the most valuable protections in US immigration — but it rewards exactly one behavior: filing before your EAD expires. Miss that date and the safety net disappears. Hit it, in the right category, and you can keep working seamlessly for well over a year while USCIS catches up.
+
+Everything hinges on a single date you need to act on months in advance. That is the problem DueVisa removes from your plate: add your EAD, and we remind you 180 days before it expires — the exact moment you should file to lock in the automatic extension — then again at 90, 60, 30, and 7 days. No spreadsheets, no missed windows, no expired safety net. Start tracking free at duevisa.com.
+    `,
+    faqs: [
+      { q: "How long is the EAD automatic extension in 2026?", a: "A timely, eligible EAD renewal can extend work authorization for up to 540 days past the card's expiration date, or until USCIS approves or denies the renewal — whichever comes first. Confirm the current length for your category on USCIS.gov." },
+      { q: "Who qualifies for the 540-day automatic EAD extension?", a: "You generally qualify if you filed your renewal before your EAD expired, in the same eligibility category, and your category is on the USCIS list of eligible categories (such as c8, c9, c26, and TPS categories)." },
+      { q: "Does OPT or STEM OPT get the 540-day extension?", a: "No. Post-completion F-1 OPT does not receive this automatic extension. STEM OPT has its own separate extension rule that works differently." },
+      { q: "How do I prove the automatic extension for I-9?", a: "Present your expired EAD card together with your Form I-797C receipt notice for the I-765 renewal. Together they document your continued authorization for the extension period." },
+      { q: "What happens if I file my EAD renewal after it expires?", a: "You forfeit the automatic extension and generally must stop working until the new EAD is approved. The extension only applies if you file before the expiration date." },
+      { q: "Can the automatic extension end early?", a: "Yes. For dependent categories like H-4, L-2, and E, the extension ends when your underlying status (such as your H-4 I-94) expires, even if the 540-day window has not run out." },
+    ],
+  },
   "h1b-renewal-timeline": {
     title: "The Complete H-1B Renewal Timeline: When to Start and What to Do",
     description: "A step-by-step guide to H-1B renewal — from the 180-day mark to filing your I-129 extension.",
@@ -468,8 +846,51 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   // Parse simple markdown to HTML-like rendering
   const sections = post.content.trim().split("\n\n");
 
+  const url = `https://duevisa.com/blog/${params.slug}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": post.title,
+        "description": post.description,
+        "datePublished": post.date,
+        "dateModified": post.date,
+        "author": { "@type": "Organization", "name": "DueVisa", "url": "https://duevisa.com" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "DueVisa",
+          "logo": { "@type": "ImageObject", "url": "https://duevisa.com/favicon.svg" },
+        },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": url },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://duevisa.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://duevisa.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": post.title, "item": url },
+        ],
+      },
+      ...(post.faqs && post.faqs.length > 0
+        ? [{
+            "@type": "FAQPage",
+            "mainEntity": post.faqs.map((f) => ({
+              "@type": "Question",
+              "name": f.q,
+              "acceptedAnswer": { "@type": "Answer", "text": f.a },
+            })),
+          }]
+        : []),
+    ],
+  };
+
   return (
     <div className="min-h-screen" style={{ background: "var(--bg-page)" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       <main className="pt-28 pb-24">
@@ -609,6 +1030,24 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               return null;
             })}
           </div>
+
+          {/* FAQ section */}
+          {post.faqs && post.faqs.length > 0 && (
+            <div className="mt-14">
+              <h2 className="font-syne font-bold text-primary text-2xl mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-3">
+                {post.faqs.map((f, i) => (
+                  <details key={i} className="card group cursor-pointer" style={{ padding: "1.25rem 1.5rem" }}>
+                    <summary className="flex items-center justify-between font-semibold text-sm list-none cursor-pointer text-primary">
+                      {f.q}
+                      <span className="text-xs font-bold ml-4 transition-all duration-200 group-open:rotate-45" style={{ color: "var(--text-muted)" }}>+</span>
+                    </summary>
+                    <p className="text-sm leading-relaxed mt-4 pt-4 text-secondary" style={{ borderTop: "1px solid var(--border-subtle)" }}>{f.a}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Related tools */}
           {RELATED_TOOLS[params.slug] && (
