@@ -13,6 +13,33 @@ export const metadata: Metadata = {
 
 const BLOG_POSTS = [
   {
+    slug: "how-long-does-ead-renewal-take",
+    title: "EAD Processing Time in 2026: How Long Does Renewal Take?",
+    description: "EAD renewal can take anywhere from 1 to 8+ months depending on your category and service center. Here's how to check your timeline and avoid a work gap.",
+    date: "June 18, 2026",
+    readTime: "11 min",
+    category: "EAD",
+    image: null,
+  },
+  {
+    slug: "h4-ead-renewal-guide",
+    title: "H-4 EAD Renewal: The Complete 2026 Guide",
+    description: "H-4 EAD is one of the most fragile work permits in US immigration. Here's how renewal works, who qualifies, and how the auto-extension is capped by your H-4 status.",
+    date: "June 16, 2026",
+    readTime: "12 min",
+    category: "EAD",
+    image: null,
+  },
+  {
+    slug: "ead-540-day-automatic-extension",
+    title: "The 540-Day EAD Automatic Extension, Explained (2026)",
+    description: "A timely EAD renewal can keep you working for up to 540 days past your card's expiry. Here's who qualifies, how to prove it for I-9, and the traps to avoid.",
+    date: "June 14, 2026",
+    readTime: "10 min",
+    category: "EAD",
+    image: null,
+  },
+  {
     slug: "h1b-renewal-timeline",
     title: "The Complete H-1B Renewal Timeline: When to Start and What to Do",
     description: "A step-by-step guide to H-1B renewal — from the 180-day mark to filing your I-129 extension. Never miss your window again.",
