@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogPosts = [
+    "how-to-check-your-i94",
     "h1b-grace-period-after-layoff",
     "how-long-does-ead-renewal-take",
     "h4-ead-renewal-guide",
