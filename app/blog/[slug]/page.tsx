@@ -47,6 +47,10 @@ const RELATED_TOOLS: Record<string, { label: string; href: string; desc: string 
     { label: "H-1B Deadline Tracker", href: "/h1b-renewal-tracker", desc: "Track your 60-day grace period countdown and every H-1B deadline automatically." },
     { label: "Start tracking free", href: "/signup", desc: "DueVisa tracks your grace period end date and sends reminders at 30, 14, and 7 days." },
   ],
+  "how-to-check-your-i94": [
+    { label: "H-1B Deadline Tracker", href: "/h1b-renewal-tracker", desc: "Track your I-94 authorized stay date with automatic reminders." },
+    { label: "Start tracking free", href: "/signup", desc: "Add your I-94 date once — DueVisa reminds you at 180, 90, 60, 30, and 7 days." },
+  ],
 };
 
 // Blog post content
@@ -945,6 +949,155 @@ Add your grace period and any pending petition deadlines at duevisa.com. Free to
       {
         q: "What happens if I overstay the 60-day grace period?",
         a: "If you remain in the US beyond the 60-day grace period without changing to another valid status or filing for extension, you begin accruing unlawful presence. Accruing 180+ days of unlawful presence and then leaving the US triggers a 3-year bar on re-entry. Accruing 1 year or more triggers a 10-year bar. It also creates complications for future immigration applications including green card petitions and visa renewals.",
+      },
+    ],
+  },
+  "how-to-check-your-i94": {
+    title: "How to Check Your I-94 Online: Step-by-Step Guide (2026)",
+    description: "Your I-94 — not your visa stamp — controls how long you can legally stay in the US. Here's how to find it, read it, and fix errors, with screenshots-level detail.",
+    date: "June 22, 2026",
+    readTime: "10 min",
+    category: "General",
+    content: `
+Your I-94 is the single most important number in your US immigration life — and most visa holders have never actually looked at it. It is not your visa stamp. It is not your I-797 approval notice. It is the official record of how long you are legally permitted to stay in the United States, and it is available online for free in about two minutes.
+
+This guide walks you through exactly how to find your I-94, how to read every field on it, and what to do if something is wrong.
+
+## Quick Answer
+
+To check your I-94, go to the official CBP website at **i94.cbp.dhs.gov**, click "Get Most Recent I-94," and enter your name, date of birth, and passport details exactly as they appear in your passport. Your most recent I-94 record will display your **admission date, class of admission (visa category), and "Admit Until" date** — the date by which you must leave or extend your status. This "Admit Until" date, not your visa stamp expiration, controls how long you can legally stay. The service is free; never pay a third-party site for it.
+
+## What Is an I-94, Exactly?
+
+The Form I-94 is the **Arrival/Departure Record** issued by US Customs and Border Protection (CBP) every time you enter the United States. It records:
+
+- The date you were admitted
+- The immigration status (class of admission) you were granted
+- The date until which you are authorized to stay (the "Admit Until" date)
+
+Since 2013, CBP has automated the I-94 for most travelers arriving by air and sea — you no longer get the small white paper card stapled into your passport. Instead, your I-94 is created electronically and is available to retrieve online.
+
+## I-94 vs Visa Stamp vs I-797: Which Date Matters?
+
+This is the confusion that gets people in trouble. These are three different documents with three different dates:
+
+| Document | What It Is | Which Date Controls Your Stay? |
+|----------|-----------|-------------------------------|
+| Visa stamp (in passport) | Permission to *travel* to a US port of entry | No — it only controls when you can seek entry |
+| I-797 approval notice | USCIS approval of a petition (e.g., H-1B) | Sometimes — but your actual admission is on the I-94 |
+| I-94 record | CBP's record of your *authorized stay* | Yes — the "Admit Until" date is what matters |
+
+Your visa stamp can be expired while you are still perfectly legal in the US, because the I-94 governs your stay — not the stamp. Conversely, you can have a valid multi-year visa stamp but an I-94 that expires much sooner. **Always trust the I-94 date.**
+
+## Step-by-Step: How to Retrieve Your I-94
+
+### Step 1: Go to the official CBP website
+
+Open your browser and go to **i94.cbp.dhs.gov**. This is the only official, free source. Be wary of look-alike sites that charge a fee — the government service costs nothing.
+
+### Step 2: Click "Get Most Recent I-94"
+
+On the homepage, select the option to retrieve your most recent I-94. You will be asked to consent to the terms of use.
+
+### Step 3: Enter your details exactly as in your passport
+
+You will need to provide:
+
+- First (given) name
+- Last (family/surname) name
+- Date of birth
+- Passport number
+- Country of issuance of the passport
+
+**Critical**: Enter your name exactly as it appears in the passport you used to enter the US, including the order of names. Name mismatches are the number one reason the system says "not found."
+
+### Step 4: Review your I-94 record
+
+Once submitted, your most recent I-94 displays on screen with your admission record. You can print it or save it as a PDF for your records.
+
+### Step 5: (Optional) Check your travel history
+
+The same website offers a "View Travel History" option, which shows your arrivals and departures over the past several years. This is useful for counting days present for tax residency, naturalization, or visa applications — though CBP notes the travel history may not be 100% complete.
+
+## How to Read Your I-94: Every Field Explained
+
+When your record displays, you will see several fields. Here is what each one means:
+
+- **Admission (I-94) Record Number** — an 11-digit number unique to this admission. You may need this for applications.
+- **Most Recent Date of Entry** — the date you last entered the US.
+- **Class of Admission** — your visa category as admitted (e.g., H-1B, F-1, B-2, L-1). Confirm this matches the status you expect.
+- **Admit Until Date** — the most important field. This is the last date you are authorized to remain in the US in this status. If it says "D/S," see below.
+
+## What Does "D/S" Mean on an I-94?
+
+If your "Admit Until" date says **D/S**, it stands for **Duration of Status**. This is common for F-1 students, J-1 exchange visitors, and some other categories. It means you are authorized to stay for as long as you maintain valid status (e.g., enrolled full-time and following program rules) rather than until a fixed calendar date.
+
+D/S does not mean "stay forever." If you fall out of status — for example, by dropping below full-time enrollment — you can begin accruing unlawful presence even though no fixed date appears on your I-94.
+
+## Common I-94 Errors and How to Fix Them
+
+CBP officers occasionally make data-entry mistakes. The most common errors:
+
+- **Wrong "Admit Until" date** — for example, an H-1B holder admitted only until their visa stamp date instead of their I-797 petition validity date
+- **Wrong class of admission** — admitted in the wrong category
+- **Misspelled name or wrong passport number**
+
+If you find an error:
+
+1. **For errors at an airport/seaport (air or sea arrival)**: Contact a CBP Deferred Inspection site or visit i94.cbp.dhs.gov for correction guidance.
+2. **For errors at a land border**: Visit a CBP port of entry or Deferred Inspection office.
+3. Bring your passport, visa, I-797 (if applicable), and any supporting documents.
+
+Fix errors **immediately**. An incorrect I-94 date can cause you to unknowingly overstay, which has serious consequences.
+
+## Why You Should Check Your I-94 After Every Entry
+
+Make it a habit: every single time you re-enter the US, check your I-94 within a few days. Here's why:
+
+- CBP may admit you to a date earlier than you expect (commonly tied to passport expiry)
+- An error caught in week one is easy to fix; an error discovered after you've overstayed is not
+- Your "Admit Until" date — not your I-797 or visa — is what an immigration officer, employer, or DMV will rely on
+
+## The "Passport Rule" That Catches People Off Guard
+
+CBP generally cannot admit you past the expiration date of your passport. So if your passport expires before your visa petition does, your I-94 may be cut short to your passport's expiry date — even if your H-1B petition is valid for two more years.
+
+The fix: renew your passport well before it expires, and after each entry, verify your I-94 "Admit Until" date reflects your full authorized period. If it was shortened due to passport expiry, you may need to renew your passport and then correct or extend your I-94.
+
+## Track Your I-94 Date with DueVisa
+
+Once you know your "Admit Until" date, the next step is making sure you never forget it. DueVisa lets you enter your I-94 expiration once and sends you reminders at 180, 90, 60, 30, and 7 days before your authorized stay ends — so a missed date never turns into an overstay.
+
+Add your I-94 at duevisa.com. Free for your first 3 documents.
+    `,
+    faqs: [
+      {
+        q: "Where do I check my I-94 online?",
+        a: "Go to the official CBP website at i94.cbp.dhs.gov and click 'Get Most Recent I-94.' Enter your name, date of birth, and passport details exactly as they appear in your passport. The service is completely free — avoid third-party sites that charge a fee for what the government provides at no cost.",
+      },
+      {
+        q: "Is the I-94 the same as my visa stamp?",
+        a: "No. Your visa stamp (in your passport) is permission to travel to a US port of entry and request admission. Your I-94 is CBP's record of how long you are actually authorized to stay once admitted. The I-94 'Admit Until' date controls your legal stay — your visa stamp can even be expired while you remain perfectly legal in the US.",
+      },
+      {
+        q: "What does 'D/S' mean on my I-94?",
+        a: "D/S stands for 'Duration of Status.' It appears instead of a fixed date for categories like F-1 students and J-1 exchange visitors. It means you can stay as long as you maintain valid status (such as full-time enrollment), rather than until a specific calendar date. However, if you fall out of status, you can begin accruing unlawful presence even with D/S on your I-94.",
+      },
+      {
+        q: "Why can't the I-94 website find my record?",
+        a: "The most common reason is a name mismatch. Enter your name exactly as it appears in the passport you used to enter the US, including the correct order of given and family names. Other causes include using a different passport than the one you entered with, or entering by land border before the record was processed. If problems persist, contact a CBP Deferred Inspection office.",
+      },
+      {
+        q: "My I-94 'Admit Until' date is wrong. What do I do?",
+        a: "CBP data-entry errors do happen. To correct an air or sea arrival record, contact a CBP Deferred Inspection site or check i94.cbp.dhs.gov for guidance. For land-border errors, visit a CBP port of entry. Bring your passport, visa, and I-797 approval notice if applicable. Fix errors immediately — an incorrect date can cause you to unknowingly overstay.",
+      },
+      {
+        q: "Why is my I-94 date earlier than my visa or I-797?",
+        a: "The most common reason is your passport expiration. CBP generally cannot admit you past your passport's expiry date, so if your passport expires before your H-1B petition, your I-94 may be shortened to the passport date. Renew your passport well in advance and verify your I-94 after each entry to ensure it reflects your full authorized stay.",
+      },
+      {
+        q: "Do I need to check my I-94 every time I enter the US?",
+        a: "Yes — it's a strongly recommended habit. CBP may admit you to a different date than you expect, and catching an error in the first week is far easier than discovering it after you've overstayed. Since your 'Admit Until' date governs your legal stay, verifying it after every entry protects you from accidental status violations.",
       },
     ],
   },

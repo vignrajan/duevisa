@@ -43,7 +43,7 @@ DueVisa is a new domain competing in a niche dominated by (a) USCIS/government p
 | h4 ead renewal | ~3k | Med | Info | h4-ead-renewal-guide ✅ |
 | when should i renew my ead | ~2k | Low-Med | Info | how-long-does-ead-renewal-take ✅ |
 | ead processing time | ~8k | Med-High | Info | how-long-does-ead-renewal-take ✅ |
-| how to check i94 expiration date | ~3k | Low | Info | i94-vs-visa-stamp (expand) |
+| how to check i94 expiration date | ~3k | Low | Info | how-to-check-your-i94 ✅ |
 | h1b grace period after layoff | ~6k | Med | Info | (build — high priority) |
 | can i work while ead renewal pending | ~1.5k | Low | Info | ead-540-day-automatic-extension ✅ |
 | ead expired can i work | ~1k | Low | Info | ead-540-day-automatic-extension ✅ |
@@ -126,7 +126,7 @@ ead-540-day-automatic-extension →  /ead-renewal-calculator, /ead-reminder
 ### CLUSTER 3 — I-94 / Status / Overstay
 - ✅ I-94 vs visa stamp (existing)
 - ✅ What happens if you overstay (existing)
-- ⬜ How to check your I-94 (step-by-step) — high volume
+- ✅ How to check your I-94 (step-by-step) — high volume
 - ⬜ I-94 vs I-797 difference
 - ⬜ Unlawful presence vs out of status
 - ⬜ Duration of Status (D/S) explained

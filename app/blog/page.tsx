@@ -13,6 +13,15 @@ export const metadata: Metadata = {
 
 const BLOG_POSTS = [
   {
+    slug: "how-to-check-your-i94",
+    title: "How to Check Your I-94 Online: Step-by-Step Guide (2026)",
+    description: "Your I-94 — not your visa stamp — controls how long you can legally stay in the US. Here's how to find it, read it, and fix errors, with screenshots-level detail.",
+    date: "June 22, 2026",
+    readTime: "10 min",
+    category: "General",
+    image: null,
+  },
+  {
     slug: "h1b-grace-period-after-layoff",
     title: "H-1B Grace Period After Layoff: Your 60-Day Survival Guide (2026)",
     description: "Laid off on an H-1B? You have 60 days to act — and every day counts. Here's exactly what to do, what your options are, and what mistakes can end your stay.",
@@ -137,8 +146,8 @@ export default function BlogPage() {
             >
               <div className="md:w-2/5 aspect-video md:aspect-auto bg-page-alt2 flex items-center justify-center flex-shrink-0">
                 <div className="text-center">
-                  <div className="font-mono text-forest text-4xl font-bold">H-1B</div>
-                  <div className="text-forest/70 text-sm mt-1 font-medium tracking-wide uppercase">Renewal Guide</div>
+                  <div className="font-mono text-forest text-4xl font-bold">{BLOG_POSTS[0].category}</div>
+                  <div className="text-forest/70 text-sm mt-1 font-medium tracking-wide uppercase">Guide</div>
                 </div>
               </div>
               <div className="flex-1 p-6 sm:p-8 flex flex-col justify-center">
