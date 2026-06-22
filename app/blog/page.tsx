@@ -13,6 +13,15 @@ export const metadata: Metadata = {
 
 const BLOG_POSTS = [
   {
+    slug: "h1b-grace-period-after-layoff",
+    title: "H-1B Grace Period After Layoff: Your 60-Day Survival Guide (2026)",
+    description: "Laid off on an H-1B? You have 60 days to act — and every day counts. Here's exactly what to do, what your options are, and what mistakes can end your stay.",
+    date: "June 22, 2026",
+    readTime: "13 min",
+    category: "H-1B",
+    image: null,
+  },
+  {
     slug: "how-long-does-ead-renewal-take",
     title: "EAD Processing Time in 2026: How Long Does Renewal Take?",
     description: "EAD renewal can take anywhere from 1 to 8+ months depending on your category and service center. Here's how to check your timeline and avoid a work gap.",

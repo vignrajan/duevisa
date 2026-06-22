@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogPosts = [
+    "h1b-grace-period-after-layoff",
     "how-long-does-ead-renewal-take",
     "h4-ead-renewal-guide",
     "ead-540-day-automatic-extension",
