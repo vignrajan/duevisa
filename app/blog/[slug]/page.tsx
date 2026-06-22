@@ -51,6 +51,10 @@ const RELATED_TOOLS: Record<string, { label: string; href: string; desc: string 
     { label: "H-1B Deadline Tracker", href: "/h1b-renewal-tracker", desc: "Track your I-94 authorized stay date with automatic reminders." },
     { label: "Start tracking free", href: "/signup", desc: "Add your I-94 date once — DueVisa reminds you at 180, 90, 60, 30, and 7 days." },
   ],
+  "opt-application-timeline": [
+    { label: "F-1 OPT Tracker", href: "/f1-opt-tracker", desc: "Track your OPT EAD, STEM OPT, and I-20 deadlines in one place." },
+    { label: "Start tracking free", href: "/signup", desc: "DueVisa reminds you when to open your 90-day OPT window and every deadline after." },
+  ],
 };
 
 // Blog post content
@@ -949,6 +953,207 @@ Add your grace period and any pending petition deadlines at duevisa.com. Free to
       {
         q: "What happens if I overstay the 60-day grace period?",
         a: "If you remain in the US beyond the 60-day grace period without changing to another valid status or filing for extension, you begin accruing unlawful presence. Accruing 180+ days of unlawful presence and then leaving the US triggers a 3-year bar on re-entry. Accruing 1 year or more triggers a 10-year bar. It also creates complications for future immigration applications including green card petitions and visa renewals.",
+      },
+    ],
+  },
+  "opt-application-timeline": {
+    title: "OPT Application Timeline: The 90-Day Window Explained (2026)",
+    description: "F-1 students can only apply for OPT within a strict 90-day window. Miss it and you lose your OPT year. Here's the exact timeline, how to calculate your window, and every deadline you need to track.",
+    date: "June 22, 2026",
+    readTime: "12 min",
+    category: "F-1",
+    content: `
+Optional Practical Training (OPT) is one of the most time-sensitive processes in F-1 immigration. Unlike most immigration filings where filing earlier is always better, OPT has a strict 90-day application window that opens exactly 90 days before your program end date. File outside that window — in either direction — and USCIS will reject your application and you will lose your OPT year entirely.
+
+This guide gives you the complete OPT application timeline, from when you can apply to when you can start working, with every date you need to hit and every mistake to avoid.
+
+## Quick Answer
+
+For post-completion OPT, you can file Form I-765 **no earlier than 90 days before your program end date** and **no later than 60 days after your program end date**. USCIS recommends filing as early as possible within that window — ideally 3 to 4 months before you want to start working. Processing typically takes 3 to 5 months in 2026. Your OPT start date can be no later than 60 days after your program end date, and you choose the start date yourself when filing. Always confirm current timelines with your DSO (Designated School Official) and on uscis.gov.
+
+## What Is OPT?
+
+Optional Practical Training authorizes F-1 students to work in the US in a job directly related to their field of study. There are two types:
+
+- **Pre-completion OPT**: Work authorization while you are still enrolled (part-time while classes are in session, full-time during breaks)
+- **Post-completion OPT**: Work authorization for up to 12 months after you graduate or finish your program — this is what most students use
+
+This guide focuses on **post-completion OPT** since that is where the timeline is most critical.
+
+If you are eligible for STEM OPT extension (a 24-month extension for qualifying STEM degrees), that requires a separate application filed within the last 90 days of your initial OPT period — covered in a separate guide.
+
+## The 90-Day OPT Application Window
+
+Here is the rule that defines everything:
+
+**You may file Form I-765 for post-completion OPT between 90 days before your program end date and 60 days after your program end date.**
+
+| Milestone | Description |
+|-----------|-------------|
+| Program End Date − 90 days | Earliest you can file I-765 |
+| Program End Date | Last day of your F-1 program (from your I-20) |
+| Program End Date + 60 days | Grace period ends — latest your OPT start date can be |
+| OPT Start Date | The date you chose when filing (must be within the window) |
+| OPT Start Date + 12 months | Your OPT EAD expires |
+
+The 90-day window is not "about 3 months" — it is a hard 90 calendar days. USCIS will reject applications filed even one day early.
+
+## How to Calculate Your OPT Window
+
+Your program end date is printed on your I-20 in the field labeled "Program End Date" or "Completion Date." This is the date your school expects you to finish your degree requirements — it is not necessarily graduation ceremony date.
+
+Example: If your program end date is May 15, 2026:
+
+- Earliest filing date: February 14, 2026 (90 days before May 15)
+- Latest OPT start date: July 14, 2026 (60 days after May 15)
+- OPT end date: 12 months after your chosen start date
+
+**Critical note**: If your program end date changes — for example, because you are finishing early or your completion is delayed — your DSO must update your I-20 and your OPT window shifts accordingly. Always calculate from the date on your most current I-20.
+
+## Step-by-Step OPT Application Timeline
+
+### 3–4 Months Before Your Program End Date
+
+This is your ideal filing window.
+
+1. **Meet with your DSO** (Designated School Official at your school's international students office). Your DSO must recommend you for OPT in SEVIS before you can apply.
+2. **Request your OPT I-20** from your DSO — it will be endorsed with an OPT recommendation and will look slightly different from your standard I-20.
+3. **Gather your application documents** (see checklist below).
+4. **File Form I-765** with USCIS with the correct fee.
+
+Filing 3–4 months early gives you enough runway for USCIS processing (currently 3–5 months in 2026) so your EAD card arrives before or near your chosen start date.
+
+### 60–90 Days Before Your Program End Date
+
+This is still within the window but is cutting it close given current processing times. If you file 60 days before your program end date and processing takes 5 months, your card may not arrive until well after your start date. You will not be able to work until the physical card arrives (unlike some other work authorization types, OPT does not have an auto-extension).
+
+### After Your Program End Date
+
+You can still file during the 60-day grace period after your program end date — but you cannot work during this window unless your EAD has already been approved. This path almost guarantees a work gap. Avoid it if at all possible.
+
+### After the 60-Day Grace Period
+
+You cannot apply for OPT. Your 12-month OPT entitlement for that degree level is gone.
+
+## What Documents Do You Need?
+
+| Document | Notes |
+|----------|-------|
+| Form I-765 | Application for Employment Authorization |
+| OPT-endorsed I-20 | Issued by your DSO; must show OPT recommendation |
+| Copy of current F-1 visa | Front page of your passport visa stamp |
+| Copy of your I-94 | From i94.cbp.dhs.gov |
+| Passport photo (2 copies) | 2×2 inches, white background |
+| Copy of all previous I-20s | Every I-20 you have ever held |
+| Copy of previous EADs (if any) | If you had prior OPT or EAD |
+| Filing fee | $520 as of 2026 — check uscis.gov for current amount |
+
+Do not include originals in your mailing — USCIS will not return them. Send clear photocopies and keep the originals.
+
+## Choosing Your OPT Start Date
+
+When you file, you choose your requested OPT start date. Rules:
+
+- It must be **after your program end date** (you cannot work before you graduate)
+- It must be **no later than 60 days after your program end date**
+- Your OPT end date will be exactly 12 months from your chosen start date
+
+Choose strategically. If you have a job lined up that starts June 1 and your program ends May 15, request June 1 as your start date — you get the full 12 months of OPT on that schedule. If you request May 16 as your start date but your EAD doesn't arrive until July, those weeks from May 16 still count toward your 12-month clock whether or not you were able to work.
+
+**You cannot change your OPT start date after USCIS approves your application.** Choose carefully.
+
+## OPT Processing Times in 2026
+
+USCIS currently processes Form I-765 for OPT (category (c)(3)(B)) in approximately 3 to 5 months at most service centers. This is why filing at the 90-day mark is the right move — you want the card in hand at or near your start date.
+
+You can check the live processing time for your service center and category at the USCIS processing times tool on uscis.gov. Select Form I-765, then eligibility category (c)(3)(B) for post-completion OPT.
+
+You will receive a Form I-797C receipt notice first (within 2–4 weeks of filing), then a biometrics appointment if required, then your approval notice and EAD card.
+
+## When Can You Start Working?
+
+You can only begin working on OPT on the start date printed on your EAD card — not your requested start date, and not the date USCIS approves your application. If the card is delayed, you wait for the physical card to arrive.
+
+The only exception: if your EAD card has not arrived but you have your approval notice, contact your DSO — in some limited situations, schools can advise on how to handle this.
+
+## Unemployment Days: The Clock Inside the Clock
+
+Once your OPT starts, an unemployment clock begins. For regular (non-STEM) OPT:
+
+- You can have **no more than 90 days of unemployment** during your 12-month OPT period
+- Days without a qualifying job count against your 90-day limit
+- If you exceed 90 days of unemployment, you fall out of F-1 status
+
+Report every job start and end date to your DSO promptly — they track your employment in SEVIS. Failing to report is itself a status violation.
+
+## Common OPT Application Mistakes
+
+**Mistake 1: Filing before the 90-day window opens.**
+USCIS will reject your application and return it. You will have to refile — potentially now in a tighter window and behind on processing time.
+
+**Mistake 2: Letting your DSO miss the SEVIS recommendation.**
+You cannot file I-765 until your DSO has recommended you in SEVIS. Do not wait until the last week to start the DSO conversation — some schools require 2–4 weeks of lead time.
+
+**Mistake 3: Sending originals instead of copies.**
+USCIS will not return original documents if they get lost or damaged in the process.
+
+**Mistake 4: Requesting a start date you cannot actually use.**
+If you request June 1 but your job doesn't start until August, your OPT clock still runs from June 1 and you've used up two months of your 12-month allotment.
+
+**Mistake 5: Not tracking your unemployment days.**
+Students who don't track their 90 days of allowed unemployment can fall out of status without realizing it. Count every gap.
+
+**Mistake 6: Forgetting about STEM OPT.**
+If your degree is in a qualifying STEM field, you can apply for a 24-month extension during the last 90 days of your initial OPT. File early — STEM OPT processing can take several months, and you need the application filed before your OPT ends.
+
+## After OPT: What Are Your Options?
+
+Your OPT year will end. Here are the common paths forward:
+
+- **H-1B cap lottery**: Your employer files an H-1B petition for the next cap season (lottery in March for October 1 start date). Cap-gap protects you while waiting.
+- **STEM OPT extension**: 24 additional months for qualifying degrees.
+- **Change of status**: H-4, F-2, or other dependent status if spouse has qualifying visa.
+- **Return to school**: Enroll in a new program at a higher level and restore F-1 status.
+- **Depart the US**: The 60-day F-1 grace period begins when your OPT ends.
+
+## Track Your OPT Timeline with DueVisa
+
+Between the 90-day application window, your chosen start date, unemployment day tracking, and STEM OPT filing window, OPT involves more deadlines than almost any other immigration category. DueVisa tracks all of them — OPT EAD expiry, STEM OPT filing window, and your F-1 I-20 program end date — with reminders so nothing slips.
+
+Add your dates at duevisa.com. Free for your first 3 documents.
+    `,
+    faqs: [
+      {
+        q: "When can I apply for OPT?",
+        a: "For post-completion OPT, you can file Form I-765 starting 90 days before your program end date (as listed on your I-20). You cannot file earlier than 90 days before, and your chosen OPT start date cannot be later than 60 days after your program end date. Filing at the 90-day mark is recommended given that USCIS currently takes 3–5 months to process OPT applications.",
+      },
+      {
+        q: "How long does OPT take to process in 2026?",
+        a: "USCIS currently takes approximately 3 to 5 months to process Form I-765 for OPT. Processing times vary by service center and can change. Check the current processing time for your service center and category (c)(3)(B) for post-completion OPT at the USCIS processing times tool on uscis.gov. Because of this timeline, filing as soon as your 90-day window opens is the safest approach.",
+      },
+      {
+        q: "Can I work before my OPT EAD card arrives?",
+        a: "No. You can only start working on OPT on the start date printed on your physical EAD card. You must have the card in hand before working. Unlike some other work authorization types, OPT does not allow you to begin work on the receipt notice alone. If your card is significantly delayed, contact your DSO for guidance.",
+      },
+      {
+        q: "What happens if I miss the OPT application window?",
+        a: "If you file after the 60-day grace period following your program end date, USCIS will reject your I-765 and you will lose your post-completion OPT entitlement for that degree level. There is no appeal or extension. This is why tracking the window carefully and filing as early as possible is so important.",
+      },
+      {
+        q: "How many days can I be unemployed on OPT?",
+        a: "For standard post-completion OPT, you can have a maximum of 90 days of cumulative unemployment during your 12-month OPT period. Days without a qualifying job (in your field of study) count against this limit. If you exceed 90 days, you fall out of F-1 status. Report all job start and end dates to your DSO promptly so they can track your employment in SEVIS.",
+      },
+      {
+        q: "Can I change my OPT start date after filing?",
+        a: "No. Once USCIS approves your OPT application, the start date on your EAD card is fixed. You cannot change it. This is why choosing your start date carefully when you file is critical — pick a date you can realistically use, because your 12-month clock runs from that date regardless of when you actually start working.",
+      },
+      {
+        q: "What is the difference between OPT and STEM OPT?",
+        a: "Standard OPT (post-completion) gives you 12 months of work authorization after graduating in any degree field. STEM OPT is a 24-month extension available to students who graduated with a qualifying STEM degree (Science, Technology, Engineering, or Mathematics). To get STEM OPT, your employer must be enrolled in E-Verify, and you must apply during the last 90 days of your standard OPT period. STEM OPT raises your unemployment day limit to 150 days.",
+      },
+      {
+        q: "Does my DSO need to do anything before I apply for OPT?",
+        a: "Yes — your DSO must recommend you for OPT in SEVIS (the government's student tracking system) and issue you an OPT-endorsed I-20 before you can file I-765 with USCIS. This is required. Contact your school's international students office as soon as your 90-day window opens, or earlier — many schools require several weeks of lead time to process the SEVIS recommendation.",
       },
     ],
   },
