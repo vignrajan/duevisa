@@ -133,7 +133,7 @@ ead-540-day-automatic-extension →  /ead-renewal-calculator, /ead-reminder
 
 ### CLUSTER 4 — F-1 / Students
 - ✅ F-1 immigration checklist (existing)
-- ⬜ OPT application timeline (90-day window)
+- ✅ OPT application timeline (90-day window)
 - ⬜ STEM OPT extension guide
 - ⬜ F-1 grace period (60 days) explained
 - ⬜ Day 1 CPT risks

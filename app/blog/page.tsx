@@ -13,6 +13,15 @@ export const metadata: Metadata = {
 
 const BLOG_POSTS = [
   {
+    slug: "opt-application-timeline",
+    title: "OPT Application Timeline: The 90-Day Window Explained (2026)",
+    description: "F-1 students can only apply for OPT within a strict 90-day window. Miss it and you lose your OPT year. Here's the exact timeline, how to calculate your window, and every deadline you need to track.",
+    date: "June 22, 2026",
+    readTime: "12 min",
+    category: "F-1",
+    image: null,
+  },
+  {
     slug: "how-to-check-your-i94",
     title: "How to Check Your I-94 Online: Step-by-Step Guide (2026)",
     description: "Your I-94 — not your visa stamp — controls how long you can legally stay in the US. Here's how to find it, read it, and fix errors, with screenshots-level detail.",
