@@ -118,7 +118,7 @@ ead-540-day-automatic-extension →  /ead-renewal-calculator, /ead-reminder
 ### CLUSTER 2 — H-1B
 - ✅ H-1B renewal timeline (existing)
 - ✅ **H-1B grace period after layoff (60 days)** — high priority, high volume
-- ⬜ H-1B transfer timeline
+- ✅ H-1B transfer timeline
 - ⬜ H-1B to green card timeline
 - ⬜ Cap-gap explained (F-1 → H-1B)
 - ⬜ H-1B extension beyond 6 years (AC21)
@@ -134,13 +134,13 @@ ead-540-day-automatic-extension →  /ead-renewal-calculator, /ead-reminder
 ### CLUSTER 4 — F-1 / Students
 - ✅ F-1 immigration checklist (existing)
 - ✅ OPT application timeline (90-day window)
-- ⬜ STEM OPT extension guide
+- ✅ STEM OPT extension guide
 - ⬜ F-1 grace period (60 days) explained
 - ⬜ Day 1 CPT risks
 
 ### CLUSTER 5 — Green Card / Citizenship
 - ✅ Green card renewal guide (existing)
-- ⬜ I-751 removal of conditions (90-day window)
+- ✅ I-751 removal of conditions (90-day window)
 - ⬜ N-400 citizenship eligibility calculator + guide
 - ⬜ Re-entry permit guide
 - ⬜ Green card while traveling (I-551 stamp)

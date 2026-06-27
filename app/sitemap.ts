@@ -28,6 +28,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogPosts = [
+    "stem-opt-extension-guide",
+    "i751-removal-of-conditions",
+    "h1b-transfer-timeline",
     "opt-application-timeline",
     "how-to-check-your-i94",
     "h1b-grace-period-after-layoff",

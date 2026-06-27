@@ -13,6 +13,33 @@ export const metadata: Metadata = {
 
 const BLOG_POSTS = [
   {
+    slug: "stem-opt-extension-guide",
+    title: "STEM OPT Extension: The Complete 24-Month Guide (2026)",
+    description: "The STEM OPT extension gives qualifying graduates 24 extra months of work authorization. Here's who qualifies, the exact filing window, the I-983 training plan, and every reporting deadline.",
+    date: "June 22, 2026",
+    readTime: "13 min",
+    category: "F-1",
+    image: null,
+  },
+  {
+    slug: "i751-removal-of-conditions",
+    title: "I-751 Removal of Conditions: The 90-Day Filing Window (2026)",
+    description: "Conditional green card holders must file Form I-751 within a strict 90-day window before their 2-year card expires. Miss it and you risk losing permanent residence. Here's the exact timeline and process.",
+    date: "June 22, 2026",
+    readTime: "11 min",
+    category: "Green Card",
+    image: null,
+  },
+  {
+    slug: "h1b-transfer-timeline",
+    title: "H-1B Transfer Timeline: How Long It Takes and When You Can Start (2026)",
+    description: "Changing employers on an H-1B? Here's the complete transfer timeline — from offer to filing to your first day at the new job — and exactly when H-1B portability lets you start working.",
+    date: "June 22, 2026",
+    readTime: "11 min",
+    category: "H-1B",
+    image: null,
+  },
+  {
     slug: "opt-application-timeline",
     title: "OPT Application Timeline: The 90-Day Window Explained (2026)",
     description: "F-1 students can only apply for OPT within a strict 90-day window. Miss it and you lose your OPT year. Here's the exact timeline, how to calculate your window, and every deadline you need to track.",
