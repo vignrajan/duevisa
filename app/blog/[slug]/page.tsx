@@ -55,6 +55,18 @@ const RELATED_TOOLS: Record<string, { label: string; href: string; desc: string 
     { label: "F-1 OPT Tracker", href: "/f1-opt-tracker", desc: "Track your OPT EAD, STEM OPT, and I-20 deadlines in one place." },
     { label: "Start tracking free", href: "/signup", desc: "DueVisa reminds you when to open your 90-day OPT window and every deadline after." },
   ],
+  "stem-opt-extension-guide": [
+    { label: "F-1 OPT Tracker", href: "/f1-opt-tracker", desc: "Track your STEM OPT filing window and 24-month extension end date automatically." },
+    { label: "Start tracking free", href: "/signup", desc: "DueVisa reminds you when your STEM OPT filing window opens — and every report deadline." },
+  ],
+  "i751-removal-of-conditions": [
+    { label: "Green Card Renewal Tracker", href: "/green-card-renewal", desc: "Track your I-751 90-day filing window and conditional card expiry automatically." },
+    { label: "Start tracking free", href: "/signup", desc: "DueVisa opens your I-751 reminder exactly 90 days before your 2-year card expires." },
+  ],
+  "h1b-transfer-timeline": [
+    { label: "H-1B Deadline Tracker", href: "/h1b-renewal-tracker", desc: "Track your H-1B transfer receipt, approval, and I-94 dates in one place." },
+    { label: "Start tracking free", href: "/signup", desc: "DueVisa tracks your current I-94 and new petition dates so nothing slips." },
+  ],
 };
 
 // Blog post content
@@ -1154,6 +1166,439 @@ Add your dates at duevisa.com. Free for your first 3 documents.
       {
         q: "Does my DSO need to do anything before I apply for OPT?",
         a: "Yes — your DSO must recommend you for OPT in SEVIS (the government's student tracking system) and issue you an OPT-endorsed I-20 before you can file I-765 with USCIS. This is required. Contact your school's international students office as soon as your 90-day window opens, or earlier — many schools require several weeks of lead time to process the SEVIS recommendation.",
+      },
+    ],
+  },
+  "stem-opt-extension-guide": {
+    title: "STEM OPT Extension: The Complete 24-Month Guide (2026)",
+    description: "The STEM OPT extension gives qualifying graduates 24 extra months of work authorization. Here's who qualifies, the exact filing window, the I-983 training plan, and every reporting deadline.",
+    date: "June 22, 2026",
+    readTime: "13 min",
+    category: "F-1",
+    content: `
+If you graduated with a STEM degree and you are on OPT, the STEM OPT extension is the single most valuable immigration benefit available to you: 24 additional months of work authorization on top of your initial 12-month OPT, giving you up to 36 months total in the US to work and pursue an H-1B. But the extension comes with a strict filing window, an employer training plan requirement, and ongoing reporting obligations that catch many students off guard.
+
+This guide covers exactly who qualifies, when to file, and every deadline you must track to keep your STEM OPT valid.
+
+## Quick Answer
+
+The STEM OPT extension adds **24 months** of work authorization for F-1 students who earned a qualifying STEM degree and are working for an **E-Verify employer**. You must file Form I-765 **during the last 90 days of your initial 12-month OPT period** and **before your current OPT EAD expires**. You also need a completed **Form I-983 Training Plan** signed by your employer. If you file on time, you receive an automatic extension of up to 180 days while the application is pending. Always verify current rules with your DSO and on uscis.gov.
+
+## What Is the STEM OPT Extension?
+
+Standard post-completion OPT gives F-1 graduates 12 months of work authorization. The STEM OPT extension allows eligible students to extend that by **24 months**, for a total of **36 months** of OPT. This extra time is critical because it gives you multiple chances at the H-1B lottery (which most people do not win on the first try).
+
+## Who Qualifies for STEM OPT?
+
+You must meet all of the following:
+
+- You are currently on **valid post-completion OPT** (standard 12-month OPT)
+- Your degree is in a **qualifying STEM field** on the DHS STEM Designated Degree Program List (identified by CIP code)
+- The degree was earned from an **accredited, SEVP-certified** US school
+- Your employer is enrolled in and using **E-Verify**
+- Your employer will complete and sign a **Form I-983 Training Plan**
+- Your job is **directly related** to your STEM degree and is paid
+
+A key nuance: you can apply for STEM OPT based on a **previously earned STEM degree** even if your most recent OPT is based on a non-STEM degree, as long as the prior STEM degree is from an SEVP-certified school and the practical training relates to it.
+
+## The STEM OPT Filing Window
+
+This is the rule that governs your entire timeline:
+
+**You must file Form I-765 for the STEM extension during the 90 days before your current OPT EAD expires — and the application must be received by USCIS before your current OPT EAD expires.**
+
+| Milestone | Description |
+|-----------|-------------|
+| OPT EAD Expiry − 90 days | Earliest you can file the STEM extension |
+| OPT EAD Expiry | Your current 12-month OPT ends |
+| Filing on time | Grants automatic extension of up to 180 days while pending |
+| STEM OPT EAD | 24-month extension from the day after your OPT EAD expired |
+
+If you file even one day after your current OPT EAD expires, you lose the extension. The 90-day window before expiry is your only chance.
+
+## The 180-Day Automatic Extension
+
+If you file your STEM OPT application on time (before your OPT EAD expires) and your extension is still pending when the OPT EAD expires, you are automatically authorized to continue working for up to **180 days** while USCIS processes your application. This bridge prevents a work gap — but only if you filed before the deadline.
+
+## Step-by-Step STEM OPT Timeline
+
+### 90+ Days Before OPT EAD Expiry: Prepare
+
+1. **Confirm your degree is STEM-eligible** — check the CIP code on your I-20 against the DHS STEM Designated Degree Program List.
+2. **Confirm your employer uses E-Verify** — ask HR directly; not all employers are enrolled.
+3. **Complete Form I-983 with your employer** — this training plan describes your role, learning objectives, and supervision.
+
+### The 90-Day Window: File
+
+4. **Request a STEM OPT I-20 from your DSO** — bring your completed I-983. Your DSO updates SEVIS and issues a new I-20 with the STEM recommendation.
+5. **File Form I-765** within 60 days of your DSO issuing the STEM OPT I-20, and before your current OPT EAD expires.
+
+### After Filing
+
+6. **Receive your I-797C receipt notice** — keep it; combined with your expired EAD it proves your 180-day authorization.
+7. **Receive your STEM OPT EAD** — work authorized through the new card's expiry.
+
+## Form I-983: The Training Plan
+
+The I-983 is unique to STEM OPT and trips up many applicants. It is a formal training plan that:
+
+- Describes how your job relates to your STEM degree
+- Lists specific learning objectives and how they will be achieved
+- Identifies your supervisor and how your performance is evaluated
+- Must be **signed by both you and an authorized official at your employer**
+
+You do not mail the I-983 to USCIS — you submit it to your DSO, who keeps it on file. But it must be complete before your DSO will recommend you for STEM OPT.
+
+## Ongoing Reporting Requirements
+
+STEM OPT has far more reporting obligations than standard OPT. Missing any of these can end your status:
+
+| Report | Deadline |
+|--------|----------|
+| Validation report to DSO | Every 6 months (confirming employment details) |
+| Annual self-evaluation on I-983 | At 12 months and at the end of the 24-month period |
+| Change of employer | Within 10 days |
+| Change of address | Within 10 days |
+| Change in job/salary/hours | Promptly, with updated I-983 |
+| Loss of employment | Within 10 days |
+
+The 6-month validation reports are the ones most students forget. Set a recurring reminder.
+
+## Unemployment Limit on STEM OPT
+
+During the combined OPT + STEM OPT period, you are allowed a total of **150 days of unemployment** (compared to 90 days on standard OPT alone). The 90 days from your initial OPT carry over and you get an additional 60 days during the STEM extension. Exceeding 150 cumulative days means falling out of status.
+
+## STEM OPT and the H-1B Cap-Gap
+
+The biggest strategic value of STEM OPT is the multiple H-1B lottery attempts it enables. If your employer files an H-1B petition and you are selected, **cap-gap** can extend your work authorization and status from the time your STEM OPT ends until your H-1B start date (October 1). With 36 months of OPT, you typically get two to three lottery cycles instead of one.
+
+## Common STEM OPT Mistakes
+
+**Mistake 1: Filing after the OPT EAD expires.** The extension is lost. The 90-day-before window is firm.
+
+**Mistake 2: Assuming your employer uses E-Verify.** Confirm it explicitly — STEM OPT requires it, and many smaller employers are not enrolled.
+
+**Mistake 3: Forgetting the 6-month validation reports.** These are easy to miss because they recur silently. A missed report is a status violation.
+
+**Mistake 4: An incomplete or generic I-983.** USCIS and your DSO expect a specific, detailed training plan — not boilerplate.
+
+**Mistake 5: Working for an employer that won't sign the I-983.** No I-983, no STEM OPT. Confirm employer cooperation before you rely on the extension.
+
+## Track Your STEM OPT Deadlines with DueVisa
+
+STEM OPT has more recurring deadlines than any other F-1 benefit: the 90-day filing window, the new EAD expiry, and 6-month validation reports for two full years. DueVisa tracks every one and reminds you before each — including the validation reports that are so easy to forget.
+
+Add your dates at duevisa.com. Free for your first 3 documents.
+    `,
+    faqs: [
+      {
+        q: "When can I apply for the STEM OPT extension?",
+        a: "You must file Form I-765 for the STEM OPT extension during the 90 days before your current OPT EAD expires, and USCIS must receive it before your OPT EAD expires. You also need to file within 60 days of your DSO issuing your STEM OPT I-20. Filing as early as the window opens is recommended to allow for processing time.",
+      },
+      {
+        q: "How long is the STEM OPT extension?",
+        a: "The STEM OPT extension provides 24 additional months of work authorization on top of your initial 12-month post-completion OPT, for a total of up to 36 months. This extended period is especially valuable because it allows multiple chances at the H-1B lottery.",
+      },
+      {
+        q: "Can I keep working while my STEM OPT application is pending?",
+        a: "Yes, if you filed on time. If you submitted your STEM OPT application before your current OPT EAD expired and it is still pending when the EAD expires, you receive an automatic extension of work authorization for up to 180 days while USCIS processes your application. Your expired EAD plus the I-797C receipt notice serves as proof.",
+      },
+      {
+        q: "What is Form I-983 and do I mail it to USCIS?",
+        a: "Form I-983 is the Training Plan for STEM OPT students. It describes how your job relates to your STEM degree, your learning objectives, supervision, and evaluation. It must be signed by you and an authorized official at your employer. You do NOT mail it to USCIS — you submit it to your DSO, who keeps it on file and uses it to recommend you for STEM OPT in SEVIS.",
+      },
+      {
+        q: "Does my employer need to be enrolled in E-Verify for STEM OPT?",
+        a: "Yes. STEM OPT requires that your employer is enrolled in and uses E-Verify, the federal employment eligibility verification system. This is a strict requirement. Confirm with your employer's HR department before relying on the STEM extension — many smaller employers are not enrolled in E-Verify.",
+      },
+      {
+        q: "What are the STEM OPT reporting requirements?",
+        a: "STEM OPT requires more reporting than standard OPT: a validation report to your DSO every 6 months, a self-evaluation on your I-983 at 12 months and at the end of the period, and reports within 10 days for any change of employer, address, or loss of employment. Missing these reports — especially the recurring 6-month validations — is a status violation.",
+      },
+      {
+        q: "How many days can I be unemployed on STEM OPT?",
+        a: "During the combined initial OPT and STEM OPT period, you are allowed up to 150 cumulative days of unemployment. This is the original 90 days from your standard OPT plus an additional 60 days during the STEM extension. Exceeding 150 total days of unemployment means you fall out of F-1 status.",
+      },
+      {
+        q: "Can I get STEM OPT if my current degree isn't STEM?",
+        a: "Possibly. You may be able to apply for STEM OPT based on a previously earned STEM degree, even if your most recent OPT is based on a non-STEM degree — as long as the prior STEM degree is from an SEVP-certified school and your practical training is directly related to that STEM degree. Discuss your specific situation with your DSO.",
+      },
+    ],
+  },
+  "i751-removal-of-conditions": {
+    title: "I-751 Removal of Conditions: The 90-Day Filing Window (2026)",
+    description: "Conditional green card holders must file Form I-751 within a strict 90-day window before their 2-year card expires. Miss it and you risk losing permanent residence. Here's the exact timeline and process.",
+    date: "June 22, 2026",
+    readTime: "11 min",
+    category: "Green Card",
+    content: `
+If you received a 2-year conditional green card — almost always through marriage to a US citizen or permanent resident — you do not yet have permanent residence locked in. You have a conditional status that expires, and to keep it you must file Form I-751 to remove the conditions within a strict 90-day window. Miss that window and you can lose your status entirely.
+
+This guide explains exactly when to file, how the process works, and the deadlines you cannot afford to miss.
+
+## Quick Answer
+
+If you hold a 2-year conditional green card, you must file **Form I-751 (Petition to Remove Conditions on Residence)** during the **90 days immediately before your conditional card expires**. Filing on time extends your permanent resident status automatically (currently up to 48 months) via a receipt notice while USCIS processes the case. Filing late requires a written explanation of good cause, and failing to file at all can result in loss of status and removal proceedings. Always verify current requirements on uscis.gov.
+
+## Why You Have a Conditional Green Card
+
+You received a 2-year conditional green card (rather than a 10-year card) if your permanent residence was granted based on a marriage that was **less than 2 years old** at the time you were approved. The condition exists so USCIS can confirm, two years later, that the marriage is genuine and not solely for immigration benefits. Conditional residence is also issued in certain investor (EB-5) cases.
+
+Your status is real permanent residence — but it is conditional, and the condition must be removed before the card expires.
+
+## The 90-Day Filing Window
+
+This is the rule that governs everything:
+
+**File Form I-751 during the 90 days immediately before the expiration date on your conditional green card.**
+
+| Milestone | Description |
+|-----------|-------------|
+| Card Expiry − 90 days | Earliest you can file I-751 (jointly) |
+| Card Expiry | Your conditional green card expires |
+| Filing on time | Receipt notice extends status (currently up to 48 months) |
+| After expiry without filing | Risk of status loss and removal proceedings |
+
+The expiration date is printed on the front of your green card. Count back 90 days — that is the day your window opens.
+
+**Important exception:** If you are filing with a waiver of the joint-filing requirement (for example, after divorce, or due to abuse), you are **not** bound by the 90-day window and can file at any time. The 90-day window applies to joint petitions filed by both spouses together.
+
+## What "Removing Conditions" Means
+
+When USCIS approves your I-751, your conditional status converts to **permanent residence with a 10-year green card**. You no longer have to re-prove your marriage, and you are on the standard path toward eventual naturalization.
+
+## Filing Jointly vs. Filing with a Waiver
+
+**Joint filing** (the standard path): You and your spouse file Form I-751 together, demonstrating that your marriage is genuine. This requires the 90-day window.
+
+**Filing with a waiver**: If you cannot file jointly — because of divorce, your spouse's death, abuse, or extreme hardship — you can request a waiver of the joint-filing requirement. Waiver-based petitions can be filed at any time, not just in the 90-day window.
+
+## What Evidence Do You Need?
+
+USCIS wants proof that your marriage is bona fide. Strong evidence includes:
+
+- Joint bank account and credit card statements
+- A shared lease or mortgage and property deeds
+- Joint utility bills and insurance policies (health, auto, life)
+- Birth certificates of children born to the marriage
+- Joint tax returns
+- Photos together over the 2-year period
+- Affidavits from people who know you as a couple
+
+The more documentation spanning the full 2 years, the stronger your case. Thin evidence is a leading cause of Requests for Evidence (RFEs) and interviews.
+
+## What to File
+
+| Item | Notes |
+|------|-------|
+| Form I-751 | Petition to Remove Conditions on Residence |
+| Copy of your conditional green card (both sides) | Front and back |
+| Evidence of bona fide marriage | See list above |
+| Filing fee | Check uscis.gov for the current amount |
+| Waiver documentation (if applicable) | Divorce decree, death certificate, etc. |
+
+## What Happens After You File
+
+1. **Receipt notice (Form I-797C)** arrives within a few weeks. This notice automatically extends your permanent resident status — currently up to 48 months — and serves as proof of your status along with your expired green card.
+2. **Biometrics appointment** for fingerprints and photo.
+3. **USCIS review** — they may approve, issue an RFE, or schedule an interview.
+4. **Approval** — your conditions are removed and you receive a 10-year green card.
+
+Keep your receipt notice with your expired card at all times — together they prove you are a lawful permanent resident while the case is pending, including for travel and I-9 employment.
+
+## What If You Miss the Window?
+
+If you fail to file before your conditional card expires:
+
+- Your conditional resident status **automatically terminates**
+- USCIS can initiate **removal (deportation) proceedings**
+- You can still file late **with a written explanation of good cause** for the delay, but approval is not guaranteed and your situation becomes more precarious
+
+If you have missed your window, contact an immigration attorney immediately — do not simply wait.
+
+## Common I-751 Mistakes
+
+**Mistake 1: Filing too early.** USCIS will reject a joint petition filed before the 90-day window opens. Count carefully from the card expiry date.
+
+**Mistake 2: Forgetting entirely.** The 2-year card feels permanent, and many people simply forget the deadline. This is the most common — and most damaging — mistake.
+
+**Mistake 3: Thin marriage evidence.** Submitting only a couple of documents invites an RFE or interview. Build a thorough record spanning the full 2 years.
+
+**Mistake 4: Not updating your address.** USCIS sends critical notices by mail. A missed biometrics or interview notice can derail your case.
+
+**Mistake 5: Assuming divorce ends your eligibility.** It does not — you can file with a waiver of the joint-filing requirement. Get legal advice rather than giving up.
+
+## Track Your I-751 Window with DueVisa
+
+The I-751 90-day window is one of the easiest deadlines to forget — your 2-year card feels like a real green card right up until it expires. DueVisa opens your I-751 reminder exactly 90 days before your conditional card expires, so you file squarely inside the window.
+
+Add your conditional green card expiry at duevisa.com. Free for your first 3 documents.
+    `,
+    faqs: [
+      {
+        q: "When do I file Form I-751?",
+        a: "If you are filing jointly with your spouse, you must file Form I-751 during the 90 days immediately before your 2-year conditional green card expires. The expiration date is printed on the front of your card — count back 90 days to find when your window opens. If you are filing with a waiver of the joint-filing requirement (e.g., after divorce), you can file at any time.",
+      },
+      {
+        q: "What happens if I don't file I-751 before my card expires?",
+        a: "Your conditional resident status automatically terminates, and USCIS can place you in removal (deportation) proceedings. You can still file late with a written explanation showing good cause for the delay, but approval is not guaranteed. If you have missed or are about to miss your window, contact an immigration attorney immediately.",
+      },
+      {
+        q: "Does my conditional green card expiring mean I lose my status while the I-751 is pending?",
+        a: "No, as long as you filed on time. When you file Form I-751, USCIS sends a receipt notice (Form I-797C) that automatically extends your permanent resident status — currently up to 48 months — while your case is processed. Carry this receipt notice with your expired green card; together they prove your status for travel and employment.",
+      },
+      {
+        q: "Can I file I-751 if I'm divorced?",
+        a: "Yes. If you are divorced, you can file Form I-751 with a request for a waiver of the joint-filing requirement. Waiver-based petitions are not bound by the 90-day window and can be filed at any time. You will need to provide your divorce decree and continue to demonstrate that the marriage was entered into in good faith. Consult an attorney for divorce-based waiver cases.",
+      },
+      {
+        q: "What evidence do I need for I-751?",
+        a: "USCIS wants proof that your marriage is genuine. Strong evidence includes joint bank and credit card statements, a shared lease or mortgage, joint utility bills and insurance policies, joint tax returns, birth certificates of children, photos together over time, and affidavits from people who know you as a couple. Documentation spanning the full 2-year period makes the strongest case.",
+      },
+      {
+        q: "How long does I-751 take to process?",
+        a: "Processing times vary significantly and have been lengthy in recent years, which is why the receipt notice extends your status for up to 48 months. Check the current processing time for Form I-751 at the USCIS processing times tool on uscis.gov. While pending, your receipt notice combined with your expired card serves as evidence of your continued permanent resident status.",
+      },
+      {
+        q: "What is the difference between a conditional and permanent green card?",
+        a: "A conditional green card is valid for 2 years and is issued when your residence is based on a marriage less than 2 years old at approval (or certain investor cases). A permanent (10-year) green card is issued after you remove the conditions via Form I-751. Both grant lawful permanent residence, but the conditional card requires the I-751 step to keep your status and obtain the 10-year card.",
+      },
+    ],
+  },
+  "h1b-transfer-timeline": {
+    title: "H-1B Transfer Timeline: How Long It Takes and When You Can Start (2026)",
+    description: "Changing employers on an H-1B? Here's the complete transfer timeline — from offer to filing to your first day at the new job — and exactly when H-1B portability lets you start working.",
+    date: "June 22, 2026",
+    readTime: "11 min",
+    category: "H-1B",
+    content: `
+Changing jobs on an H-1B is one of the most common — and most misunderstood — moves in US immigration. The good news: you usually do not have to wait for USCIS approval to start your new job. The H-1B "portability" rule lets you begin working as soon as your new employer's petition is properly filed. But the timing details matter enormously, and getting them wrong can put your status at risk.
+
+This guide breaks down the full H-1B transfer timeline and answers the question everyone asks: when can I actually start?
+
+## Quick Answer
+
+An H-1B transfer is simply a new Form I-129 petition filed by your new employer — there is no separate "transfer" form. Under **H-1B portability** (AC21), you can begin working for the new employer **as soon as USCIS receives the new petition** (confirmed by the I-797C receipt notice), as long as you were in valid H-1B status, the petition is non-frivolous, and you have not worked without authorization. You do **not** need to wait for approval. Premium processing (15 business days) is available; standard processing can take several months. Verify current rules on uscis.gov.
+
+## What an "H-1B Transfer" Actually Is
+
+There is no Form for an H-1B "transfer." When you change employers, your new employer files a brand-new **Form I-129 H-1B petition** for you. Because you already hold an H-1B and are counted against the cap, this new petition is **cap-exempt** — it is not subject to the annual H-1B lottery. That is what makes transfers relatively straightforward compared to a first-time H-1B.
+
+## The H-1B Portability Rule: Why You Can Start Early
+
+Under the American Competitiveness in the Twenty-First Century Act (AC21), an H-1B worker can begin employment with a new employer as soon as that employer files a non-frivolous H-1B petition — you do not have to wait for approval. To use portability, you must:
+
+- Have been **lawfully admitted** in H-1B status
+- Have a **new I-129 petition filed before your current authorized stay expires**
+- **Not have engaged in unauthorized employment** since your last admission
+
+Once the petition is filed and you have the receipt notice, you are authorized to work for the new employer while the petition is pending.
+
+## The H-1B Transfer Timeline, Step by Step
+
+| Stage | Typical Duration |
+|-------|------------------|
+| Offer accepted → attorney engaged | A few days to 2 weeks |
+| Attorney prepares petition + LCA | 1–3 weeks |
+| LCA certification by DOL | ~7 business days |
+| Petition filed → I-797C receipt | A few days to 2 weeks |
+| **You can start working** | On/after receipt (portability) |
+| Premium processing decision | 15 business days |
+| Standard processing decision | 2–6+ months |
+
+### Step 1: Offer and Attorney Engagement
+
+Once you accept the offer, the new employer's immigration attorney begins the process. Provide your current I-797, I-94, visa stamp, passport, and prior pay stubs promptly — delays here delay everything.
+
+### Step 2: Labor Condition Application (LCA)
+
+Before filing the I-129, the employer files an LCA with the Department of Labor, which certifies the wage and working conditions. LCA certification typically takes about 7 business days. This step cannot be skipped.
+
+### Step 3: Filing the I-129 Petition
+
+With the certified LCA, the attorney files the I-129 petition. You will receive an I-797C receipt notice confirming USCIS has the petition. **This receipt is the trigger for portability — keep it safe.**
+
+### Step 4: Starting Work
+
+You can begin working for the new employer on or after the date USCIS receives the petition (the receipt date), provided you meet the portability conditions. Many people choose to wait for the receipt notice in hand for documentation purposes.
+
+### Step 5: USCIS Decision
+
+- **Premium processing** ($2,805 as of 2026): USCIS acts within 15 business days — issuing an approval, RFE, or denial. Highly recommended for transfers to reduce uncertainty.
+- **Standard processing**: Several months. You can keep working under portability the entire time.
+
+## When Should You Give Notice at Your Current Job?
+
+This is the strategic question. Common approaches:
+
+- **Conservative**: Wait until the new petition is approved before resigning. Safest, but you carry two jobs' worth of risk and the new employer may want you sooner.
+- **Balanced**: Resign after the new petition is filed and you have the receipt notice, relying on portability. This is the most common approach.
+- **Aggressive**: Resign at offer acceptance. Riskiest — if anything delays the LCA or filing, you could have a status gap.
+
+Most attorneys recommend waiting until at least the receipt notice before giving notice, and ideally choosing premium processing for faster certainty.
+
+## What About the 60-Day Grace Period?
+
+If you have already left your old job (or were laid off), you may be relying on the 60-day grace period. In that case, the new I-129 must be filed **before your grace period ends**. The grace period and portability work together: the grace period keeps you in status while you find the job; the filed petition lets you start working.
+
+## Premium Processing: Worth It for Transfers?
+
+For transfers, premium processing is usually worth the cost because:
+
+- It removes months of uncertainty about whether the petition will be approved
+- Some new employers will not let you start until approval — premium gets you there in 15 business days
+- If an RFE is issued, you learn quickly and can respond rather than waiting months
+
+## Does Transferring Reset Your H-1B 6-Year Clock?
+
+No. Your H-1B is subject to a **6-year maximum** across all employers. Transferring does not reset this clock — your time with the previous employer still counts. However, if you have an approved I-140 or qualify under AC21, you may be able to extend beyond 6 years (covered in a separate guide).
+
+## Common H-1B Transfer Mistakes
+
+**Mistake 1: Resigning before the petition is filed.** If the LCA or filing is delayed, you could fall out of status. Wait for the receipt notice.
+
+**Mistake 2: Assuming the transfer resets your 6-year clock.** It does not. Track your cumulative H-1B time.
+
+**Mistake 3: Skipping premium processing on a tight timeline.** Standard processing can take months — premium removes the uncertainty for a few thousand dollars.
+
+**Mistake 4: Not keeping your I-797C receipt.** It is your proof of work authorization under portability. Keep digital and physical copies.
+
+**Mistake 5: Letting your I-94 expire.** Portability requires the new petition to be filed before your authorized stay ends. Know your I-94 date.
+
+## Track Your H-1B Transfer with DueVisa
+
+A transfer involves several dates that all matter: your current I-94 expiry, the new petition's receipt date, and the approval. DueVisa tracks them together so you always know your status — and reminds you well before your I-94 runs out.
+
+Add your H-1B dates at duevisa.com. Free for your first 3 documents.
+    `,
+    faqs: [
+      {
+        q: "How long does an H-1B transfer take?",
+        a: "The full process typically takes a few weeks to prepare and file (including ~7 business days for LCA certification), after which USCIS decides the petition. With premium processing, USCIS acts within 15 business days; standard processing can take 2 to 6+ months. Importantly, you can usually start working at the new employer as soon as the petition is filed under H-1B portability — you don't have to wait for approval.",
+      },
+      {
+        q: "When can I start working at my new employer on an H-1B transfer?",
+        a: "Under H-1B portability (AC21), you can begin working for the new employer as soon as USCIS receives the new I-129 petition, confirmed by the I-797C receipt notice. You must have been in valid H-1B status, the petition must be non-frivolous and filed before your authorized stay expires, and you must not have worked without authorization. You do not need to wait for the petition to be approved.",
+      },
+      {
+        q: "Is there a separate form for an H-1B transfer?",
+        a: "No. There is no dedicated 'transfer' form. Your new employer files a new Form I-129 H-1B petition on your behalf. Because you already hold an H-1B and are counted against the cap, this petition is cap-exempt and is not subject to the annual H-1B lottery — which makes transfers much more straightforward than a first-time H-1B.",
+      },
+      {
+        q: "Should I quit my current job before the H-1B transfer is approved?",
+        a: "Most immigration attorneys recommend waiting until at least the new petition is filed and you have the I-797C receipt notice before resigning, so you can rely on H-1B portability. Resigning before the petition is filed creates the risk of a status gap if the LCA or filing is delayed. Some workers wait for full approval (faster with premium processing) for maximum certainty.",
+      },
+      {
+        q: "Does an H-1B transfer reset my 6-year limit?",
+        a: "No. The H-1B 6-year maximum applies across all employers, and transferring does not reset the clock — your time with previous employers still counts. However, if you have an approved I-140 immigrant petition or otherwise qualify under AC21, you may be able to extend your H-1B beyond the 6-year limit.",
+      },
+      {
+        q: "Is premium processing worth it for an H-1B transfer?",
+        a: "For most transfers, yes. Premium processing ($2,805 as of 2026) gets a USCIS decision within 15 business days, removing months of uncertainty. It's especially valuable if your new employer won't let you start until approval, or if you want to know quickly whether an RFE will be issued so you can respond. Always confirm the current premium processing fee on uscis.gov.",
+      },
+      {
+        q: "What if I was laid off — can I still transfer my H-1B?",
+        a: "Yes. If you were laid off, you have a 60-day grace period to find a new employer. The new employer's I-129 petition must be filed before your grace period ends. The grace period keeps you in valid status while you job-hunt, and the filed petition lets you begin working under portability. File as early in the grace period as possible given processing times.",
       },
     ],
   },
