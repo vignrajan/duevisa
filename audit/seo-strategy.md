@@ -120,8 +120,8 @@ ead-540-day-automatic-extension →  /ead-renewal-calculator, /ead-reminder
 - ✅ **H-1B grace period after layoff (60 days)** — high priority, high volume
 - ✅ H-1B transfer timeline
 - ⬜ H-1B to green card timeline
-- ⬜ Cap-gap explained (F-1 → H-1B)
-- ⬜ H-1B extension beyond 6 years (AC21)
+- ✅ Cap-gap explained (F-1 → H-1B)
+- ✅ H-1B extension beyond 6 years (AC21)
 
 ### CLUSTER 3 — I-94 / Status / Overstay
 - ✅ I-94 vs visa stamp (existing)

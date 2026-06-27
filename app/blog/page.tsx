@@ -13,6 +13,24 @@ export const metadata: Metadata = {
 
 const BLOG_POSTS = [
   {
+    slug: "h1b-cap-gap-explained",
+    title: "Cap-Gap Explained: How F-1 Students Bridge OPT to H-1B (2026)",
+    description: "Cap-gap automatically extends your F-1 status and work authorization from when your OPT ends until your H-1B starts on October 1. Here's exactly how it works and who qualifies.",
+    date: "June 22, 2026",
+    readTime: "11 min",
+    category: "H-1B",
+    image: null,
+  },
+  {
+    slug: "h1b-extension-beyond-6-years-ac21",
+    title: "H-1B Extension Beyond 6 Years: AC21 Rules Explained (2026)",
+    description: "The H-1B has a 6-year limit — but AC21 lets you extend it in one-year or three-year increments if your green card process is far enough along. Here's exactly how to qualify.",
+    date: "June 22, 2026",
+    readTime: "11 min",
+    category: "H-1B",
+    image: null,
+  },
+  {
     slug: "stem-opt-extension-guide",
     title: "STEM OPT Extension: The Complete 24-Month Guide (2026)",
     description: "The STEM OPT extension gives qualifying graduates 24 extra months of work authorization. Here's who qualifies, the exact filing window, the I-983 training plan, and every reporting deadline.",

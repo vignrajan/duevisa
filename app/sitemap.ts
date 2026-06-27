@@ -28,6 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogPosts = [
+    "h1b-cap-gap-explained",
+    "h1b-extension-beyond-6-years-ac21",
     "stem-opt-extension-guide",
     "i751-removal-of-conditions",
     "h1b-transfer-timeline",

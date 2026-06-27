@@ -67,6 +67,14 @@ const RELATED_TOOLS: Record<string, { label: string; href: string; desc: string 
     { label: "H-1B Deadline Tracker", href: "/h1b-renewal-tracker", desc: "Track your H-1B transfer receipt, approval, and I-94 dates in one place." },
     { label: "Start tracking free", href: "/signup", desc: "DueVisa tracks your current I-94 and new petition dates so nothing slips." },
   ],
+  "h1b-cap-gap-explained": [
+    { label: "F-1 OPT Tracker", href: "/f1-opt-tracker", desc: "Track your OPT end date and cap-gap extension in one place." },
+    { label: "Start tracking free", href: "/signup", desc: "DueVisa tracks your OPT expiry, cap-gap window, and October 1 H-1B start." },
+  ],
+  "h1b-extension-beyond-6-years-ac21": [
+    { label: "H-1B Deadline Tracker", href: "/h1b-renewal-tracker", desc: "Track your 6-year H-1B max, I-140 approval, and extension deadlines." },
+    { label: "Start tracking free", href: "/signup", desc: "DueVisa tracks your cumulative H-1B time and reminds you when to file extensions." },
+  ],
 };
 
 // Blog post content
@@ -1166,6 +1174,256 @@ Add your dates at duevisa.com. Free for your first 3 documents.
       {
         q: "Does my DSO need to do anything before I apply for OPT?",
         a: "Yes — your DSO must recommend you for OPT in SEVIS (the government's student tracking system) and issue you an OPT-endorsed I-20 before you can file I-765 with USCIS. This is required. Contact your school's international students office as soon as your 90-day window opens, or earlier — many schools require several weeks of lead time to process the SEVIS recommendation.",
+      },
+    ],
+  },
+  "h1b-cap-gap-explained": {
+    title: "Cap-Gap Explained: How F-1 Students Bridge OPT to H-1B (2026)",
+    description: "Cap-gap automatically extends your F-1 status and work authorization from when your OPT ends until your H-1B starts on October 1. Here's exactly how it works and who qualifies.",
+    date: "June 22, 2026",
+    readTime: "11 min",
+    category: "H-1B",
+    content: `
+You won the H-1B lottery — congratulations. But there is a catch that confuses thousands of F-1 students every year: your H-1B doesn't start until October 1, and your OPT might expire months earlier. What happens in between? The answer is "cap-gap," a provision that bridges the gap so you don't fall out of status or lose your job. But it only works under specific conditions, and misunderstanding it can cost you your status.
+
+This guide explains exactly how cap-gap works, who qualifies, and the deadlines you must hit.
+
+## Quick Answer
+
+**Cap-gap** automatically extends an F-1 student's status — and, in many cases, their OPT work authorization — from the date it would otherwise expire until **October 1**, when the new fiscal year's H-1B begins. It applies when you are on F-1/OPT and your employer files a **cap-subject H-1B petition with an October 1 start date that requests a change of status** (not consular processing), and the petition is filed while your F-1 status (including any grace period) is still valid. Always confirm details with your DSO and on uscis.gov.
+
+## What Problem Does Cap-Gap Solve?
+
+The H-1B cap lottery runs in March. Selected petitions are filed in the spring, but the H-1B itself cannot begin until **October 1** (the start of the federal fiscal year). Meanwhile, many F-1 graduates' OPT expires over the summer — in May, June, or July.
+
+Without cap-gap, there would be a "gap" between when your OPT ends and when your H-1B begins — a period with no status and no work authorization. Cap-gap fills exactly that gap.
+
+## How Cap-Gap Works
+
+Cap-gap has two components, and which one you get depends on your timing:
+
+| Your situation when H-1B petition is filed | What cap-gap extends |
+|--------------------------------------------|----------------------|
+| You are in a valid OPT period | Both your **F-1 status AND OPT work authorization** are extended to Oct 1 |
+| You are in your post-OPT 60-day grace period | Only your **F-1 status** is extended to Oct 1 — you cannot work until the H-1B begins |
+
+This distinction is critical. If your employer files the H-1B while your OPT is still active, you keep working straight through to October 1. If they file after your OPT has already ended (during your grace period), your status is preserved but you cannot work in the interim.
+
+## Who Qualifies for Cap-Gap?
+
+All of the following must be true:
+
+- You are an **F-1 student** currently in valid status (in OPT, STEM OPT, or your 60-day grace period)
+- Your employer filed a **cap-subject H-1B petition** (i.e., subject to the annual lottery)
+- The petition requests an **October 1 start date**
+- The petition requests a **change of status** (Consular processing does NOT trigger cap-gap)
+- The petition was **filed before your F-1 status / grace period expired**
+- The petition was **accepted** by USCIS (selected in the lottery and properly filed)
+
+If your employer filed for consular processing instead of change of status, you do **not** get cap-gap — a common and costly surprise.
+
+## The Cap-Gap Timeline
+
+| Date | Event |
+|------|-------|
+| March | H-1B registration / lottery selection |
+| April 1 onward | Selected petitions filed with USCIS |
+| Spring–Summer | Your OPT or grace period would normally end |
+| Petition filed in time | Cap-gap extends status (and possibly work auth) to Oct 1 |
+| October 1 | Your H-1B status and employment begin |
+
+## Getting Your Cap-Gap I-20
+
+Cap-gap is automatic in the sense that it applies by regulation — but you should get documentation proving it. Request an updated **cap-gap I-20** from your DSO once your H-1B petition is filed (and again once it is receipted/approved). This I-20 shows your extended OPT end date and is your evidence of continued work authorization for I-9 and employer purposes.
+
+Bring your H-1B receipt notice (Form I-797C) to your DSO to get the cap-gap I-20 issued.
+
+## What If Your H-1B Is Denied or Withdrawn?
+
+Cap-gap ends if your H-1B petition is **denied, rejected, revoked, or withdrawn**. At that point:
+
+- If the denial occurs after your original OPT end date, you generally enter a **60-day grace period** from the date of the denial (or the cap-gap end), during which you must depart, change status, or take other action
+- You can no longer work under cap-gap once the petition is no longer pending/approved
+
+This is why you should not treat cap-gap as guaranteed until your H-1B is approved.
+
+## Travel During Cap-Gap: Be Careful
+
+Traveling internationally during the cap-gap period is risky. If you leave the US while in cap-gap status (after your OPT EAD has expired) and before October 1, you generally **cannot re-enter in F-1 status** to resume cap-gap, and you cannot enter in H-1B status until October 1. This can strand you outside the US.
+
+If you must travel, consult your DSO and an immigration attorney first. The safe default is to remain in the US until your H-1B takes effect on October 1.
+
+## Cap-Gap and STEM OPT
+
+If you are on STEM OPT, the same cap-gap principles apply — your STEM OPT and F-1 status can be extended to October 1 if a timely cap-subject H-1B change-of-status petition is filed. STEM OPT's longer duration (24 months) often means students are still in an active work-authorized period when the H-1B is filed, maximizing the chance of a seamless transition.
+
+## Common Cap-Gap Mistakes
+
+**Mistake 1: Assuming consular processing triggers cap-gap.** It does not. Only a change-of-status petition extends your status. Confirm with your employer's attorney which one they filed.
+
+**Mistake 2: Letting your OPT lapse before the petition is filed.** If you are in your grace period when the petition is filed, you get status but no work authorization until October 1. Filing while OPT is active is far better.
+
+**Mistake 3: Traveling internationally during cap-gap.** You may not be able to return until October 1. Stay in the US unless an attorney advises otherwise.
+
+**Mistake 4: Not getting a cap-gap I-20.** Your employer needs documentation of your extended work authorization. Request the updated I-20 from your DSO promptly.
+
+**Mistake 5: Treating cap-gap as guaranteed.** If your H-1B is denied, cap-gap ends. Have a backup plan until approval.
+
+## Track Your Cap-Gap Window with DueVisa
+
+Cap-gap involves three dates that must line up: your OPT end date, your H-1B filing date, and the October 1 start. DueVisa tracks all of them together so you know whether you'll have continuous work authorization — and reminds you well before your OPT expires.
+
+Add your OPT and H-1B dates at duevisa.com. Free for your first 3 documents.
+    `,
+    faqs: [
+      {
+        q: "What is cap-gap?",
+        a: "Cap-gap is a provision that automatically extends an F-1 student's status — and in many cases their OPT work authorization — from when it would otherwise expire until October 1, when a new fiscal year's H-1B begins. It bridges the gap between an expiring OPT and an H-1B that cannot start until October 1, preventing a lapse in status or employment.",
+      },
+      {
+        q: "Does cap-gap let me keep working until October 1?",
+        a: "It depends on your timing. If your employer filed the cap-subject H-1B change-of-status petition while your OPT was still valid, cap-gap extends both your F-1 status AND your work authorization to October 1 — so you keep working. If the petition was filed during your post-OPT 60-day grace period, cap-gap extends only your status, not work authorization, so you cannot work until the H-1B begins on October 1.",
+      },
+      {
+        q: "Do I qualify for cap-gap if my employer filed for consular processing?",
+        a: "No. Cap-gap only applies when the H-1B petition requests a change of status to H-1B. If your employer filed for consular processing (meaning you would get your H-1B visa stamp abroad), you do not qualify for cap-gap. This is a common and costly surprise — confirm with your employer's attorney which type of petition was filed.",
+      },
+      {
+        q: "How do I get a cap-gap I-20?",
+        a: "Request a cap-gap I-20 from your DSO (Designated School Official) once your H-1B petition is filed, and again once it is receipted or approved. Bring your H-1B receipt notice (Form I-797C). The cap-gap I-20 shows your extended OPT end date and serves as evidence of your continued work authorization for I-9 and employer purposes.",
+      },
+      {
+        q: "Can I travel internationally during cap-gap?",
+        a: "It is risky and generally not recommended. If you leave the US during the cap-gap period (after your OPT EAD has expired) and before October 1, you typically cannot re-enter in F-1 status to resume cap-gap, and you cannot enter in H-1B status until October 1 — which can strand you abroad. Consult your DSO and an immigration attorney before any travel; the safe default is to stay in the US until your H-1B takes effect.",
+      },
+      {
+        q: "What happens to cap-gap if my H-1B is denied?",
+        a: "Cap-gap ends if your H-1B petition is denied, rejected, revoked, or withdrawn. If this happens after your original OPT end date, you generally enter a 60-day grace period from the denial during which you must depart, change status, or take other action. You can no longer work under cap-gap once the petition is no longer pending or approved, so it's wise to have a backup plan until your H-1B is approved.",
+      },
+      {
+        q: "Does cap-gap apply to STEM OPT students?",
+        a: "Yes. The same cap-gap principles apply to STEM OPT — your STEM OPT work authorization and F-1 status can be extended to October 1 if a timely cap-subject H-1B change-of-status petition is filed while you are in valid status. Because STEM OPT lasts 24 months, students are often still in an active work-authorized period when the H-1B is filed, which maximizes the chance of a seamless transition to H-1B.",
+      },
+    ],
+  },
+  "h1b-extension-beyond-6-years-ac21": {
+    title: "H-1B Extension Beyond 6 Years: AC21 Rules Explained (2026)",
+    description: "The H-1B has a 6-year limit — but AC21 lets you extend it in one-year or three-year increments if your green card process is far enough along. Here's exactly how to qualify.",
+    date: "June 22, 2026",
+    readTime: "11 min",
+    category: "H-1B",
+    content: `
+The H-1B visa has a hard 6-year maximum. For many immigrants stuck in years-long green card backlogs — especially those born in India or China — six years is nowhere near enough time to reach permanent residence. The American Competitiveness in the Twenty-First Century Act (AC21) solves this by allowing H-1B extensions beyond the 6-year cap, but only if your green card case has hit specific milestones. Understanding which milestone you've reached determines whether you get a one-year or a three-year extension.
+
+This guide explains the AC21 rules in plain English and the deadlines that protect your ability to extend.
+
+## Quick Answer
+
+Under **AC21**, you can extend your H-1B beyond the normal 6-year limit in two ways: (1) **One-year extensions** under AC21 §106(a)(b) if a **labor certification (PERM) or I-140 was filed at least 365 days ago** and is still pending or approved; or (2) **Three-year extensions** under AC21 §104(c) if you have an **approved I-140 but cannot file for adjustment of status** because your priority date is not current (you are stuck in the green card backlog). You generally must begin the green card process before the start of your 6th year to preserve one-year-extension eligibility. Verify all details on uscis.gov and with an attorney.
+
+## The H-1B 6-Year Limit
+
+H-1B status is granted in increments (usually 3 years at a time) up to a cumulative maximum of **6 years**. Time spent outside the US can sometimes be "recaptured" to add back to your total, but the baseline rule is six years across all H-1B employers. After six years, you must either:
+
+- Have transitioned to another status (such as a green card), OR
+- Qualify for an AC21 extension, OR
+- Leave the US for at least one year before a new H-1B (resetting the clock)
+
+For anyone in a long green card backlog, AC21 extensions are the lifeline.
+
+## AC21 One-Year Extensions (§106)
+
+You qualify for **one-year H-1B extensions** beyond the 6-year limit if:
+
+- A **PERM labor certification** OR an **I-140 petition** was filed **at least 365 days before** your 6-year limit is reached, AND
+- That PERM/I-140 is still pending, or was approved but you can't yet file (or complete) adjustment of status
+
+The key trigger is the **365-day rule**: your green card process (PERM or I-140) must have been pending for a year. This is why immigration attorneys urge H-1B workers to **start the green card process early — ideally in year 4 or the start of year 5** — so the 365 days have elapsed by the time the 6-year limit hits.
+
+These extensions are granted one year at a time and can be renewed as long as you remain eligible.
+
+## AC21 Three-Year Extensions (§104)
+
+You qualify for **three-year H-1B extensions** if:
+
+- You have an **approved I-140 immigrant petition**, AND
+- You are unable to file for (or be granted) adjustment of status because an **immigrant visa number is not available** — i.e., your priority date is not current due to per-country backlogs
+
+This is the provision that keeps hundreds of thousands of Indian and Chinese nationals in valid H-1B status through decade-long waits. Because the extension is granted in 3-year blocks, it is more convenient than annual renewals.
+
+## Which Extension Do You Get?
+
+| Your green card status | AC21 extension available |
+|------------------------|--------------------------|
+| PERM or I-140 pending 365+ days | 1-year extensions (§106) |
+| I-140 approved, priority date NOT current | 3-year extensions (§104) |
+| I-140 approved, priority date current | File I-485 (AOS) — extension may not be needed |
+| No PERM/I-140 started in time | No AC21 extension — must leave or change status |
+
+## Priority Dates and the Visa Bulletin
+
+Your **priority date** is your place in line for a green card — usually the date your PERM was filed (employment-based) . Whether your date is "current" depends on the monthly **Visa Bulletin** published by the Department of State, which lists cutoff dates per category and country of birth.
+
+If your priority date is **earlier** than the cutoff in the Visa Bulletin, a visa number is available and you may file adjustment of status. If it is **later**, you are still waiting — and that is exactly when the §104 three-year extension applies.
+
+## The Critical Deadline: Start Early
+
+The single most important AC21 takeaway: **begin your green card process early.**
+
+To preserve one-year-extension eligibility, your PERM or I-140 must be pending for 365 days before your 6-year limit. PERM alone can take many months. If you wait until year 5 to start, you may not hit the 365-day mark in time and could be forced to leave the US.
+
+Best practice: have your employer initiate PERM by **year 4** of your H-1B. This gives ample buffer for PERM processing, the 365-day clock, and any delays.
+
+## Recapturing Time Outside the US
+
+If you spent time physically outside the US during your H-1B (vacations, work trips abroad, time between jobs spent overseas), you may be able to **"recapture"** those days and add them back to your 6-year total. This requires documentation (passport stamps, travel records). Recapture can buy additional months even without AC21 — and can be combined with AC21 extensions.
+
+## Common AC21 Mistakes
+
+**Mistake 1: Starting the green card process too late.** If PERM/I-140 hasn't been pending 365 days by your 6-year mark, you lose one-year-extension eligibility. Start by year 4.
+
+**Mistake 2: Confusing the two extension types.** One-year extensions need a 365-day-pending PERM/I-140; three-year extensions need an approved I-140 plus a backlogged priority date. Know which you qualify for.
+
+**Mistake 3: Letting an I-140 be withdrawn.** If your employer withdraws your approved I-140 within 180 days of approval, you may lose the basis for your three-year extension. After 180 days, the I-140 generally remains valid for extension purposes even if you change jobs.
+
+**Mistake 4: Not tracking recapturable time.** Days spent abroad can extend your H-1B — but only if you document them. Keep your travel records.
+
+**Mistake 5: Missing your extension filing deadline.** AC21 extensions still require timely I-129 filings before your current status expires. Track your I-94 date.
+
+## Track Your H-1B 6-Year Clock with DueVisa
+
+AC21 eligibility hinges on dates: your cumulative H-1B time, your PERM/I-140 filing date (and the 365-day mark), your priority date, and your I-94 expiry. DueVisa tracks them together so you know exactly when to start your green card process and when each extension is due.
+
+Add your H-1B dates at duevisa.com. Free for your first 3 documents.
+    `,
+    faqs: [
+      {
+        q: "Can I extend my H-1B beyond 6 years?",
+        a: "Yes, under the American Competitiveness in the Twenty-First Century Act (AC21). You can get one-year extensions if a PERM labor certification or I-140 has been pending at least 365 days, or three-year extensions if you have an approved I-140 but cannot file for adjustment of status because your priority date is not current. Without one of these, you must leave the US or change status after six years.",
+      },
+      {
+        q: "What is the difference between AC21 one-year and three-year extensions?",
+        a: "One-year extensions (AC21 §106) require that a PERM or I-140 was filed at least 365 days before your 6-year limit and is still pending or unapproved for filing. Three-year extensions (AC21 §104) require an approved I-140 plus an unavailable visa number — meaning your priority date is not yet current due to green card backlogs. Three-year extensions are more convenient because they are granted in longer blocks.",
+      },
+      {
+        q: "When should I start my green card process to extend my H-1B?",
+        a: "Start early — ideally by year 4 of your H-1B. To qualify for one-year AC21 extensions, your PERM or I-140 must have been pending for 365 days before you reach the 6-year limit. Since PERM alone can take many months, waiting until year 5 risks missing the 365-day mark and being forced to leave the US. Have your employer initiate PERM by year 4 for a safe buffer.",
+      },
+      {
+        q: "What is a priority date and why does it matter for AC21?",
+        a: "Your priority date is your place in line for a green card, usually the date your PERM was filed. The monthly Visa Bulletin lists cutoff dates by category and country of birth. If your priority date is earlier than the cutoff, a visa is available and you can file adjustment of status. If it's later, you're still waiting — which is exactly when the AC21 three-year extension (requiring an approved I-140 and an unavailable visa number) applies.",
+      },
+      {
+        q: "Can I recapture time I spent outside the US on H-1B?",
+        a: "Yes. Days you spent physically outside the US during your H-1B — vacations, work trips, time abroad between jobs — can often be 'recaptured' and added back to your 6-year total. You must document them with passport stamps and travel records. Recapture can buy additional months of H-1B time and can be combined with AC21 extensions.",
+      },
+      {
+        q: "What happens to my AC21 extension if I change jobs?",
+        a: "If your three-year extension is based on an approved I-140 that has been approved for at least 180 days, the I-140 generally remains valid for extension purposes even if you change employers, thanks to AC21 portability. However, if your employer withdraws the I-140 within 180 days of approval, you may lose the basis for the extension. Track your I-140 approval date and consult an attorney before changing jobs.",
+      },
+      {
+        q: "Does transferring my H-1B reset the 6-year clock?",
+        a: "No. The 6-year H-1B maximum applies cumulatively across all employers, so transferring does not reset it. The only way to reset the clock is to spend at least one full year physically outside the US before obtaining a new H-1B. Otherwise, your path past 6 years is through AC21 extensions tied to your green card process.",
       },
     ],
   },
