@@ -19,6 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Feature landing pages
     { url: `${baseUrl}/h1b-renewal-tracker`, changeFrequency: "monthly" as const, priority: 0.9, lastModified: now },
     { url: `${baseUrl}/ead-renewal-calculator`, changeFrequency: "monthly" as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/stem-opt-calculator`, changeFrequency: "monthly" as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/i751-calculator`, changeFrequency: "monthly" as const, priority: 0.9, lastModified: now },
     { url: `${baseUrl}/ead-reminder`, changeFrequency: "monthly" as const, priority: 0.8, lastModified: now },
     { url: `${baseUrl}/f1-opt-tracker`, changeFrequency: "monthly" as const, priority: 0.8, lastModified: now },
     { url: `${baseUrl}/green-card-renewal`, changeFrequency: "monthly" as const, priority: 0.8, lastModified: now },
@@ -28,6 +30,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogPosts = [
+    "h4-ead-renewal-checklist",
+    "h1b-cap-gap-explained",
+    "h1b-extension-beyond-6-years-ac21",
     "stem-opt-extension-guide",
     "i751-removal-of-conditions",
     "h1b-transfer-timeline",
