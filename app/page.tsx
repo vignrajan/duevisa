@@ -4,9 +4,8 @@ import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AnnouncementBanner } from "@/components/AnnouncementBanner";
-import { InitialsAvatar } from "@/components/InitialsAvatar";
 import { CheckoutButton } from "@/components/CheckoutButton";
-import { CheckCircle2, Clock, Bell, Users, Shield, Zap, ChevronRight, AlertTriangle, Plane, Scale, ArrowRight, Star, X, Lock, Calendar } from "lucide-react";
+import { CheckCircle2, Clock, Bell, Users, Shield, Zap, ChevronRight, AlertTriangle, Plane, Scale, ArrowRight, X, Lock, Calendar } from "lucide-react";
 import { EADCalculator } from "@/components/EADCalculator";
 
 const STATS = [
@@ -17,7 +16,7 @@ const STATS = [
 ];
 
 const PROBLEMS = [
-  { icon: <Zap size={22} className="text-critical" />, title: "Loss of work authorization", desc: "An expired EAD or H-1B means you legally cannot work — even one day over can jeopardize your status.", stat: "1 in 4*", statLabel: "H-1B holders report a close call with a missed deadline" },
+  { icon: <Zap size={22} className="text-critical" />, title: "Loss of work authorization", desc: "An expired EAD or H-1B means you legally cannot work — even one day over can jeopardize your status.", stat: "0 days*", statLabel: "of automatic EAD extension for most renewals since Oct 30, 2025 — file late and you can't work" },
   { icon: <Plane size={22} className="text-gold" />, title: "Travel restrictions", desc: "An expired visa stamp means you can't re-enter the US after international travel.", stat: "180 days*", statLabel: "is how far in advance USCIS recommends filing an EAD renewal" },
   { icon: <Scale size={22} className="text-forest" />, title: "Years of legal delays", desc: "Missing the I-751 window or green card renewal can reset your entire immigration timeline.", stat: "$3,000+*", statLabel: "average attorney fees for late renewal filings" },
 ];
@@ -33,17 +32,9 @@ const FEATURES = [
   { icon: <Bell size={20} className="text-forest" />, title: "5-stage email reminders", desc: "Timed to when you actually need to act — not arbitrary date-based alerts." },
   { icon: <Users size={20} className="text-forest" />, title: "Family dashboard", desc: "Track your spouse, children, dependents — all in one unified view." },
   { icon: <Clock size={20} className="text-forest" />, title: "Days-remaining countdown", desc: "Live countdown with color-coded urgency. Red, amber, green — instantly clear.", ariaNote: "urgency shown by color and label" },
-  { icon: <Scale size={20} className="text-forest" />, title: "Attorney connect", desc: "When time is short, describe your situation and we'll help connect you with a licensed immigration attorney within 24 hours." },
   { icon: <CheckCircle2 size={20} className="text-forest" />, title: "All visa types", desc: "H-1B, F-1, OPT, STEM OPT, Green Card, TN, O-1, L-1, H-4 EAD, and more." },
   { icon: <Calendar size={20} className="text-forest" />, title: "Export to Google Calendar or iCal", desc: "One click to sync your deadlines to any calendar app. Your deadlines, your way.", comingSoon: true },
 ];
-
-const TESTIMONIALS = [
-  { quote: "My H-1B was expiring in 8 days and I had no idea. DueVisa caught it. I genuinely don't know what I would have done.", name: "Arjun S.", role: "H-1B Engineer · San Jose, CA", stars: 5 },
-  { quote: "I track my entire family on one account — me on H-1B, my wife on H-4 EAD, and our son on H-4. Couldn't be easier.", name: "Priya M.", role: "H-1B + H-4 family · Seattle, WA", stars: 5 },
-  { quote: "The 180-day reminder is what sold me. No other tool thinks that far ahead. My attorney was impressed.", name: "Chen W.", role: "F-1 → OPT STEM · Boston, MA", stars: 5 },
-];
-// Note: testimonials above are illustrative of real use cases. Replace with verified user quotes before broader launch.
 
 const PLANS = [
   {
@@ -293,7 +284,7 @@ export default function HomePage() {
           </div>
           {/* Footnote */}
           <p className="text-xs text-center mt-8" style={{ color: "var(--text-muted)" }}>
-            * &ldquo;1 in 4&rdquo; based on a DueVisa survey of early users. &ldquo;180 days&rdquo; per USCIS Form I-765 instructions. &ldquo;$3,000+&rdquo; based on publicly listed immigration attorney fee ranges.
+            * &ldquo;0 days&rdquo; reflects the removal of the automatic EAD extension for most renewals filed on or after Oct 30, 2025 (DHS interim final rule). &ldquo;180 days&rdquo; per USCIS Form I-765 filing guidance. &ldquo;$3,000+&rdquo; based on publicly listed immigration attorney fee ranges.
           </p>
         </div>
       </section>
@@ -422,7 +413,7 @@ export default function HomePage() {
                   "Smart reminders at 180/90/60/30/7 days",
                   "Family & dependent tracking included",
                   "Color-coded urgency — green, yellow, red",
-                  "Attorney directory when you need help",
+                  "Every deadline linked to the right filing window",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
                     <CheckCircle2 size={15} className="flex-shrink-0 mt-0.5 text-forest dark:text-lime" aria-hidden="true" />
@@ -500,37 +491,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
+      {/* ── EARLY ACCESS / FOUNDING MEMBERS ──────────────────────── */}
       <section style={{ background: "var(--bg-page-alt)", padding: "6rem 0" }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="badge badge-good mb-5 inline-flex">Loved by immigrants</span>
-            <h2 className="h-section" style={{ color: "var(--text-primary)" }}>
-              Real people.<br />Real peace of mind.
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {TESTIMONIALS.map(t => (
-              <div key={t.name} className="card cursor-default flex flex-col">
-                <div className="flex gap-0.5 mb-4" aria-label={`${t.stars} out of 5 stars`}>
-                  {Array.from({ length: t.stars }).map((_, i) => (
-                    <Star key={i} size={14} fill="#0a5c4a" className="text-forest" aria-hidden="true" />
-                  ))}
-                </div>
-                <p className="text-sm leading-relaxed flex-1 mb-5" style={{ color: "var(--text-secondary)" }}>&ldquo;{t.quote}&rdquo;</p>
-                <div className="flex items-center gap-3 mt-auto pt-4" style={{ borderTop: "1px solid var(--border-subtle)" }}>
-                  <InitialsAvatar name={t.name} size={36} />
-                  <div>
-                    <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{t.name}</p>
-                    <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>{t.role}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-1 mt-3">
-                  <span className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>Illustrative example</span>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="badge badge-good mb-5 inline-flex">Founding members</span>
+          <h2 className="h-section mb-4" style={{ color: "var(--text-primary)" }}>
+            We just launched.<br />Be one of our first 100.
+          </h2>
+          <p className="text-lg max-w-2xl mx-auto mb-8" style={{ color: "var(--text-secondary)" }}>
+            DueVisa is new — so rather than show you reviews we haven&apos;t earned yet, here&apos;s an honest offer: the first 100 members to upgrade lock in Pro at <strong style={{ color: "var(--text-primary)" }}>$4/month for life</strong>. Help shape the product, and never pay more.
+          </p>
+          <Link href="/signup" className="btn-primary text-base px-8 py-3.5 cursor-pointer inline-flex">
+            Claim a founding spot <ArrowRight size={16} />
+          </Link>
         </div>
       </section>
 
@@ -544,7 +517,7 @@ export default function HomePage() {
             </h2>
           </div>
           <div className="flex flex-col md:flex-row items-center gap-10 card">
-            {/* Placeholder photo */}
+            {/* TODO(founder): replace this placeholder with a real founder photo + name — a named, real founder materially increases trust for this audience. */}
             <div
               className="flex-shrink-0 w-28 h-28 rounded-2xl flex items-center justify-center text-5xl"
               style={{ background: "var(--bg-page-alt2)", border: "1px solid var(--border-default)" }}
@@ -554,13 +527,13 @@ export default function HomePage() {
             </div>
             <div className="text-left">
               <p className="text-base leading-relaxed mb-4" style={{ color: "var(--text-secondary)" }}>
-                DueVisa was built because immigration deadlines are genuinely terrifying — and spreadsheets aren&apos;t good enough. We&apos;re a small team that believes immigrants deserve tools as serious as the stakes they&apos;re managing.
+                DueVisa was built because immigration deadlines are genuinely terrifying — and spreadsheets aren&apos;t good enough. It&apos;s an independent product built for immigrants who deserve tools as serious as the stakes they&apos;re managing.
               </p>
               <p className="text-base leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
-                We&apos;re not a law firm. We don&apos;t give legal advice. We just make sure you always know when to act.
+                DueVisa is not a law firm and does not give legal advice. It just makes sure you always know when to act.
               </p>
               <Link href="/about" className="btn-secondary text-sm inline-flex">
-                Meet the team →
+                About DueVisa →
               </Link>
             </div>
           </div>
@@ -625,7 +598,7 @@ export default function HomePage() {
             {[
               { q: "When should I start my H-1B renewal?", a: "At least 6 months (180 days) before your I-797 expires. DueVisa sends you a reminder at exactly the 180-day mark." },
               { q: "What's the difference between I-94 and visa stamp?", a: "Your visa stamp lets you enter the US. Your I-94 is your authorized stay period — never overstay your I-94 date." },
-              { q: "Can I work if my EAD is expired?", a: "No. Apply at least 180 days before expiry to use automatic extension rules. DueVisa alerts you at every milestone." },
+              { q: "Can I work if my EAD is expired?", a: "For most renewals filed on or after October 30, 2025, no — USCIS removed the automatic extension, so you generally must wait for your renewal to be approved before working again (STEM OPT and certain TPS categories are exceptions). That's why filing as early as possible — up to 180 days before expiry — now matters more than ever. DueVisa alerts you at every milestone." },
               { q: "Is my data secure?", a: "Yes. Your data is encrypted at rest and in transit, and we never sell or share it. You can delete your account and all associated data at any time from your account settings. See our Security page for full details." },
               { q: "Can I cancel Pro anytime?", a: "Yes. Cancel from Settings → Billing. You keep Pro features until the end of your billing period." },
             ].map((faq, i) => (

@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 };
 
 const REMINDER_MILESTONES = [
-  { days: 180, label: "File your I-765", desc: "The ideal time to submit your EAD renewal. Filing now maximizes your automatic extension window (up to 540 days).", urgent: false },
+  { days: 180, label: "File your I-765", desc: "The ideal time to submit your EAD renewal. Since most renewals filed on/after Oct 30, 2025 get no automatic extension, filing now gives USCIS the most time to approve before your card expires.", urgent: false },
   { days: 90,  label: "Check case status", desc: "Verify your I-765 is received and processing. If you haven't filed, do so immediately.", urgent: false },
   { days: 60,  label: "Follow up if needed", desc: "If your receipt notice hasn't arrived, contact USCIS. Premium processing may be available.", urgent: false },
-  { days: 30,  label: "Prepare for gap risk", desc: "If your renewal isn't approved and there's no automatic extension, alert your employer's HR team now.", urgent: true },
-  { days: 7,   label: "Final reminder", desc: "Your EAD expires in 1 week. Confirm your automatic extension status with an immigration attorney.", urgent: true },
+  { days: 30,  label: "Prepare for gap risk", desc: "With no automatic extension for most renewals, alert your employer's HR team now if your renewal isn't approved yet.", urgent: true },
+  { days: 7,   label: "Final reminder", desc: "Your EAD expires in 1 week. If your renewal isn't approved, confirm your options with an immigration attorney.", urgent: true },
 ];
 
 const EAD_CATEGORIES = [
@@ -98,12 +98,12 @@ export default function EadReminderPage() {
 
           {/* How it works */}
           <div className="mb-10 p-6 rounded-2xl" style={{ background: "var(--bg-page-alt)", border: "1px solid var(--border-default)" }}>
-            <h2 className="font-bold text-base mb-4" style={{ color: "var(--text-primary)" }}>How the automatic extension works</h2>
+            <h2 className="font-bold text-base mb-4" style={{ color: "var(--text-primary)" }}>The automatic extension was removed in 2025</h2>
             <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--text-secondary)" }}>
-              If you file your I-765 renewal <strong style={{ color: "var(--text-primary)" }}>before your EAD expires</strong>, USCIS may grant an automatic extension of up to 540 days while your case is pending. This means you can keep working even if your card&apos;s physical expiry date passes.
+              As of <strong style={{ color: "var(--text-primary)" }}>October 30, 2025</strong>, USCIS no longer grants an automatic extension for most EAD renewals. If you file on or after that date, you generally must wait for your renewal to be <strong style={{ color: "var(--text-primary)" }}>approved</strong> before you can keep working once your card expires. (Renewals timely filed before Oct 30, 2025, STEM OPT, and certain TPS categories are exceptions.)
             </p>
             <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-              The key: you must file on time. DueVisa&apos;s 180-day reminder is designed to give you enough runway to file before the window closes.
+              With no safety net, filing early is everything. DueVisa&apos;s 180-day reminder gives USCIS the most possible time to approve your renewal before your current card expires.
             </p>
             <div className="flex items-center gap-2 mt-4">
               <Clock size={13} style={{ color: "var(--text-muted)" }} />
