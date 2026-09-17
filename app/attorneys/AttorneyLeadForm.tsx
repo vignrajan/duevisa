@@ -45,7 +45,7 @@ export function AttorneyLeadForm() {
         <CheckCircle2 size={40} className="text-forest dark:text-lime mx-auto mb-3" />
         <h3 className="font-syne font-bold text-primary text-lg mb-2">Request received!</h3>
         <p className="text-secondary text-sm">
-          A vetted immigration attorney will contact you at <strong className="text-primary">{email}</strong> within 24 hours.
+          Thanks — we&apos;ve saved your details. We&apos;re building our attorney network now and will reach out at <strong className="text-primary">{email}</strong> as it launches.
         </p>
       </div>
     );
@@ -101,11 +101,11 @@ export function AttorneyLeadForm() {
         {loading ? (
           <><Loader2 size={16} className="animate-spin" /> Submitting...</>
         ) : (
-          <><Send size={16} /> Connect me with an attorney</>
+          <><Send size={16} /> Join the attorney waitlist</>
         )}
       </button>
       <p className="text-sage/60 text-xs text-center">
-        Free consultation matching. Attorneys pay a referral fee — no cost to you.
+        No cost to you. We&apos;ll notify you as our attorney network launches.
       </p>
     </form>
   );
