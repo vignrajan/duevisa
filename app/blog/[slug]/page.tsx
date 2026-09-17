@@ -75,6 +75,10 @@ const RELATED_TOOLS: Record<string, { label: string; href: string; desc: string 
     { label: "H-1B Deadline Tracker", href: "/h1b-renewal-tracker", desc: "Track your 6-year H-1B max, I-140 approval, and extension deadlines." },
     { label: "Start tracking free", href: "/signup", desc: "DueVisa tracks your cumulative H-1B time and reminds you when to file extensions." },
   ],
+  "h4-ead-renewal-checklist": [
+    { label: "EAD Renewal Reminder", href: "/ead-reminder", desc: "Track your H-4 EAD and H-4 I-94 together — never let either lapse." },
+    { label: "EAD Renewal Calculator", href: "/ead-renewal-calculator", desc: "See your exact 180-day H-4 EAD filing window in seconds." },
+  ],
 };
 
 // Blog post content
@@ -1174,6 +1178,141 @@ Add your dates at duevisa.com. Free for your first 3 documents.
       {
         q: "Does my DSO need to do anything before I apply for OPT?",
         a: "Yes — your DSO must recommend you for OPT in SEVIS (the government's student tracking system) and issue you an OPT-endorsed I-20 before you can file I-765 with USCIS. This is required. Contact your school's international students office as soon as your 90-day window opens, or earlier — many schools require several weeks of lead time to process the SEVIS recommendation.",
+      },
+    ],
+  },
+  "h4-ead-renewal-checklist": {
+    title: "H-4 EAD Renewal Checklist: Every Document and Deadline (2026)",
+    description: "A step-by-step H-4 EAD renewal checklist — every form, every supporting document, and every deadline, in the order you need them. Print it, check it off, and avoid a work gap.",
+    date: "June 22, 2026",
+    readTime: "9 min",
+    category: "EAD",
+    content: `
+The H-4 EAD is one of the most paperwork-heavy renewals in US immigration, because it depends on documents for two people — you and your H-1B spouse. Miss one piece and USCIS issues a Request for Evidence (RFE) that can add months. This is a practical, do-this-in-order checklist to renew your H-4 EAD cleanly the first time.
+
+If you want the background on how H-4 EAD works and how the auto-extension is capped by your H-4 status, read the full H-4 EAD renewal guide. This page is the action list.
+
+## Quick Answer
+
+To renew your H-4 EAD, you generally file **three forms together**: Form I-539 (extend H-4 status), Form I-539A (for dependents, if any), and Form I-765 (renew the EAD) — along with evidence of your spouse's valid H-1B status, your H-4 status, your marriage, and your current EAD. File **as early as USCIS allows** (up to 180 days before your EAD expires) because H-4 EAD renewals are frequently delayed. Confirm current forms and fees on uscis.gov.
+
+## Before You Start: Confirm These 3 Things
+
+Check these first — if any is a problem, fix it before filing:
+
+- **Your spouse's H-1B is valid** and, ideally, recently extended. Your H-4 and H-4 EAD cannot extend beyond your spouse's H-1B validity.
+- **Your H-4 I-94 status** is valid. If your H-4 needs extending too, you file I-539 together with the EAD.
+- **Your current EAD category is C26** (H-4 dependent spouse) — this is the category you are renewing under.
+
+## The H-4 EAD Renewal Checklist
+
+### Step 1: Forms to File
+
+- **Form I-765** — Application for Employment Authorization (the EAD renewal itself), category **(c)(26)**
+- **Form I-539** — Application to Extend/Change Nonimmigrant Status (to extend your H-4 status)
+- **Form I-539A** — Supplemental form for any co-applicant dependents (e.g., H-4 children), if applicable
+
+Filing all three together is the standard approach, and in most cases the EAD cannot be approved until the underlying H-4 extension is approved.
+
+### Step 2: Your Personal Documents
+
+- Copy of your **current EAD card** (front and back)
+- Copy of your **most recent I-94** (from i94.cbp.dhs.gov)
+- Copy of your **passport** biographic page and H-4 visa stamp
+- Copy of your **previous I-797 approval notices** for H-4 status
+- **Two passport-style photos** (2×2 inches, white background)
+
+### Step 3: Your Spouse's Documents (the H-1B holder)
+
+- Copy of your spouse's **H-1B I-797 approval notice** (current, showing valid dates)
+- Copy of your spouse's **most recent I-94**
+- Copy of your spouse's **passport** biographic page and visa stamp
+- Copy of your spouse's **recent pay stubs** (proof of maintaining H-1B status)
+- If applicable: evidence your spouse has an **approved I-140** or is otherwise in a status that supports H-4 EAD eligibility
+
+### Step 4: Relationship & Eligibility Evidence
+
+- Copy of your **marriage certificate**
+- If names differ across documents: **name-change documentation**
+
+### Step 5: Fees
+
+- The current filing fee for I-765 and I-539 — **check uscis.gov for the exact amounts**, as fees change. Include the correct payment for each form.
+
+### Step 6: File and Track
+
+- File **online** (faster to confirm) or by mail to the correct USCIS address for your forms
+- Save your **I-797C receipt notices** for each form
+- Note your **receipt numbers** and track status in your USCIS online account
+
+## The Timing Rule: File 180 Days Early
+
+You can file your H-4 EAD renewal up to **180 days before** your current EAD expires. Do it. H-4 EAD renewals are among the most delay-prone, and unlike some categories the H-4 EAD auto-extension is limited and tied to your H-4 I-94 validity. Filing early is your single best protection against a work gap.
+
+| Milestone | Action |
+|-----------|--------|
+| EAD expiry − 180 days | Earliest filing date — file now |
+| EAD expiry − 90 days | If not filed yet, this is urgent |
+| EAD expiry | Work authorization ends unless extension/auto-extension applies |
+
+## The Auto-Extension Trap for H-4 EAD
+
+H-4 EAD holders may qualify for an automatic extension of up to 540 days if they file a timely renewal in the same category **and** they have a valid, unexpired H-4 I-94. The catch: the auto-extension **cannot run beyond your H-4 I-94 expiration date**. If your H-4 status lapses, so does your work authorization — even if the 540-day period has not run out. This is why you file I-539 (to extend H-4) together with I-765.
+
+## Common H-4 EAD Renewal Mistakes
+
+**Mistake 1: Filing the EAD without extending H-4 status.** If your H-4 I-94 expires, your EAD auto-extension dies with it. File I-539 alongside.
+
+**Mistake 2: Forgetting spouse's pay stubs.** USCIS wants proof your spouse is maintaining H-1B status. Missing pay evidence is a common RFE trigger.
+
+**Mistake 3: Filing too late.** H-4 EAD processing is slow. The 180-day head start is not optional in practice.
+
+**Mistake 4: Mismatched names.** If your marriage certificate, passport, and EAD show different name formats, include documentation to connect them.
+
+**Mistake 5: Wrong eligibility category.** Renew under (c)(26). Filing under the wrong category can break your auto-extension eligibility.
+
+## Print-and-Check Summary
+
+- [ ] Form I-765 (category c26)
+- [ ] Form I-539 (+ I-539A if dependents)
+- [ ] Current EAD copy (both sides)
+- [ ] Your I-94, passport, visa, prior I-797s
+- [ ] 2 passport photos
+- [ ] Spouse's H-1B I-797, I-94, passport, visa, pay stubs
+- [ ] Marriage certificate (+ name-change docs if needed)
+- [ ] Correct fees for each form
+- [ ] Filed 180 days early; receipts saved
+
+## Track Your H-4 EAD With DueVisa
+
+The hardest part of H-4 EAD is that it depends on your spouse's H-1B dates as well as your own. DueVisa tracks your H-4 EAD, your H-4 I-94, and your spouse's H-1B together — and reminds you at 180 days so you file with room to spare.
+
+Add your dates at duevisa.com. Free for your first 3 documents.
+    `,
+    faqs: [
+      {
+        q: "What forms do I need to renew my H-4 EAD?",
+        a: "You generally file three forms together: Form I-765 to renew the EAD (under category c26), Form I-539 to extend your H-4 status, and Form I-539A for any co-applicant dependents. Filing them together is the standard approach because, in most cases, the EAD renewal cannot be approved until the underlying H-4 extension is approved.",
+      },
+      {
+        q: "How early can I file my H-4 EAD renewal?",
+        a: "You can file up to 180 days before your current EAD expires, and you should file as early as possible. H-4 EAD renewals are among the most delay-prone applications, and the auto-extension is limited and tied to your H-4 I-94 validity, so the 180-day head start is your best protection against a work gap.",
+      },
+      {
+        q: "What documents do I need from my H-1B spouse?",
+        a: "You need copies of your spouse's current H-1B I-797 approval notice, their most recent I-94, their passport biographic page and visa stamp, and recent pay stubs showing they are maintaining H-1B status. Missing pay evidence is one of the most common reasons USCIS issues a Request for Evidence on H-4 EAD cases.",
+      },
+      {
+        q: "Does the H-4 EAD auto-extension apply to me?",
+        a: "H-4 EAD holders may qualify for an automatic extension of up to 540 days if they file a timely renewal in the same category (c26) and hold a valid, unexpired H-4 I-94. The critical limit: the auto-extension cannot run beyond your H-4 I-94 expiration date. If your H-4 status lapses, your work authorization ends even if the 540-day period hasn't run out — which is why you file I-539 to extend H-4 at the same time.",
+      },
+      {
+        q: "Can my H-4 EAD extend beyond my spouse's H-1B?",
+        a: "No. Your H-4 status — and therefore your H-4 EAD — cannot extend beyond your spouse's H-1B validity. This is why it's best to renew your H-4 EAD after (or together with) your spouse's H-1B extension, so your new EAD reflects the longest possible validity period tied to the current H-1B.",
+      },
+      {
+        q: "What is the most common H-4 EAD renewal mistake?",
+        a: "Filing the EAD (I-765) without also extending H-4 status (I-539). If your H-4 I-94 expires while your EAD renewal is pending, your auto-extension ends with it and you lose work authorization. Always file the H-4 extension alongside the EAD renewal unless your H-4 status is already valid well beyond your new EAD period.",
       },
     ],
   },

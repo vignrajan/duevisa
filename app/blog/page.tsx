@@ -13,6 +13,15 @@ export const metadata: Metadata = {
 
 const BLOG_POSTS = [
   {
+    slug: "h4-ead-renewal-checklist",
+    title: "H-4 EAD Renewal Checklist: Every Document and Deadline (2026)",
+    description: "A step-by-step H-4 EAD renewal checklist — every form, every supporting document, and every deadline, in the order you need them. Print it, check it off, and avoid a work gap.",
+    date: "June 22, 2026",
+    readTime: "9 min",
+    category: "EAD",
+    image: null,
+  },
+  {
     slug: "h1b-cap-gap-explained",
     title: "Cap-Gap Explained: How F-1 Students Bridge OPT to H-1B (2026)",
     description: "Cap-gap automatically extends your F-1 status and work authorization from when your OPT ends until your H-1B starts on October 1. Here's exactly how it works and who qualifies.",
