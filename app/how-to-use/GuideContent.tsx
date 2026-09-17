@@ -511,16 +511,16 @@ export default function DueVisaGuide() {
 
           {/* ATTORNEY */}
           <section id="attorney" className="mb-32">
-            <Fade><SectionHeading tag="Find an Attorney" title="Connect with a lawyer when it matters." sub="When a deadline is dangerously close, DueVisa connects you to a vetted attorney." /></Fade>
+            <Fade><SectionHeading tag="Find an Attorney — coming soon" title="Connect with a lawyer when it matters." sub="Some situations need legal advice, not just a reminder. We're building a network of vetted immigration attorneys — here's how it will work." /></Fade>
             <Fade delay={0.05}>
               <GuideCard className="!p-8">
-                <div className="text-[11px] font-bold text-forest tracking-widest uppercase mb-6">How it works</div>
-                <Step num="1" title="Click 'Talk to an Attorney' on any urgent card">Appears on any document in Warning or Critical state.</Step>
+                <div className="text-[11px] font-bold text-forest tracking-widest uppercase mb-6">How it will work</div>
+                <Step num="1" title="Open the attorney request from any urgent card">Planned for documents in Warning or Critical state.</Step>
                 <Step num="2" title="Describe your situation in 2–3 sentences">A brief form: visa type (pre-filled), what's happening, your contact email.</Step>
-                <Step num="3" title="We match you with a specialist">DueVisa sends your details to attorneys who specialise in your visa type.</Step>
-                <Step num="4" title="Get expert help fast">They contact you within 4–24 hours. No cold calls, no Googling.</Step>
+                <Step num="3" title="We match you with a specialist">DueVisa will forward your details to attorneys who specialise in your visa type.</Step>
+                <Step num="4" title="Join the waitlist today">You can register your interest now on the Attorneys page — we'll reach out as the network launches.</Step>
               </GuideCard>
-              <Callout type="danger">If any document is <strong>already expired</strong>, use the attorney feature immediately. This is not a situation to handle without legal guidance.</Callout>
+              <Callout type="danger">If any document is <strong>already expired</strong>, don't wait — consult a licensed immigration attorney right away. This is not a situation to handle without legal guidance.</Callout>
             </Fade>
           </section>
 

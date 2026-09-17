@@ -113,9 +113,9 @@ const BLOG_POSTS = [
   },
   {
     slug: "ead-540-day-automatic-extension",
-    title: "The 540-Day EAD Automatic Extension, Explained (2026)",
-    description: "A timely EAD renewal can keep you working for up to 540 days past your card's expiry. Here's who qualifies, how to prove it for I-9, and the traps to avoid.",
-    date: "June 14, 2026",
+    title: "The 540-Day EAD Auto-Extension Ended in 2025 — What It Means Now",
+    description: "Big change: USCIS removed the automatic extension for EAD renewals filed on or after October 30, 2025. Most renewers must now wait for approval before working. Here's what changed and what to do.",
+    date: "September 17, 2026",
     readTime: "10 min",
     category: "EAD",
     image: null,

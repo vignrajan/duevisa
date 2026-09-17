@@ -129,7 +129,7 @@ export default function EadCalculatorPage() {
           <div className="p-6 rounded-2xl mb-8" style={{ background: "var(--bg-page-alt)", border: "1px solid var(--border-default)" }}>
             <h2 className="font-bold text-base mb-3" style={{ color: "var(--text-primary)" }}>How the 180-day rule works</h2>
             <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--text-secondary)" }}>
-              USCIS recommends filing Form I-765 at least 180 days before your EAD expires. Filing early maximizes your automatic extension window — which can extend your work authorization up to 540 days while USCIS processes your renewal.
+              USCIS recommends filing Form I-765 at least 180 days before your EAD expires. This matters more than ever: as of October 30, 2025, most EAD renewals no longer get an automatic extension, so your new card must be approved before the old one expires (STEM OPT and certain TPS categories are exceptions). Filing early is your best protection against a work gap.
             </p>
             <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               If you file after your EAD expires, you may have a gap in work authorization. A gap means you cannot legally work — which can have serious HR and tax consequences.

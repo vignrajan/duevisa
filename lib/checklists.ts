@@ -41,7 +41,7 @@ export const CHECKLISTS: Record<string, Checklist> = {
       { id: 5, text: "Get 2 passport-style photos", detail: "2x2 inches, white background" },
       { id: 6, text: "File Form I-765 with USCIS" },
       { id: 7, text: "Pay USCIS filing fee", detail: "Check uscis.gov for current fee — approximately $410" },
-      { id: 8, text: "Save receipt notice", detail: "Your 180-day automatic extension begins from the date on this notice" },
+      { id: 8, text: "Save receipt notice", detail: "Keep your I-797C for your records and USCIS case tracking (note: most renewals filed on/after Oct 30, 2025 no longer get an automatic extension)" },
       { id: 9, text: "Attend biometrics appointment if scheduled" },
       { id: 10, text: "Receive new EAD — update DueVisa with new expiry date" },
     ],

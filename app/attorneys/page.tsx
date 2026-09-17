@@ -35,12 +35,12 @@ export default function AttorneysPage() {
             <div className="w-14 h-14 rounded-2xl mx-auto mb-6 flex items-center justify-center" style={{ background: "var(--color-forest)" }}>
               <Scale size={24} style={{ color: "var(--color-lime)" }} />
             </div>
-            <span className="badge badge-good mb-4 inline-flex">Attorney Connect</span>
+            <span className="badge badge-good mb-4 inline-flex">Attorney Connect — coming soon</span>
             <h1 className="h-section mb-5" style={{ color: "var(--text-primary)" }}>
               Need an immigration attorney?
             </h1>
             <p className="text-lg leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-              DueVisa tracks your deadlines — but some situations require legal advice. Describe your case below and we&apos;ll help connect you with the right attorney within 24 hours.
+              DueVisa tracks your deadlines — but some situations require legal advice. We&apos;re building a network of vetted immigration attorneys. Tell us about your case below and we&apos;ll reach out as we connect you with the right professional.
             </p>
           </div>
 
@@ -50,7 +50,7 @@ export default function AttorneysPage() {
               Tell us about your situation
             </h2>
             <p className="text-sm mb-6" style={{ color: "var(--text-secondary)" }}>
-              We&apos;ll respond within 24 hours. This is not legal advice — we&apos;re helping you find the right attorney.
+              We&apos;re building our attorney network now — leave your details and we&apos;ll be in touch as it launches. This is not legal advice; we help you find the right attorney.
             </p>
             <AttorneyLeadForm />
           </div>
