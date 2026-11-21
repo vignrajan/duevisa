@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/ead-renewal-calculator`, changeFrequency: "monthly" as const, priority: 0.9, lastModified: now },
     { url: `${baseUrl}/stem-opt-calculator`, changeFrequency: "monthly" as const, priority: 0.9, lastModified: now },
     { url: `${baseUrl}/i751-calculator`, changeFrequency: "monthly" as const, priority: 0.9, lastModified: now },
+    { url: `${baseUrl}/tools/h1b-grace-period-calculator`, changeFrequency: "monthly" as const, priority: 0.9, lastModified: now },
     { url: `${baseUrl}/ead-reminder`, changeFrequency: "monthly" as const, priority: 0.8, lastModified: now },
     { url: `${baseUrl}/f1-opt-tracker`, changeFrequency: "monthly" as const, priority: 0.8, lastModified: now },
     { url: `${baseUrl}/green-card-renewal`, changeFrequency: "monthly" as const, priority: 0.8, lastModified: now },

@@ -6,6 +6,9 @@ export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url);
   const code = searchParams.get("code");
   const next = searchParams.get("next") ?? "/dashboard";
+  // A tool page (e.g. the H-1B grace period calculator) is about to create the
+  // user's first document client-side, so don't bounce them to onboarding.
+  const skipOnboarding = searchParams.get("newdoc") === "1";
 
   if (code) {
     const supabase = createClient();
@@ -28,8 +31,9 @@ export async function GET(request: Request) {
         .eq("user_id", user.id)
         .limit(1);
 
-      // If they have no documents, send to onboarding
-      if (!docs || docs.length === 0) {
+      // If they have no documents, send to onboarding — unless a tool page is
+      // about to create their first document (then land them on the dashboard).
+      if ((!docs || docs.length === 0) && !skipOnboarding) {
         return NextResponse.redirect(`${origin}/signup/onboarding`);
       }
     }
