@@ -2,6 +2,7 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { DashboardClient } from "./DashboardClient";
+import { PendingGraceDeadline } from "@/components/PendingGraceDeadline";
 import type { Profile } from "@/types/database";
 
 export const metadata = {
@@ -65,11 +66,14 @@ export default async function DashboardPage() {
     .eq("user_id", user.id);
 
   return (
-    <DashboardClient
-      user={user}
-      profile={profile}
-      documents={documents || []}
-      familyMembers={familyMembers || []}
-    />
+    <>
+      <PendingGraceDeadline />
+      <DashboardClient
+        user={user}
+        profile={profile}
+        documents={documents || []}
+        familyMembers={familyMembers || []}
+      />
+    </>
   );
 }
